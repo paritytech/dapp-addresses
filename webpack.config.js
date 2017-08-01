@@ -15,6 +15,7 @@
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -76,36 +77,36 @@ module.exports = {
         use: [ 'html-loader', 'markdown-loader' ]
       },
       {
-  	    test: /\.css$/,
-  	    include: /semantic-ui-css/,
-  	    use: [ 'style-loader', 'css-loader' ]
-  	  },
-  	  {
-  	    test: /\.css$/,
-  	    exclude: /semantic-ui-css/,
-  	    use: [
-  	      'style-loader',
-  	      {
-        		loader: 'css-loader',
-        		options: {
-        		  importLoaders: 1,
-        		  localIdentName: '[name]_[local]_[hash:base64:10]',
-        		  minimize: true,
-        		  modules: true
-        		}
-	      },
-	      {
-    		loader: 'postcss-loader',
-    		options: {
-    		  plugins: (loader) => [
-    		    require('postcss-import'),
-    		    require('postcss-nested'),
-    		    require('postcss-simple-vars')
-    		  ]
-		 }
-	      }
-	    ]
-	  },
+        test: /\.css$/,
+        include: /semantic-ui-css/,
+        use: [ 'style-loader', 'css-loader' ]
+      },
+      {
+        test: /\.css$/,
+        exclude: /semantic-ui-css/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              localIdentName: '[name]_[local]_[hash:base64:10]',
+              minimize: true,
+              modules: true
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: (loader) => [
+                require('postcss-import'),
+                require('postcss-nested'),
+                require('postcss-simple-vars')
+              ]
+            }
+          }
+        ]
+      },
       {
         test: /\.(png|jpg)$/,
         use: [ {
@@ -160,6 +161,15 @@ module.exports = {
       filename: '../index.html',
       template: './index.ejs',
       chunks: [ 'bundle' ]
+    }),
+    isProd && new webpack.optimize.UglifyJsPlugin({
+      screwIe8: true,
+      compress: {
+        warnings: false
+      },
+      output: {
+        comments: false
+      }
     })
-  ]
+  ].filter((plugin) => plugin)
 };
