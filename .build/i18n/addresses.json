@@ -1,0 +1,14 @@
+[
+  {
+    "id": "addresses.buttons.add",
+    "defaultMessage": "address"
+  },
+  {
+    "id": "addresses.title",
+    "defaultMessage": "Saved Addresses"
+  },
+  {
+    "id": "addresses.errors.invalidFile",
+    "defaultMessage": "The provided file is invalid..."
+  }
+]
