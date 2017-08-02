@@ -25,8 +25,8 @@ import { setVisibleAccounts } from '@parity/shared/redux/providers/personalActio
 import { Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button, Page } from '@parity/ui';
 import { AddIcon } from '@parity/ui/Icons';
 
-import List from '@parity/dapp-accounts/List';
-import Summary from '@parity/dapp-accounts/Summary';
+import List from '@parity/dapp-accounts/src/List';
+import Summary from '@parity/dapp-accounts/src/Summary';
 
 import AddAddress from './AddAddress';
 
