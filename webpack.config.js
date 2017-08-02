@@ -58,39 +58,20 @@ module.exports = {
       },
       {
         test: /\.json$/,
-        use: [ 'json-loader' ]
+        use: ['json-loader']
       },
       {
         test: /\.ejs$/,
-        use: [ 'ejs-loader' ]
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]'
-            }
-          },
-          'extract-loader',
-          {
-            loader: 'html-loader',
-            options: {
-              root: path.resolve(__dirname, '../assets/images'),
-              attrs: ['img:src', 'link:href']
-            }
-          }
-        ]
+        use: ['ejs-loader']
       },
       {
         test: /\.md$/,
-        use: [ 'html-loader', 'markdown-loader' ]
+        use: ['html-loader', 'markdown-loader']
       },
       {
         test: /\.css$/,
         include: /semantic-ui-css/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.css$/,
@@ -120,35 +101,15 @@ module.exports = {
     },
       {
         test: /\.(png|jpg)$/,
-        use: [ {
-          loader: 'file-loader',
-          options: {
-            name: 'assets/[name].[ext]'
-          }
-        } ]
+        use: ['base64-inline-loader']
       },
       {
         test: /\.(woff|woff2|ttf|eot|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [ {
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[name].[ext]'
-          }
-        } ]
+        use: ['base64-inline-loader']
       },
       {
-        test: /parity-logo-white-no-text\.svg/,
-        use: [ 'url-loader' ]
-      },
-      {
-        test: /\.svg(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        exclude: [ /parity-logo-white-no-text\.svg/ ],
-        use: [ {
-          loader: 'file-loader',
-          options: {
-            name: 'assets/[name].[ext]'
-          }
-        } ]
+        test: /\.svg$/,
+        use: ['svg-inline-loader']
       }
     ],
     noParse: [
@@ -175,7 +136,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: '../index.html',
       template: './index.ejs',
-      chunks: [ 'bundle' ]
+      chunks: ['bundle']
     }),
     isProd && new webpack.optimize.UglifyJsPlugin({
       screwIe8: true,
