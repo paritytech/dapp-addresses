@@ -62,8 +62,8 @@
   "dependencies": {
     "@parity/api": "paritytech/js-api",
     "@parity/dapp-accounts": "paritytech/dapp-accounts",
-    "@parity/ui": "paritytech/js-ui",
-    "@parity/shared": "paritytech/js-shared"
+    "@parity/shared": "paritytech/js-shared",
+    "@parity/ui": "paritytech/js-ui"
   },
   "peerDependencies": {}
 }
