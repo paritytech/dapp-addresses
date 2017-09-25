@@ -18,4 +18,4 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Addresses from './Addresses';
 
-ReactDOM.render(<div>hello</div>, document.querySelector('#container'));
+ReactDOM.render(<Addresses />, document.querySelector('#container'));
