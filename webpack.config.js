@@ -10,7 +10,7 @@ module.exports = {
   output:{
     path: path.join(__dirname, 'dist'),
     publicPath: 'dist/',
-    filename: 'dist.js'
+    filename: '../dist.js'
   },
   module: {
     loaders: [
@@ -20,7 +20,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: '../index.html',
+      template: '../index.html',
+      filename: 'index.html',
       chunks: ['dist']
     })
   ]
