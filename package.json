@@ -17,21 +17,17 @@
     "watch": "webpack --colors --progress --watch"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
+    "babel-cli": "^6.22.2",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
     "babel-plugin-react-intl": "2.3.1",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.3.3",
+    "babel-plugin-transform-class-properties": "6.23.0",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.3.2",
     "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "6.22.0",
-    "babel-preset-es2016": "6.22.0",
-    "babel-preset-es2017": "6.22.0",
-    "babel-preset-react": "^6.24.1",
+    "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.1",
     "ejs-loader": "0.3.0",
@@ -59,13 +55,13 @@
     "react-hot-loader": "3.0.0-beta.6",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.8",
-    "webpack": "^3.5.5"
+    "webpack": "^3.3.0"
   },
   "dependencies": {
     "@parity/api": "^2",
     "@parity/dapp-accounts": "paritytech/dapp-accounts",
-    "@parity/shared": "paritytech/js-shared",
-    "@parity/ui": "paritytech/js-ui"
+    "@parity/ui": "^2",
+    "@parity/shared": "^2"
   },
   "peerDependencies": {}
 }
