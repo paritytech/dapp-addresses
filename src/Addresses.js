@@ -1,46 +1,53 @@
 import React, { Component } from 'react';
+//import { FormattedMessage } from 'react-intl';
 import { bonds } from 'parity-reactive-ui';
-import { Rspan } from 'oo7-react';
+//import { Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort } from 'parity-reactive-ui/src/js-ui/Actionbar';
+import { Rspan, ReactiveComponent } from 'oo7-react';
+
+//console.log(Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort);
 
 import AddressCard from './AddressCard';
 
-import styles from './Addresses.css';
+import './Addresses.css';
 
 export default class Addresses extends Component {
   constructor(){
     super();
-    this.state = {
-      accounts: []
-    }
   }
-  componentWillMount(){
-    bonds.allAccountsInfo.tie(this.renderAccounts.bind(this));
-  }
+
   render(){
-    //bonds.allAccountsInfo.map(b => console.log('b', b))
-    console.log('accs',this.state.accounts);
-    return (<div>
-      {this.state.accounts.map((addr)=>{
-        return (<AddressCard
-          address={addr}          
-        />);
-      })}
+    return (<div className="AddressContainer">
+      <AddressesAux
+        accountinfo={bonds.allAccountsInfo.map((accountList)=>{
+          let p = []
+          for(let key in accountList){
+            if( typeof accountList[key].uuid == 'undefined' && !accountList[key].meta.contract && !accountList[key].meta.wallet){
+              let modaccount = accountList[key];
+              modaccount['address'] = key;
+              p.push(modaccount);
+            }
+          }
+          return p;
+        })}
+      />
       </div>);
   }
+}
 
-  renderAccounts(accountList){
-
-    if(typeof accountList != 'undefined'){
-      console.log('hereo', accountList);
-      let p = Object.keys(accountList)
-      .filter((key) => {
-        return (typeof accountList[key].uuid == 'undefined') && (!accountList[key].meta.contract) && !accountList[key].meta.wallet;
-      })
-      .map((elem)=>{
-        return elem;
-      })
-      console.log('p', p);
-      this.setState({accounts:p});
-    }
+export class AddressesAux extends ReactiveComponent{
+  constructor(){
+    super(['accountinfo']);
   }
+
+  render(){
+    console.log('madeit', this.state );
+    if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>)
+
+    return (<div>{this.state.accountinfo.map(elem=>{
+      return (<AddressCard
+        address={elem.address}
+      />);
+    })}</div>)
+  }
+
 }
