@@ -8,7 +8,8 @@ import { Rspan, ReactiveComponent } from 'oo7-react';
 
 import AddressCard from './AddressCard';
 
-import './Addresses.css';
+import styles from './Addresses.css';
+
 
 export default class Addresses extends Component {
   constructor(){
@@ -16,7 +17,8 @@ export default class Addresses extends Component {
   }
 
   render(){
-    return (<div className="AddressContainer">
+    console.log('styl',styles);
+    return (<div className={styles.Addresses}>
       <AddressesAux
         accountinfo={bonds.allAccountsInfo.map((accountList)=>{
           let p = []
@@ -45,6 +47,7 @@ export class AddressesAux extends ReactiveComponent{
 
     return (<div>{this.state.accountinfo.map(elem=>{
       return (<AddressCard
+        key={elem.address}
         address={elem.address}
       />);
     })}</div>)
