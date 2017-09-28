@@ -34,7 +34,7 @@ export default class AddressCard extends Component{
       <Card.Content>
         <AddressLabel address={addressBond} />
       </Card.Content>
-      <Rspan>{bonds.balance(this.props.info.address)}</Rspan>
+      
       <CoinList tokens={bonds.tokensOf(this.props.info.address)}/>
     </Card>);
   }

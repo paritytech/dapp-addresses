@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { Label, Button, Icon, Input, Card } from 'semantic-ui-react';
-import { bonds } from 'parity-reactive-ui';
+import { bonds, Actionbar, Transaction, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton} from 'parity-reactive-ui';
 
 import { Rspan, ReactiveComponent } from 'oo7-react';
 
@@ -15,8 +16,9 @@ export default class Addresses extends Component {
   }
 
   render(){
-    console.log('styl',styles);
+    console.log('styl',Actionbar,PButton);
     return (<div className={styles.Addresses}>
+      { this.renderActionbar() }
       <AddressesAux
         accountinfo={bonds.allAccountsInfo.map((accountList)=>{
           let p = []
@@ -32,6 +34,26 @@ export default class Addresses extends Component {
       />
 
       </div>);
+  }
+
+  renderActionbar () {
+    //const { contacts } = this.props;
+
+    const buttons = [
+      <PButton
+        key='newAddress'
+        label={"address"}
+        onClick={ ()=>{} }
+      />
+    ];
+
+    return (
+      <Actionbar
+        className={ 'Actionbar' }
+        title={'Saved Addresses'}
+        buttons={ buttons }
+      />
+    );
   }
 }
 
@@ -52,5 +74,4 @@ export class AddressesAux extends ReactiveComponent{
       />);
     })}</Card.Group>)
   }
-
 }
