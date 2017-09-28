@@ -42,7 +42,7 @@ export default class AddressCard extends Component{
             <EtherBalance balance={balanceBond}/>
           </Table.Cell>
           <Table.Cell>
-            iconi
+            <CoinList tokens={bonds.tokensOf(this.props.info.address)}/>
           </Table.Cell>
           <Table.Cell>
             <AddressLabel address={addressBond} />
@@ -65,8 +65,8 @@ class CoinList extends ReactiveComponent{
   }
   render(){
     //console.log('toki',this.state.tokens);
-    if(typeof this.state.tokens == "undefined") return <Card.Content></Card.Content>
-    return (<Card.Content>
+    if(typeof this.state.tokens == "undefined") return <span>-</span>
+    return (<div className={styles.CoinList}>
       {this.state.tokens.map((elem)=>{
         return (<CoinIcon
           key={elem.name}
@@ -77,7 +77,7 @@ class CoinList extends ReactiveComponent{
           balance={elem.balance.toString()}
           tla={elem.name} />);
       })}
-    </Card.Content>);
+    </div>);
   }
 }
 
@@ -86,7 +86,16 @@ class CoinIcon extends ReactiveComponent{
     super(['balance','src','tla'])
   }
   render(){
-    return (<div><span>{this.state.tla}:{this.state.balance}</span><Rimg src={this.state.src} style={{width:'50px',height:'50px'}}></Rimg></div>);
+    //<span>{this.state.tla}:{this.state.balance}</span>
+    console.log('divcl',styles);
+    return (<div className={styles.CoinIcon} >
+      <Popup
+        key={'userName'}
+        trigger={<Image src={this.state.src}></Image>}
+        header={'Username'}
+        content={'userbio....'}
+      />
+    </div>);
   }
 }
 
