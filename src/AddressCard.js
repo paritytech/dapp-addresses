@@ -34,7 +34,7 @@ export default class AddressCard extends Component{
       <Card.Content>
         <AddressLabel address={addressBond} />
       </Card.Content>
-      <Rspan></Rspan>
+      <Rspan>{bonds.balance(this.props.info.address)}</Rspan>
       <CoinList tokens={bonds.tokensOf(this.props.info.address)}/>
     </Card>);
   }
@@ -49,15 +49,24 @@ class CoinList extends ReactiveComponent{
     if(typeof this.state.tokens == "undefined") return <Card.Content></Card.Content>
     return (<Card.Content>
       {this.state.tokens.map((elem)=>{
-        return (<div>
-          <span>{elem.name}:{elem.balance.toString()}</span>
-          <Rimg src={bonds.githubhint.entries(elem.img).map((imgObj)=>{
+        return (<CoinIcon
+          src={bonds.githubhint.entries(elem.img).map((imgObj)=>{
             console.log('img', imgObj[0]);
             return imgObj[0]
-          })}></Rimg>
-        </div>);
+          })}
+          balance={elem.balance.toString()}
+          tla={elem.name} />);
       })}
     </Card.Content>);
+  }
+}
+
+class CoinIcon extends ReactiveComponent{
+  constructor(){
+    super(['balance','src','tla'])
+  }
+  render(){
+    return (<div><span>{this.state.tla}:{this.state.balance}</span><Rimg src={this.state.src} style={{width:'50px',height:'50px'}}></Rimg></div>);
   }
 }
 //
