@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Label, Button, Icon, Input, Card } from 'semantic-ui-react';
+import { Label, Button, Icon, Input, Card, Table } from 'semantic-ui-react';
 import { bonds, Actionbar, Transaction, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton} from 'parity-reactive-ui';
 
 import { Rspan, ReactiveComponent } from 'oo7-react';
@@ -38,18 +38,16 @@ export default class Addresses extends Component {
 
   renderActionbar () {
     //const { contacts } = this.props;
-
-    const buttons = [
-      <PButton
-        key='newAddress'
-        label={"address"}
-        onClick={ ()=>{} }
-      />
-    ];
+    // <PButton
+    //   key='newAddress'
+    //   label={"address"}
+    //   onClick={ ()=>{} }
+    // />
+    const buttons = [];
 
     return (
       <Actionbar
-        className={ 'Actionbar' }
+        className={ styles.toolbar }
         title={'Saved Addresses'}
         buttons={ buttons }
       />
@@ -66,12 +64,25 @@ export class AddressesAux extends ReactiveComponent{
     console.log('madeit', this.state );
     if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>)
 
-    return (<Card.Group className={styles.AddressContainer} itemsPerRow={3}>
+    return (<Table padded columns={5} textAlign="center">
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell>1</Table.HeaderCell>
+          <Table.HeaderCell>2</Table.HeaderCell>
+          <Table.HeaderCell>3</Table.HeaderCell>
+          <Table.HeaderCell>4</Table.HeaderCell>
+          <Table.HeaderCell>5</Table.HeaderCell>
+          <Table.HeaderCell></Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
       {this.state.accountinfo.map(elem=>{
       return (<AddressCard
         key={elem.address}
         info={elem}
       />);
-    })}</Card.Group>)
+    })}
+  </Table.Body>
+  </Table>)
   }
 }
