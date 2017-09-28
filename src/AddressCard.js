@@ -75,7 +75,9 @@ class CoinList extends ReactiveComponent{
             return imgObj[0]
           })}
           balance={elem.balance.toString()}
-          tla={elem.name} />);
+          tla={elem.tla}
+          name={elem.name}
+         />);
       })}
     </div>);
   }
@@ -83,17 +85,18 @@ class CoinList extends ReactiveComponent{
 
 class CoinIcon extends ReactiveComponent{
   constructor(){
-    super(['balance','src','tla'])
+    super(['balance','src','tla','name'])
   }
   render(){
     //<span>{this.state.tla}:{this.state.balance}</span>
+    const { src, tla, name, balance } = this.state;
     console.log('divcl',styles);
     return (<div className={styles.CoinIcon} >
       <Popup
-        key={'userName'}
-        trigger={<Image src={this.state.src}></Image>}
-        header={'Username'}
-        content={'userbio....'}
+        key={tla}
+        trigger={<Image src={src}></Image>}
+        header={name}
+        content={balance}
       />
     </div>);
   }
