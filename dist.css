@@ -1,7 +1,17 @@
 .AddressCard_AddressCard_1Hp5qaWLHp {
   display: inline-block;
-  background-color: blue;
+  padding: 20px;
+  box-shadow: 1px 1px 5px #DDD;
+}
+
+.AddressCard_AddressCard_1Hp5qaWLHp:hover{
+  box-shadow: 3px 3px 8px #DDD;
 }
 .Addresses_Addresses_2y9tBA4qAH{
-  background-color: blue;
+  /*background: ;*/
+}
+
+.Addresses_AddressContainer_2O09GLtCgX{
+  display: flex;
+  justify-content: space-around;
 }

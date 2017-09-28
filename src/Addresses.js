@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-//import { FormattedMessage } from 'react-intl';
+import { Label, Button, Icon, Input, Card } from 'semantic-ui-react';
 import { bonds } from 'parity-reactive-ui';
-//import { Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort } from 'parity-reactive-ui/src/js-ui/Actionbar';
-import { Rspan, ReactiveComponent } from 'oo7-react';
 
-//console.log(Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort);
+import { Rspan, ReactiveComponent } from 'oo7-react';
 
 import AddressCard from './AddressCard';
 
@@ -32,6 +30,7 @@ export default class Addresses extends Component {
           return p;
         })}
       />
+
       </div>);
   }
 }
@@ -45,12 +44,13 @@ export class AddressesAux extends ReactiveComponent{
     console.log('madeit', this.state );
     if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>)
 
-    return (<div>{this.state.accountinfo.map(elem=>{
+    return (<Card.Group className={styles.AddressContainer} itemsPerRow={3}>
+      {this.state.accountinfo.map(elem=>{
       return (<AddressCard
         key={elem.address}
-        address={elem.address}
+        info={elem}
       />);
-    })}</div>)
+    })}</Card.Group>)
   }
 
 }

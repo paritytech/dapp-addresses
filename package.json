@@ -19,7 +19,8 @@
     "parity-reactive-ui": "file:../parity-reactive-ui",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-intl": "^2.4.0"
+    "react-intl": "^2.4.0",
+    "semantic-ui-react": "^0.74.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -1,3 +1,8 @@
 .Addresses{
-  background-color: blue;
+  /*background: ;*/
+}
+
+.AddressContainer{
+  display: flex;
+  justify-content: space-around;
 }
