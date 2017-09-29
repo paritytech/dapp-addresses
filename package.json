@@ -17,6 +17,7 @@
     "oo7-parity": "file:../oo7-parity",
     "oo7-react": "file:../oo7-react",
     "parity-reactive-ui": "file:../parity-reactive-ui",
+    "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-intl": "^2.4.0",

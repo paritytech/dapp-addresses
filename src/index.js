@@ -16,7 +16,27 @@
 
 import ReactDOM from 'react-dom';
 import React from 'react';
+import { Route, Router, hashHistory } from 'react-router';
+
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
+import ContractInstances from '@parity/shared/contracts';
+import { initStore } from '@parity/shared/redux';
+import { ContextProvider } from 'parity-reactive-ui';
+
+import api from './api';
 import Addresses from './Addresses';
 
+ContractInstances.get(api);
 
-ReactDOM.render(<Addresses />, document.querySelector('#container'));
+const store = initStore(api, hashHistory);
+console.log('cntxt',)
+ReactDOM.render(
+  <ContextProvider api={ api }>
+    <Router history={ hashHistory }>
+      <Route path='/' component={ Addresses } />
+    </Router>
+  </ContextProvider>,
+  document.querySelector('#container')
+);
