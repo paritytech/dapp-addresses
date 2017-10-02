@@ -1,27 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);.AddressCard_AddressCard_1Hp5qaWLHp {
-  display: inline-block;
-  padding: 20px;
-  box-shadow: 1px 1px 5px #DDD;
-}
-
-.AddressCard_AddressCard_1Hp5qaWLHp:hover{
-  box-shadow: 3px 3px 8px #DDD;
-}
-
-.AddressCard_CoinIcon_19UlC2g02y{
-  display: inline-block;
-}
-
-.AddressCard_CoinIcon_19UlC2g02y img{
-  width: 40px;
-  height:40px;
-}
-
-.AddressCard_CoinList_2pTE3_gmof{
-  display: flex;
-  justify-content: center;
-}
-/* Copyright 2015-2017 Parity Technologies (UK) Ltd.
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);/* Copyright 2015-2017 Parity Technologies (UK) Ltd.
 /* This file is part of Parity.
 /*
 /* Parity is free software: you can redistribute it and/or modify
@@ -40322,6 +40299,29 @@ i.dappCard_image_2YNwBiduRQ {
     text-transform: uppercase;
     white-space: nowrap;
   }
+.AddressCard_AddressCard_1Hp5qaWLHp {
+  display: inline-block;
+  padding: 20px;
+  box-shadow: 1px 1px 5px #DDD;
+}
+
+.AddressCard_AddressCard_1Hp5qaWLHp:hover{
+  box-shadow: 3px 3px 8px #DDD;
+}
+
+.AddressCard_CoinIcon_19UlC2g02y{
+  display: inline-block;
+}
+
+.AddressCard_CoinIcon_19UlC2g02y img{
+  width: 40px;
+  height:40px;
+}
+
+.AddressCard_CoinList_2pTE3_gmof{
+  display: flex;
+  justify-content: center;
+}
 .Addresses_Addresses_2y9tBA4qAH{
   /*background: ;*/
 }

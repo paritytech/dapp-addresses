@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { bonds, InlineAccount, InlineBalance, AccountIcon, AddressLabel, AccountLabel, DappLink } from 'parity-reactive-ui';
+import { bonds, InlineAccount, InlineBalance, AccountIcon, AddressLabel, AccountLabel } from 'parity-reactive-ui';
 import { Header, Card, Image, Table, Button, Popup, Input } from 'semantic-ui-react';
+import { DappLink } from '@parity/ui';
 import { BigNumber } from 'bignumber.js';
-import {Bond} from 'oo7';
+import { Bond } from 'oo7';
 import { formatBalance } from 'oo7-parity';
 import { ReactiveComponent, Rspan, Rimg } from 'oo7-react';
 

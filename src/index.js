@@ -22,7 +22,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 import ContractInstances from '@parity/shared/contracts';
-import { ContextProvider } from 'parity-reactive-ui';
+import { ContextProvider } from '@parity/ui';
 
 import api from './api';
 import Addresses from './Addresses';

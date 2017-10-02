@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Label, Button, Icon, Input, Card, Table } from 'semantic-ui-react';
-import { bonds, Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton, AddIcon} from 'parity-reactive-ui';
+import { bonds} from 'parity-reactive-ui';
+import { Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton } from '@parity/ui';
+import {AddIcon} from '@parity/ui/Icons';
 
 import { Rspan, ReactiveComponent } from 'oo7-react';
 
