@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Label, Button, Icon, Input, Card, Table } from 'semantic-ui-react';
-import { bonds, Actionbar, DappLink, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton} from 'parity-reactive-ui';
+import { bonds, Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton} from 'parity-reactive-ui';
 
 import { Rspan, ReactiveComponent } from 'oo7-react';
 
@@ -16,15 +16,9 @@ export default class Addresses extends Component {
   }
 
   render(){
-    console.log('styl',DappLink);
+    //console.log('styl',DappLink);
     return (<div className={styles.Addresses}>
       { this.renderActionbar() }
-      <DappLink
-        to="/address/0x006E778F0fde07105C7adDc24b74b99bb4A89566"
-        className="yolo"
-        >
-        <Button onClick={()=>(console.log('clicky'))}>linky</Button>
-      </DappLink>
       <AddressesAux
         accountinfo={bonds.allAccountsInfo.map((accountList)=>{
           let p = []
@@ -67,7 +61,7 @@ export class AddressesAux extends ReactiveComponent{
   }
 
   render(){
-    console.log('madeit', this.state );
+    //console.log('madeit', this.state );
     if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>)
 
     return (<Table padded columns={5} textAlign="center">
@@ -82,13 +76,13 @@ export class AddressesAux extends ReactiveComponent{
         </Table.Row>
       </Table.Header>
       <Table.Body>
-      {this.state.accountinfo.map(elem=>{
-      return (<AddressCard
-        key={elem.address}
-        info={elem}
-      />);
-    })}
-  </Table.Body>
+        {this.state.accountinfo.map(elem=>{
+        return (<AddressCard
+          key={elem.address}
+          info={elem}
+        />);
+      })}
+    </Table.Body>
   </Table>)
   }
 }

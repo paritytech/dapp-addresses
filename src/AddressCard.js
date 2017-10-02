@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bonds, InlineAccount, InlineBalance, AccountIcon, AddressLabel, AccountLabel } from 'parity-reactive-ui';
+import { bonds, InlineAccount, InlineBalance, AccountIcon, AddressLabel, AccountLabel, DappLink } from 'parity-reactive-ui';
 import { Header, Card, Image, Table, Button, Popup, Input } from 'semantic-ui-react';
 import { BigNumber } from 'bignumber.js';
 import {Bond} from 'oo7';
@@ -31,9 +31,17 @@ export default class AddressCard extends Component{
     //console.log('accinfo',);
     //<CoinList tokens={bonds.tokensOf(this.props.info.address)}/>
     //<Header as='h3'>{this.props.info.meta.description}</Header>
+    console.log('dldl',DappLink);
     return (<Table.Row >
           <Table.Cell>
-            <Image><AccountIcon address={info.address} /></Image>
+            <DappLink
+              to={`/address/${info.address}`}
+              className="IconLink"
+              >
+              <Image>
+                <AccountIcon address={info.address} />
+              </Image>
+            </DappLink>
           </Table.Cell>
           <Table.Cell>
             <Header as='h3'>{dispname}</Header>
@@ -64,7 +72,6 @@ class CoinList extends ReactiveComponent{
     super(['tokens']);
   }
   render(){
-    //console.log('toki',this.state.tokens);
     if(typeof this.state.tokens == "undefined") return <span>-</span>
     return (<div className={styles.CoinList}>
       {this.state.tokens.map((elem)=>{
@@ -88,7 +95,6 @@ class CoinIcon extends ReactiveComponent{
     super(['balance','src','tla','name'])
   }
   render(){
-    //<span>{this.state.tla}:{this.state.balance}</span>
     const { src, tla, name, balance } = this.state;
     console.log('divcl',styles);
     return (<div className={styles.CoinIcon} >
