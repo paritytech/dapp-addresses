@@ -20,18 +20,16 @@ export default class AddressCard extends Component{
     addressBond.changed(info.address);
     let balanceBond = bonds.balance(info.address);
     let bondi = bonds.tokensOf(info.address).then((ret)=>{
-      //console.log('tokens',ret)
+
     })
     bonds.githubhint.entries("0xd40679a3a234d8421c678d64f4df3308859e8ad07ac95ce4a228aceb96955287").then((ret)=>{
-      //console.log('imgs',ret)
+
     })
     let dispname = info.name
     if(info.name.length > 40) dispname = info.name.substr(0,30) + '...';
 
-    //console.log('accinfo',);
     //<CoinList tokens={bonds.tokensOf(this.props.info.address)}/>
     //<Header as='h3'>{this.props.info.meta.description}</Header>
-    console.log('dldl',DappLink);
     return (<Table.Row >
           <Table.Cell>
             <DappLink
@@ -78,7 +76,6 @@ class CoinList extends ReactiveComponent{
         return (<CoinIcon
           key={elem.name}
           src={bonds.githubhint.entries(elem.img).map((imgObj)=>{
-            console.log('img', imgObj[0]);
             return imgObj[0]
           })}
           balance={elem.balance.toString()}
@@ -96,7 +93,6 @@ class CoinIcon extends ReactiveComponent{
   }
   render(){
     const { src, tla, name, balance } = this.state;
-    console.log('divcl',styles);
     return (<div className={styles.CoinIcon} >
       <Popup
         key={tla}
@@ -118,7 +114,6 @@ class EtherBalance extends ReactiveComponent{
     let ethdiv = new BigNumber('1e+18');
     let ethVal = this.state.balance.div(ethdiv)
     //BigNumber.config(2);
-    console.log('balance:', ethVal.toString());
     return (<span>{ethVal.toFormat(5)} ETH</span>)
   }
 }

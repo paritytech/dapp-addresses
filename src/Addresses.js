@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Label, Button, Icon, Input, Card, Table } from 'semantic-ui-react';
-import { bonds, Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton} from 'parity-reactive-ui';
+import { bonds, Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton, AddIcon} from 'parity-reactive-ui';
 
 import { Rspan, ReactiveComponent } from 'oo7-react';
 
 import AddressCard from './AddressCard';
+import AddAddress from './AddAddress';
 
 import styles from './Addresses.css';
 
@@ -15,10 +16,14 @@ export default class Addresses extends Component {
     super();
   }
 
+  state ={
+    showAdd: false
+  }
+
   render(){
-    //console.log('styl',DappLink);
     return (<div className={styles.Addresses}>
       { this.renderActionbar() }
+      { this.renderAddAddress() }
       <AddressesAux
         accountinfo={bonds.allAccountsInfo.map((accountList)=>{
           let p = []
@@ -43,13 +48,49 @@ export default class Addresses extends Component {
     //   label={"address"}
     //   onClick={ ()=>{} }
     // />
-    const buttons = [];
+    const buttons = [
+      <PButton
+        key='newAddress'
+        icon={ <AddIcon /> }
+        label={"address"}
+        onClick={ this.onOpenAdd }
+      />
+    ];
 
     return (
       <Actionbar
         className={ styles.toolbar }
         title={'Saved Addresses'}
         buttons={ buttons }
+      />
+    );
+  }
+
+  onOpenAdd = () => {
+    console.log('change to true');
+    this.setState({
+      showAdd: true
+    });
+  }
+
+  onCloseAdd = () => {
+    this.setState({
+      showAdd: false
+    });
+  }
+
+  renderAddAddress(){
+    console.log('renderadd');
+    const { showAdd } = this.state;
+
+    if (!showAdd) {
+      return null;
+    }
+
+    return (
+      <AddAddress
+        contacts={ {} }
+        onClose={ this.onCloseAdd }
       />
     );
   }
