@@ -50,12 +50,19 @@ export default class Addresses extends Component {
     //   label={"address"}
     //   onClick={ ()=>{} }
     // />
+    //needs to be internationalised
+
     const buttons = [
       <PButton
         key='newAddress'
         icon={ <AddIcon /> }
         label={"address"}
         onClick={ this.onOpenAdd }
+      />,
+      <ActionbarExport
+        key='exportAddressbook'
+        content={ bonds.allAccountsInfo }
+        filename='addressbook'
       />
     ];
 
