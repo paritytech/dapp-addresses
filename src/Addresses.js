@@ -19,23 +19,36 @@ export default class Addresses extends Component {
   }
 
   state ={
-    showAdd: false
+    showAdd: false,
+    searchTokens:[],
+    searchValues:[],
+    sortOrder: ''
   }
 
   render(){
+    console.log('stati',this.state);
     return (<div className={styles.Addresses}>
       { this.renderActionbar() }
       { this.renderAddAddress() }
       <AddressesAux
         accountinfo={bonds.allAccountsInfo.map((accountList)=>{
+          const { searchValues, sortOrder } = this.state;
           let p = []
+          //read ou all (valid) accounts
           for(let key in accountList){
-            if( typeof accountList[key].uuid == 'undefined' && !accountList[key].meta.contract && !accountList[key].meta.wallet){
+            if( typeof accountList[key].uuid == 'undefined' &&
+                !accountList[key].meta.contract &&
+                !accountList[key].meta.wallet){
+              //modify account so that all info is in object
               let modaccount = accountList[key];
               modaccount['address'] = key;
               p.push(modaccount);
             }
           }
+
+          //filter all accounts
+
+
           return p;
         })}
       />
@@ -63,7 +76,14 @@ export default class Addresses extends Component {
         key='exportAddressbook'
         content={ bonds.allAccountsInfo }
         filename='addressbook'
-      />
+      />,
+      <ActionbarImport
+        key='importAddressbook'
+        onConfirm={ this.onImport }
+        renderValidation={ this.renderValidation }
+      />,
+      this.renderSearchButton(),
+      this.renderSortButton()
     ];
 
     return (
@@ -100,6 +120,64 @@ export default class Addresses extends Component {
       <AddAddress
         contacts={ {} }
         onClose={ this.onCloseAdd }
+      />
+    );
+  }
+
+
+  onImport = (content) => {
+    try {
+      const addresses = JSON.parse(content);
+
+      Object.values(addresses).forEach((account) => {
+        this.onAddAccount(account);
+      });
+    } catch (e) {
+      console.error('onImport', content, e);
+    }
+  }
+
+  onAddAccount = (account) => {
+    const { api } = this.context;
+    const { address, name, meta } = account;
+
+    Promise.all([
+      api.parity.setAccountName(address, name),
+      api.parity.setAccountMeta(address, {
+        ...meta,
+        timestamp: Date.now(),
+        deleted: false
+      })
+    ]).catch((error) => {
+      console.error('onAddAccount', error);
+    });
+  }
+
+  renderSearchButton = () => {
+    const onChange = (searchTokens, searchValues) => {
+      this.setState({ searchTokens, searchValues });
+    };
+
+    return (
+      <ActionbarSearch
+        key='searchAddress'
+        tokens={ this.state.searchTokens }
+        onChange={ onChange }
+      />
+    );
+  }
+
+  renderSortButton () {
+    const onChange = (sortOrder) => {
+      this.setState({ sortOrder });
+    };
+
+    return (
+      <ActionbarSort
+        key='sortAccounts'
+        id='sortAddresses'
+        order={ this.state.sortOrder }
+        onChange={ onChange }
       />
     );
   }

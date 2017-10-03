@@ -93,6 +93,7 @@ class CoinIcon extends ReactiveComponent{
     super(['balance','src','tla','name'])
   }
   render(){
+    console.log('render CoinIcon');
     const { src, tla, name, balance } = this.state;
     return (<div className={styles.CoinIcon} >
       <Popup
@@ -111,7 +112,8 @@ class EtherBalance extends ReactiveComponent{
   }
 
   render(){
-    if(typeof this.state.balance == "undefined") return (<span>undef</span>);
+    console.log('render EtherBalance');
+    if(typeof this.state.balance == "undefined") return (<span>-</span>);
     let ethdiv = new BigNumber('1e+18');
     let ethVal = this.state.balance.div(ethdiv)
     //BigNumber.config(2);
