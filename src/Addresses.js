@@ -140,7 +140,7 @@ export default class Addresses extends Component {
   onAddAccount = (account) => {
     const { api } = this.context;
     const { address, name, meta } = account;
-
+    //TODO: bnd api might need to be extended to include this 
     Promise.all([
       api.parity.setAccountName(address, name),
       api.parity.setAccountMeta(address, {
@@ -189,7 +189,7 @@ export class AddressesAux extends ReactiveComponent{
   }
 
   render(){
-    //console.log('madeit', this.state );
+    console.log('madeit', this.state );
     if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>)
 
     return (<Table padded columns={5} textAlign="center">
@@ -205,9 +205,9 @@ export class AddressesAux extends ReactiveComponent{
       </Table.Header>
       <Table.Body>
         {this.state.accountinfo.map(elem=>{
-        return (<AddressCard
-          key={elem.address}
-          info={elem}
+          return (<AddressCard
+            key={elem.address}
+            info={elem}
         />);
       })}
     </Table.Body>

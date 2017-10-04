@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bonds, InlineAccount, InlineBalance, AccountIcon, AddressLabel, AccountLabel } from 'parity-reactive-ui';
+import { bonds, InlineAccount, InlineBalance, AccountIcon, AddressLabel, AccountLabel, EtherBalance, CoinList } from 'parity-reactive-ui';
 import { Header, Card, Image, Table, Button, Popup, Input } from 'semantic-ui-react';
 import { DappLink } from '@parity/ui';
 import { BigNumber } from 'bignumber.js';
@@ -16,6 +16,7 @@ export default class AddressCard extends Component{
   }
 
   render(){
+    console.log('ethb',EtherBalance);
     const { info } = this.props;
     let addressBond = new Bond();
     addressBond.changed(info.address);
@@ -66,60 +67,20 @@ export default class AddressCard extends Component{
   }
 }
 
-class CoinList extends ReactiveComponent{
-  constructor(){
-    super(['tokens']);
-  }
-  render(){
-    if(typeof this.state.tokens == "undefined") return <span>-</span>
-    return (<div className={styles.CoinList}>
-      {this.state.tokens.map((elem)=>{
-        return (<CoinIcon
-          key={elem.name}
-          src={bonds.githubhint.entries(elem.img).map((imgObj)=>{
-            return imgObj[0]
-          })}
-          balance={elem.balance.toString()}
-          tla={elem.tla}
-          name={elem.name}
-         />);
-      })}
-    </div>);
-  }
-}
-
-class CoinIcon extends ReactiveComponent{
-  constructor(){
-    super(['balance','src','tla','name'])
-  }
-  render(){
-    console.log('render CoinIcon');
-    const { src, tla, name, balance } = this.state;
-    return (<div className={styles.CoinIcon} >
-      <Popup
-        key={tla}
-        trigger={<Image src={src}></Image>}
-        header={name}
-        content={balance}
-      />
-    </div>);
-  }
-}
-
-class EtherBalance extends ReactiveComponent{
-  constructor(){
-    super(['balance']);
-  }
-
-  render(){
-    console.log('render EtherBalance');
-    if(typeof this.state.balance == "undefined") return (<span>-</span>);
-    let ethdiv = new BigNumber('1e+18');
-    let ethVal = this.state.balance.div(ethdiv)
-    //BigNumber.config(2);
-    return (<span>{ethVal.toFormat(5)} ETH</span>)
-  }
-}
+//
+// class EtherBalance extends ReactiveComponent{
+//   constructor(){
+//     super(['balance']);
+//   }
+//
+//   render(){
+//     if(typeof this.state.balance == "undefined") return (<span>-</span>);
+//     let ethdiv = new BigNumber('1e+18');
+//     let ethVal = this.state.balance.div(ethdiv)
+//     //BigNumber.config(2);
+//     return (<span>{ethVal.toFormat(5)} ETH</span>)
+//   }
+// }
 //
 // let ownedTokenBond = bonds.tokens.map((ls)=>{
 //   console.log(ls[0].tla);
