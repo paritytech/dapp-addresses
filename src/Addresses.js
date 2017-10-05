@@ -207,15 +207,21 @@ export class AddressesTable extends ReactiveComponent{
     const { api } = this.context;
     let {accountinfo} = this.state;
     let {sortOrder} = this.props;
-
-    accountinfo.sort((accA, accB)=>{
-      console.log('sorting..');
-      if(sortOrder == "eth" || true) {
-        if(accA.balance.equals(accB.balance)) return 0;
-        if(accA.balance.greaterThan(accB.balance)) return -1
-        return 1
-      }
-    })
+    console.log('so', sortOrder);
+    //TODO dont so sorting on every render
+    if(sortOrder == "eth") {
+      accountinfo.sort((accA, accB)=>{
+          if(accA.balance.equals(accB.balance)) return 0;
+          if(accA.balance.greaterThan(accB.balance)) return -1
+          return 1
+      })
+    }else if(sortOrder == "name"){
+      console.log('singby name');
+      accountinfo.sort((accA, accB)=>{
+        console.log(accA.name, accB.name);
+        return accA.name.localeCompare(accB.name);
+      })
+    }
 
 
     return (<Table padded columns={5} textAlign="center">
