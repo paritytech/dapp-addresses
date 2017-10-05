@@ -7,6 +7,7 @@ import { BigNumber } from 'bignumber.js';
 import { Bond } from 'oo7';
 import { formatBalance } from 'oo7-parity';
 import { ReactiveComponent, Rspan, Rimg } from 'oo7-react';
+import _ from 'lodash';
 
 import styles from './AddressCard.css';
 
@@ -18,6 +19,10 @@ export default class AddressCard extends Component{
 
   static contextTypes = {
     api: PropTypes.object.isRequired
+  }
+
+  shouldComponentUpdate(nextProps,nextState){
+    return !_.isEqual(this.props,nextProps) || !_.isEqual(this.state,nextState); 
   }
 
   render(){
@@ -50,6 +55,9 @@ export default class AddressCard extends Component{
           </Table.Cell>
           <Table.Cell>
             <CoinList tokens={bonds.tokensOf(info.address)}/>
+          </Table.Cell>
+          <Table.Cell>
+            -
           </Table.Cell>
           <Table.Cell>
             <AddressLabel address={addressBond} />

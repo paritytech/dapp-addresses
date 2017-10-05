@@ -30,7 +30,7 @@ export default class Addresses extends Component {
   render(){
     let bBond = bonds.balance(bonds.me);
     bBond.log();
-    console.log('renderin');
+    
     let TableBond = bonds.allAccountsInfo.map((accountList)=>{
       let p = []
       let balanceArray = [];
@@ -233,6 +233,7 @@ export class AddressesTable extends ReactiveComponent{
           <Table.HeaderCell>Name</Table.HeaderCell>
           <Table.HeaderCell>Balance</Table.HeaderCell>
           <Table.HeaderCell>Tokens</Table.HeaderCell>
+          <Table.HeaderCell>Badges</Table.HeaderCell>
           <Table.HeaderCell>Address</Table.HeaderCell>
           <Table.HeaderCell></Table.HeaderCell>
         </Table.Row>
