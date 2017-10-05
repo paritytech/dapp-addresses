@@ -4,7 +4,7 @@ import { Label, Button, Icon, Input, Card, Table } from 'semantic-ui-react';
 import { bonds} from 'parity-reactive-ui';
 import { Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton } from '@parity/ui';
 import {AddIcon} from '@parity/ui/Icons';
-import {Api} from './api'
+import PropTypes from 'prop-types';
 
 import { Rspan, ReactiveComponent } from 'oo7-react';
 import {Bond} from 'oo7';
@@ -68,14 +68,6 @@ export default class Addresses extends Component {
   }
 
   renderActionbar () {
-    //const { contacts } = this.props;
-    // <PButton
-    //   key='newAddress'
-    //   label={"address"}
-    //   onClick={ ()=>{} }
-    // />
-    //needs to be internationalised
-
     const buttons = [
       <PButton
         key='newAddress'
@@ -195,11 +187,22 @@ export default class Addresses extends Component {
 }
 
 export class AddressesTable extends ReactiveComponent{
+  static contextTypes = {
+    api: PropTypes.object.isRequired
+  }
+
   constructor(){
     super(['accountinfo']);
   }
 
+  shouldComponentUpdate(nextProps,nextState){
+    console.log('sup',Object.keys(this.state).length == 0 , this.props);
+    //return this.props.sortOrder !== nextProps.sortOrder || Object.keys(this.state).length == 0;
+    return true;
+  }
+
   render(){
+    console.log('ap',this.context.api);
     console.log('madeit', this.state.accountinfo );
 
     if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>);
@@ -209,14 +212,13 @@ export class AddressesTable extends ReactiveComponent{
     let {sortOrder} = this.props;
     console.log('so', sortOrder);
     //TODO dont so sorting on every render
-    if(sortOrder == "eth") {
+    if(sortOrder == "eth" && this.state.prevSort != "eth") {
       accountinfo.sort((accA, accB)=>{
           if(accA.balance.equals(accB.balance)) return 0;
           if(accA.balance.greaterThan(accB.balance)) return -1
           return 1
       })
     }else if(sortOrder == "name"){
-      console.log('singby name');
       accountinfo.sort((accA, accB)=>{
         console.log(accA.name, accB.name);
         return accA.name.localeCompare(accB.name);
@@ -245,4 +247,5 @@ export class AddressesTable extends ReactiveComponent{
     </Table.Body>
   </Table>)
   }
+
 }
