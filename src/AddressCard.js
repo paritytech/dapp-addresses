@@ -16,7 +16,6 @@ export default class AddressCard extends Component{
   }
 
   render(){
-    console.log('ethb',EtherBalance);
     const { info } = this.props;
     let addressBond = new Bond();
     addressBond.changed(info.address);

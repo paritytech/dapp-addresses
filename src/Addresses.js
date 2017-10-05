@@ -4,8 +4,10 @@ import { Label, Button, Icon, Input, Card, Table } from 'semantic-ui-react';
 import { bonds} from 'parity-reactive-ui';
 import { Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton } from '@parity/ui';
 import {AddIcon} from '@parity/ui/Icons';
+import {Api} from './api'
 
 import { Rspan, ReactiveComponent } from 'oo7-react';
+import {Bond} from 'oo7';
 
 import AddressCard from './AddressCard';
 import AddAddress from './AddAddress';
@@ -26,31 +28,61 @@ export default class Addresses extends Component {
   }
 
   render(){
-    console.log('stati',this.state);
+    let bBond = bonds.balance(bonds.me);
+    bBond.log();
+    console.log('renderin');
+    let TableBond = bonds.allAccountsInfo.map((accountList)=>{
+      let p = []
+      let balanceArray = [];
+      //read ou all (valid) accounts
+      for(let key in accountList){
+        if( typeof accountList[key].uuid == 'undefined' &&
+            !accountList[key].meta.contract &&
+            !accountList[key].meta.wallet){
+          //modify account so that all bond of info is in object
+          let modaccount = accountList[key];
+          modaccount['address'] = key;
+          //balanceArray.push(bonds.balance(key));
+          p.push(modaccount);
+        }
+      }
+      return p;
+    }).map((filterArray)=>{
+      let balanceArray = filterArray.map((accData)=>{
+        accData['balance'] = bonds.balance(accData.address);
+        return accData;
+      })
+      console.log('barry',balanceArray);
+      return balanceArray;
+    },2)
+    //console.log('tup',TableBond);
+    // .map(list=>{
+    //
+    //   console.log('ls',list);
+    //   // let compare = (accA,accB)=>{
+    //   //
+    //   // }
+    //   // list.sort((accA,accB)=>{
+    //   //
+    //   //   let bal = bonds.balance(accA.address).map((bA)=>{
+    //   //     return bonds.balance(accB.address).map((bB)=>{
+    //   //       if(bA.equals(bB)) return 0;
+    //   //       return bA.greaterThan(bB);
+    //   //     })
+    //   //   })
+    //   //   bal.then(console.log);
+    //   // });
+    //
+    //   return list;
+    // })
+
+    //console.log('tb',TableBond);
     return (<div className={styles.Addresses}>
       { this.renderActionbar() }
       { this.renderAddAddress() }
-      <AddressesAux
-        accountinfo={bonds.allAccountsInfo.map((accountList)=>{
-          const { searchValues, sortOrder } = this.state;
-          let p = []
-          //read ou all (valid) accounts
-          for(let key in accountList){
-            if( typeof accountList[key].uuid == 'undefined' &&
-                !accountList[key].meta.contract &&
-                !accountList[key].meta.wallet){
-              //modify account so that all info is in object
-              let modaccount = accountList[key];
-              modaccount['address'] = key;
-              p.push(modaccount);
-            }
-          }
-
-          //filter all accounts
-
-
-          return p;
-        })}
+      <AddressesTable
+        accountinfo={TableBond}
+        sortOrder={this.state.sortOrder}
       />
 
       </div>);
@@ -140,7 +172,7 @@ export default class Addresses extends Component {
   onAddAccount = (account) => {
     const { api } = this.context;
     const { address, name, meta } = account;
-    //TODO: bnd api might need to be extended to include this 
+    //TODO: bnd api might need to be extended to include this
     Promise.all([
       api.parity.setAccountName(address, name),
       api.parity.setAccountMeta(address, {
@@ -183,14 +215,35 @@ export default class Addresses extends Component {
   }
 }
 
-export class AddressesAux extends ReactiveComponent{
+export class AddressesTable extends ReactiveComponent{
   constructor(){
     super(['accountinfo']);
   }
 
   render(){
-    console.log('madeit', this.state );
-    if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>)
+    console.log('madeit', this.state.accountinfo );
+
+    if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>);
+    // console.log('bond',this.state[0].balance);
+    const { api } = this.context;
+    let {accountinfo} = this.state;
+    let {sortOrder} = this.props;
+
+    // let sortInfo = accountinfo.mapAll((list)=>{
+    //   console.log(list);
+    //   // console.log(list[0].balance.isReady());
+    //   // list.sort((accA,accB)=>{
+    //   //   let p = 0;
+    //   //   accA.balance.then((balA)=>{
+    //   //     accB.balance.then((balB)=>{
+    //   //       p = balA > balB
+    //   //     })
+    //   //   })
+    //   //   console.log(p);
+    //   //   return 1;
+    //   // });
+    // })
+
 
     return (<Table padded columns={5} textAlign="center">
       <Table.Header>
