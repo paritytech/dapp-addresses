@@ -52,29 +52,8 @@ export default class Addresses extends Component {
         accData['balance'] = bonds.balance(accData.address);
         return accData;
       })
-      console.log('barry',balanceArray);
       return balanceArray;
     },2)
-    //console.log('tup',TableBond);
-    // .map(list=>{
-    //
-    //   console.log('ls',list);
-    //   // let compare = (accA,accB)=>{
-    //   //
-    //   // }
-    //   // list.sort((accA,accB)=>{
-    //   //
-    //   //   let bal = bonds.balance(accA.address).map((bA)=>{
-    //   //     return bonds.balance(accB.address).map((bB)=>{
-    //   //       if(bA.equals(bB)) return 0;
-    //   //       return bA.greaterThan(bB);
-    //   //     })
-    //   //   })
-    //   //   bal.then(console.log);
-    //   // });
-    //
-    //   return list;
-    // })
 
     //console.log('tb',TableBond);
     return (<div className={styles.Addresses}>
@@ -229,20 +208,14 @@ export class AddressesTable extends ReactiveComponent{
     let {accountinfo} = this.state;
     let {sortOrder} = this.props;
 
-    // let sortInfo = accountinfo.mapAll((list)=>{
-    //   console.log(list);
-    //   // console.log(list[0].balance.isReady());
-    //   // list.sort((accA,accB)=>{
-    //   //   let p = 0;
-    //   //   accA.balance.then((balA)=>{
-    //   //     accB.balance.then((balB)=>{
-    //   //       p = balA > balB
-    //   //     })
-    //   //   })
-    //   //   console.log(p);
-    //   //   return 1;
-    //   // });
-    // })
+    accountinfo.sort((accA, accB)=>{
+      console.log('sorting..');
+      if(sortOrder == "eth" || true) {
+        if(accA.balance.equals(accB.balance)) return 0;
+        if(accA.balance.greaterThan(accB.balance)) return -1
+        return 1
+      }
+    })
 
 
     return (<Table padded columns={5} textAlign="center">
