@@ -21,8 +21,12 @@ export default class AddressCard extends Component{
     api: PropTypes.object.isRequired
   }
 
+  static PropTypes = {
+    info: PropTypes.object.isRequired
+  }
+
   shouldComponentUpdate(nextProps,nextState){
-    return !_.isEqual(this.props,nextProps) || !_.isEqual(this.state,nextState); 
+    return !_.isEqual(this.props,nextProps) || !_.isEqual(this.state,nextState);
   }
 
   render(){
@@ -33,8 +37,11 @@ export default class AddressCard extends Component{
     let bondi = bonds.tokensOf(info.address).then((ret)=>{
 
     })
-    let dispname = info.name
-    if(info.name.length > 40) dispname = info.name.substr(0,30) + '...';
+    console.log('in',info);
+    info.name = info.name || '';
+    let dispname = info.name;
+    console.log('iname', info.name);
+    if(info.name.length > 30) dispname = info.name.substr(0,30) + '...';
 
     return (<Table.Row >
           <Table.Cell>
@@ -79,27 +86,3 @@ export default class AddressCard extends Component{
     this.setState(this.state);
   }
 }
-
-//
-// class EtherBalance extends ReactiveComponent{
-//   constructor(){
-//     super(['balance']);
-//   }
-//
-//   render(){
-//     if(typeof this.state.balance == "undefined") return (<span>-</span>);
-//     let ethdiv = new BigNumber('1e+18');
-//     let ethVal = this.state.balance.div(ethdiv)
-//     //BigNumber.config(2);
-//     return (<span>{ethVal.toFormat(5)} ETH</span>)
-//   }
-// }
-//
-// let ownedTokenBond = bonds.tokens.map((ls)=>{
-//   console.log(ls[0].tla);
-//   let owned = []
-//   for(let num in ls){
-//     if(ls[num].tla == "GAV") owned.push(ls[num]);//need new way to filtr
-//   }
-//   return owned;
-// })

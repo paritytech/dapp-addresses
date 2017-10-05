@@ -30,7 +30,7 @@ export default class Addresses extends Component {
   render(){
     let bBond = bonds.balance(bonds.me);
     bBond.log();
-    
+
     let TableBond = bonds.allAccountsInfo.map((accountList)=>{
       let p = []
       let balanceArray = [];
@@ -62,6 +62,8 @@ export default class Addresses extends Component {
       <AddressesTable
         accountinfo={TableBond}
         sortOrder={this.state.sortOrder}
+        searchTokens={this.state.searchTokens}
+        searchValues={this.state.searchValues}
       />
 
       </div>);
@@ -191,26 +193,25 @@ export class AddressesTable extends ReactiveComponent{
     api: PropTypes.object.isRequired
   }
 
+  static PropTypes = {
+    sortOrder: PropTypes.string,
+    searchTokens: PropTypes.array,
+    seachValues: PropTypes.array
+  }
+
   constructor(){
     super(['accountinfo']);
   }
 
-  shouldComponentUpdate(nextProps,nextState){
-    console.log('sup',Object.keys(this.state).length == 0 , this.props);
-    //return this.props.sortOrder !== nextProps.sortOrder || Object.keys(this.state).length == 0;
-    return true;
-  }
-
   render(){
-    console.log('ap',this.context.api);
     console.log('madeit', this.state.accountinfo );
 
     if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>);
     // console.log('bond',this.state[0].balance);
     const { api } = this.context;
     let {accountinfo} = this.state;
-    let {sortOrder} = this.props;
-    console.log('so', sortOrder);
+    let {sortOrder,searchTokens,searchValues} = this.props;
+    console.log('so',searchTokens,searchValues);
     //TODO dont so sorting on every render
     if(sortOrder == "eth" && this.state.prevSort != "eth") {
       accountinfo.sort((accA, accB)=>{
@@ -225,6 +226,8 @@ export class AddressesTable extends ReactiveComponent{
       })
     }
 
+    let filteredAddreddes = this.getFilteredAddresses(this.state.accountinfo)
+    console.log('fa',filteredAddreddes);
 
     return (<Table padded columns={5} textAlign="center">
       <Table.Header>
@@ -239,7 +242,7 @@ export class AddressesTable extends ReactiveComponent{
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {this.state.accountinfo.map(elem=>{
+        {filteredAddreddes.map(elem=>{
           return (<AddressCard
             key={elem.address}
             info={elem}
@@ -249,4 +252,33 @@ export class AddressesTable extends ReactiveComponent{
   </Table>)
   }
 
+  getFilteredAddresses(){
+    //return [];
+    const { searchTokens } = this.props;
+    const { accountinfo } = this.state;
+    const searchValues = (searchTokens || []).map(v => v.toLowerCase());
+
+    if (searchValues.length === 0) {
+      return accountinfo
+    }
+    console.log('acci',accouninfo);
+    return accountinfo.filter((account) => {
+        console.log('acc2');
+        const tags = account.meta.tags || [];
+        const desc = account.meta.description || '';
+        const name = account.name || '';
+
+        const values = tags
+          .concat(name)
+          .concat(desc.split(' '))
+          .map(v => v.toLowerCase());
+          console.log('valery', values);
+        return searchValues.map(searchValue => {
+              return values.some(value => value.indexOf(searchValue) >= 0);
+          })
+          .reduce((current, truth) => current && truth, true);
+          // `current && truth, true` => use tokens as AND
+          // `current || truth, false` => use tokens as OR
+      });
+  }
 }
