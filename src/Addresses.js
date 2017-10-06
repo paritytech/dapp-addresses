@@ -129,7 +129,6 @@ export default class Addresses extends Component {
     );
   }
 
-
   onImport = (content) => {
     try {
       const addresses = JSON.parse(content);
@@ -229,7 +228,7 @@ export class AddressesTable extends ReactiveComponent{
     let filteredAddreddes = this.getFilteredAddresses(this.state.accountinfo)
     console.log('fa',filteredAddreddes);
 
-    return (<Table padded columns={5} textAlign="center">
+    return (<Table padded columns={5} textAlign="center" style={{marginBottom:'70px'}}>
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell>Icon</Table.HeaderCell>
@@ -261,7 +260,7 @@ export class AddressesTable extends ReactiveComponent{
     if (searchValues.length === 0) {
       return accountinfo
     }
-    console.log('acci',accouninfo);
+    console.log('acci',accountinfo);
     return accountinfo.filter((account) => {
         console.log('acc2');
         const tags = account.meta.tags || [];
