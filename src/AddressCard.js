@@ -37,10 +37,9 @@ export default class AddressCard extends Component{
     let bondi = bonds.tokensOf(info.address).then((ret)=>{
 
     })
-    console.log('in',info);
+
     info.name = info.name || '';
     let dispname = info.name;
-    console.log('iname', info.name);
     if(info.name.length > 30) dispname = info.name.substr(0,30) + '...';
 
     return (<Table.Row >
@@ -81,7 +80,6 @@ export default class AddressCard extends Component{
   }
 
   removeAddress(address){
-    console.log('removing...');
     this.context.api.parity.removeAddress(address);
     this.setState(this.state);
   }

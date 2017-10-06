@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Label, Button, Icon, Input, Card, Table } from 'semantic-ui-react';
-import { bonds} from 'parity-reactive-ui';
+import { bonds } from 'parity-reactive-ui';
 import { Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton } from '@parity/ui';
 import {AddIcon} from '@parity/ui/Icons';
 import PropTypes from 'prop-types';
@@ -20,6 +20,10 @@ export default class Addresses extends Component {
     super();
   }
 
+  static contextTypes = {
+    api: PropTypes.object.isRequired
+  }
+
   state ={
     showAdd: false,
     searchTokens:[],
@@ -34,7 +38,7 @@ export default class Addresses extends Component {
     let TableBond = bonds.allAccountsInfo.map((accountList)=>{
       let p = []
       let balanceArray = [];
-      //read ou all (valid) accounts
+      //read out all (valid) accounts
       for(let key in accountList){
         if( typeof accountList[key].uuid == 'undefined' &&
             !accountList[key].meta.contract &&
@@ -55,7 +59,6 @@ export default class Addresses extends Component {
       return balanceArray;
     },2)
 
-    //console.log('tb',TableBond);
     return (<div className={styles.Addresses}>
       { this.renderActionbar() }
       { this.renderAddAddress() }
@@ -101,7 +104,6 @@ export default class Addresses extends Component {
   }
 
   onOpenAdd = () => {
-    console.log('change to true');
     this.setState({
       showAdd: true
     });
@@ -114,7 +116,6 @@ export default class Addresses extends Component {
   }
 
   renderAddAddress(){
-    console.log('renderadd');
     const { showAdd } = this.state;
 
     if (!showAdd) {
@@ -132,7 +133,6 @@ export default class Addresses extends Component {
   onImport = (content) => {
     try {
       const addresses = JSON.parse(content);
-
       Object.values(addresses).forEach((account) => {
         this.onAddAccount(account);
       });
@@ -144,7 +144,7 @@ export default class Addresses extends Component {
   onAddAccount = (account) => {
     const { api } = this.context;
     const { address, name, meta } = account;
-    //TODO: bnd api might need to be extended to include this
+    //Q: bond api might need to be extended to include this?
     Promise.all([
       api.parity.setAccountName(address, name),
       api.parity.setAccountMeta(address, {
@@ -203,15 +203,11 @@ export class AddressesTable extends ReactiveComponent{
   }
 
   render(){
-    console.log('madeit', this.state.accountinfo );
-
     if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>);
-    // console.log('bond',this.state[0].balance);
     const { api } = this.context;
     let {accountinfo} = this.state;
     let {sortOrder,searchTokens,searchValues} = this.props;
-    console.log('so',searchTokens,searchValues);
-    //TODO dont so sorting on every render
+
     if(sortOrder == "eth" && this.state.prevSort != "eth") {
       accountinfo.sort((accA, accB)=>{
           if(accA.balance.equals(accB.balance)) return 0;
@@ -220,13 +216,11 @@ export class AddressesTable extends ReactiveComponent{
       })
     }else if(sortOrder == "name"){
       accountinfo.sort((accA, accB)=>{
-        console.log(accA.name, accB.name);
         return accA.name.localeCompare(accB.name);
       })
     }
 
     let filteredAddreddes = this.getFilteredAddresses(this.state.accountinfo)
-    console.log('fa',filteredAddreddes);
 
     return (<Table padded columns={5} textAlign="center" style={{marginBottom:'70px'}}>
       <Table.Header>
@@ -252,17 +246,13 @@ export class AddressesTable extends ReactiveComponent{
   }
 
   getFilteredAddresses(){
-    //return [];
     const { searchTokens } = this.props;
     const { accountinfo } = this.state;
     const searchValues = (searchTokens || []).map(v => v.toLowerCase());
 
-    if (searchValues.length === 0) {
-      return accountinfo
-    }
-    console.log('acci',accountinfo);
+    if (searchValues.length === 0) return accountinfo;
+
     return accountinfo.filter((account) => {
-        console.log('acc2');
         const tags = account.meta.tags || [];
         const desc = account.meta.description || '';
         const name = account.name || '';
@@ -271,7 +261,6 @@ export class AddressesTable extends ReactiveComponent{
           .concat(name)
           .concat(desc.split(' '))
           .map(v => v.toLowerCase());
-          console.log('valery', values);
         return searchValues.map(searchValue => {
               return values.some(value => value.indexOf(searchValue) >= 0);
           })
