@@ -1,0 +1,9 @@
+.AddressCard {
+  display: inline-block;
+  padding: 20px;
+  box-shadow: 1px 1px 5px #DDD;
+}
+
+.AddressCard:hover{
+  box-shadow: 3px 3px 8px #DDD;
+}

@@ -131,7 +131,8 @@ module.exports = {
   resolve: {
     alias: {},
     modules: [
-      path.join(__dirname, 'node_modules')
+      path.join(__dirname, 'node_modules'),
+      path.join(__dirname, 'node_modules/@parity/ui/node_modules')
     ],
     extensions: ['.json', '.js', '.jsx'],
     unsafeCache: true
