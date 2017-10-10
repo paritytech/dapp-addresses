@@ -40299,24 +40299,6 @@ i.dappCard_image_s9lvjiXT68 {
     text-transform: uppercase;
     white-space: nowrap;
   }
-.AddressCard_AddressCard_1Hp5qaWLHp {
-  display: inline-block;
-  padding: 20px;
-  box-shadow: 1px 1px 5px #DDD;
-}
-
-.AddressCard_AddressCard_1Hp5qaWLHp:hover{
-  box-shadow: 3px 3px 8px #DDD;
-}
-.Addresses_Addresses_2y9tBA4qAH{
-  /*background: ;*/
-}
-
-.Addresses_AddressContainer_2O09GLtCgX{
-  display: flex;
-  justify-content: space-around;
-}
-
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
 /* This file is part of Parity.
 /*
@@ -40333,6 +40315,11 @@ i.dappCard_image_s9lvjiXT68 {
 /* You should have received a copy of the GNU General Public License
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
+
+.Addresses_AddressContainer_2O09GLtCgX{
+  display: flex;
+  justify-content: space-around;
+}
 
 .Addresses_list_gKdHH8R5nb {
   display: flex;
