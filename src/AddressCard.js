@@ -79,7 +79,7 @@ export default class AddressCard extends Component {
       <Table.Cell>
         <Popup
           trigger={ <Button icon='setting' /> }
-          content={ <Button color='red' content='Remove' onClick={ this.removeAddress(info.address) } /> }
+          content={ <Button color='red' content='Remove' onClick={ this.removeAddress } /> }
           on='click'
           position='top right'
         />
@@ -87,8 +87,8 @@ export default class AddressCard extends Component {
     </Table.Row>);
   }
 
-  removeAddress = (address) => {
+  removeAddress = () => {
     this.context.api.parity.removeAddress(this.props.info.address);
-    this.setState(this.state);
+    this.forceUpdate();
   }
 }

@@ -21,6 +21,7 @@ import PropTypes from 'prop-types';
 import { Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton } from '@parity/ui';
 import { AddIcon } from '@parity/ui/Icons';
 import { ReactiveComponent } from 'oo7-react';
+import { bonds } from 'oo7-parity';
 
 import AddressCard from './AddressCard';
 import AddAddress from './AddAddress';
