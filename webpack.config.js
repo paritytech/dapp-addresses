@@ -28,7 +28,7 @@ module.exports = {
     : '#eval',
   context: path.join(__dirname, 'src'),
   entry: {
-    dist: './index.js'
+    dist: ['babel-polyfill', './index.js']
   },
   output: {
     path: path.join(__dirname, 'dist'),
