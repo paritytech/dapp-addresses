@@ -1,75 +1,80 @@
+// Copyright 2015-2017 Parity Technologies (UK) Ltd.
+// This file is part of Parity.
+
+// Parity is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// Parity is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// You should have received a copy of the GNU General Public License
+// along with Parity.  If not, see <http://www.gnu.org/licenses/>.
+
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
-import { Label, Button, Icon, Input, Card, Table } from 'semantic-ui-react';
-import { bonds } from 'parity-reactive-ui';
-import { Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton } from '@parity/ui';
-import {AddIcon} from '@parity/ui/Icons';
+import { Table } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-import { Rspan, ReactiveComponent } from 'oo7-react';
-import {Bond} from 'oo7';
+import { Actionbar, ActionbarExport, ActionbarImport, ActionbarSearch, ActionbarSort, Button as PButton } from '@parity/ui';
+import { AddIcon } from '@parity/ui/Icons';
+import { ReactiveComponent } from 'oo7-react';
+import { bonds } from 'oo7-parity';
 
 import AddressCard from './AddressCard';
 import AddAddress from './AddAddress';
-
 import styles from './Addresses.css';
 
-
 export default class Addresses extends Component {
-  constructor(){
-    super();
-  }
-
   static contextTypes = {
     api: PropTypes.object.isRequired
   }
 
   state ={
     showAdd: false,
-    searchTokens:[],
-    searchValues:[],
+    searchTokens: [],
+    searchValues: [],
     sortOrder: ''
   }
 
-  render(){
-    let bBond = bonds.balance(bonds.me);
-    bBond.log();
+  render () {
+    let TableBond = bonds.allAccountsInfo.map((accountList) => {
+      let p = [];
 
-    let TableBond = bonds.allAccountsInfo.map((accountList)=>{
-      let p = []
-      let balanceArray = [];
-      //read out all (valid) accounts
-      for(let key in accountList){
-        if( typeof accountList[key].uuid == 'undefined' &&
+      for (let key in accountList) {
+        // read out all (valid) accounts
+        if (typeof accountList[key].uuid === 'undefined' &&
             !accountList[key].meta.contract &&
-            !accountList[key].meta.wallet){
-          //modify account so that all bond of info is in object
+            !accountList[key].meta.wallet) {
+          // modify account so that all bond of info is in object
           let modaccount = accountList[key];
+
           modaccount['address'] = key;
-          //balanceArray.push(bonds.balance(key));
+          // balanceArray.push(bonds.balance(key));
           p.push(modaccount);
         }
       }
       return p;
-    }).map((filterArray)=>{
-      let balanceArray = filterArray.map((accData)=>{
+    }).map((filterArray) => {
+      filterArray.map((accData) => {
         accData['balance'] = bonds.balance(accData.address);
         return accData;
-      })
-      return balanceArray;
-    },2)
+      });
+      return filterArray;
+    }, 2);
 
-    return (<div className={styles.Addresses}>
+    return (<div className={ styles.Addresses }>
       { this.renderActionbar() }
       { this.renderAddAddress() }
       <AddressesTable
-        accountinfo={TableBond}
-        sortOrder={this.state.sortOrder}
-        searchTokens={this.state.searchTokens}
-        searchValues={this.state.searchValues}
+        accountinfo={ TableBond }
+        sortOrder={ this.state.sortOrder }
+        searchTokens={ this.state.searchTokens }
+        searchValues={ this.state.searchValues }
       />
-
-      </div>);
+    </div>);
   }
 
   renderActionbar () {
@@ -77,7 +82,7 @@ export default class Addresses extends Component {
       <PButton
         key='newAddress'
         icon={ <AddIcon /> }
-        label={"address"}
+        label={ 'address' }
         onClick={ this.onOpenAdd }
       />,
       <ActionbarExport
@@ -97,7 +102,7 @@ export default class Addresses extends Component {
     return (
       <Actionbar
         className={ styles.toolbar }
-        title={'Saved Addresses'}
+        title={ 'Saved Addresses' }
         buttons={ buttons }
       />
     );
@@ -115,7 +120,7 @@ export default class Addresses extends Component {
     });
   }
 
-  renderAddAddress(){
+  renderAddAddress () {
     const { showAdd } = this.state;
 
     if (!showAdd) {
@@ -133,6 +138,7 @@ export default class Addresses extends Component {
   onImport = (content) => {
     try {
       const addresses = JSON.parse(content);
+
       Object.values(addresses).forEach((account) => {
         this.onAddAccount(account);
       });
@@ -144,7 +150,8 @@ export default class Addresses extends Component {
   onAddAccount = (account) => {
     const { api } = this.context;
     const { address, name, meta } = account;
-    //Q: bond api might need to be extended to include this?
+
+    // Q: bond api might need to be extended to include this?
     Promise.all([
       api.parity.setAccountName(address, name),
       api.parity.setAccountMeta(address, {
@@ -187,7 +194,7 @@ export default class Addresses extends Component {
   }
 }
 
-export class AddressesTable extends ReactiveComponent{
+export class AddressesTable extends ReactiveComponent {
   static contextTypes = {
     api: PropTypes.object.isRequired
   }
@@ -198,31 +205,35 @@ export class AddressesTable extends ReactiveComponent{
     seachValues: PropTypes.array
   }
 
-  constructor(){
+  constructor () {
     super(['accountinfo']);
   }
 
-  render(){
-    if(typeof this.state.accountinfo == 'undefined') return(<div>hello</div>);
-    const { api } = this.context;
-    let {accountinfo} = this.state;
-    let {sortOrder,searchTokens,searchValues} = this.props;
+  render () {
+    if (typeof this.state.accountinfo === 'undefined') {
+      return (<div />);
+    }
+    let { accountinfo } = this.state;
+    let { sortOrder } = this.props;
 
-    if(sortOrder == "eth" && this.state.prevSort != "eth") {
-      accountinfo.sort((accA, accB)=>{
-          if(accA.balance.equals(accB.balance)) return 0;
-          if(accA.balance.greaterThan(accB.balance)) return -1
-          return 1
-      })
-    }else if(sortOrder == "name"){
-      accountinfo.sort((accA, accB)=>{
+    if (sortOrder === 'eth' && this.state.prevSort !== 'eth') {
+      accountinfo.sort((accA, accB) => {
+        if (accA.balance.equals(accB.balance)) {
+          return 0;
+        } else if (accA.balance.greaterThan(accB.balance)) {
+          return -1;
+        }
+        return 1;
+      });
+    } else if (sortOrder === 'name') {
+      accountinfo.sort((accA, accB) => {
         return accA.name.localeCompare(accB.name);
-      })
+      });
     }
 
-    let filteredAddreddes = this.getFilteredAddresses(this.state.accountinfo)
+    let filteredAddreddes = this.getFilteredAddresses(this.state.accountinfo);
 
-    return (<Table padded columns={5} textAlign="center" style={{marginBottom:'70px'}}>
+    return (<Table padded columns={ 5 } textAlign='center' style={ { marginBottom: '70px' } }>
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell>Icon</Table.HeaderCell>
@@ -231,42 +242,45 @@ export class AddressesTable extends ReactiveComponent{
           <Table.HeaderCell>Tokens</Table.HeaderCell>
           <Table.HeaderCell>Badges</Table.HeaderCell>
           <Table.HeaderCell>Address</Table.HeaderCell>
-          <Table.HeaderCell></Table.HeaderCell>
+          <Table.HeaderCell />
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {filteredAddreddes.map(elem=>{
-          return (<AddressCard
-            key={elem.address}
-            info={elem}
-        />);
-      })}
-    </Table.Body>
-  </Table>)
+        { filteredAddreddes.map(elem => {
+          return (
+            <AddressCard
+              key={ elem.address }
+              info={ elem }
+            />);
+        })}
+      </Table.Body>
+    </Table>);
   }
 
-  getFilteredAddresses(){
+  getFilteredAddresses () {
     const { searchTokens } = this.props;
     const { accountinfo } = this.state;
     const searchValues = (searchTokens || []).map(v => v.toLowerCase());
 
-    if (searchValues.length === 0) return accountinfo;
+    if (searchValues.length === 0) {
+      return accountinfo;
+    }
 
     return accountinfo.filter((account) => {
-        const tags = account.meta.tags || [];
-        const desc = account.meta.description || '';
-        const name = account.name || '';
+      const tags = account.meta.tags || [];
+      const desc = account.meta.description || '';
+      const name = account.name || '';
 
-        const values = tags
-          .concat(name)
-          .concat(desc.split(' '))
-          .map(v => v.toLowerCase());
-        return searchValues.map(searchValue => {
-              return values.some(value => value.indexOf(searchValue) >= 0);
-          })
-          .reduce((current, truth) => current && truth, true);
-          // `current && truth, true` => use tokens as AND
-          // `current || truth, false` => use tokens as OR
-      });
+      const values = tags.concat(name);
+
+      values.concat(desc.split(' '));
+      values.map(v => v.toLowerCase());
+
+      return searchValues.map(searchValue => {
+        return values.some(value => value.indexOf(searchValue) >= 0);
+      }).reduce((current, truth) => current && truth, true);
+      // `current && truth, true` => use tokens as AND
+      // `current || truth, false` => use tokens as OR
+    });
   }
 }

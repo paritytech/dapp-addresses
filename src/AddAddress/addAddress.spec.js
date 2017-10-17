@@ -22,11 +22,7 @@ import AddAddress from './';
 describe('modals/AddAddress', () => {
   describe('rendering', () => {
     it('renders defaults', () => {
-      expect(
-        shallow(
-          <AddAddress />
-        )
-      ).to.be.ok;
+      expect(shallow(<AddAddress />)).to.be.ok;
     });
   });
 });
