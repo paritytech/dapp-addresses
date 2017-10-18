@@ -11,7 +11,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "@parity/api": "^2",
-    "@parity/ui": "file:../js-ui",
+    "@parity/ui": "^2.0.43",
     "bignumber.js": "^4.0.4",
     "oo7": "^0.5.6",
     "oo7-parity": "file:../oo7-parity",
