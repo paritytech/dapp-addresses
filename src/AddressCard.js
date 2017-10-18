@@ -43,6 +43,8 @@ export default class AddressCard extends Component {
     let dispname = info.name;
     let addressBond = new Bond();
 
+    console.log('infoa', info, bonds.tokensOf(info.address));
+
     info.name = info.name || '';
     addressBond.changed(info.address);
 

@@ -45,7 +45,6 @@ export default class AddAddress extends Component {
   }
 
   render () {
-    console.log('adding addresses');
     return (
       <Portal
         buttons={ this.renderDialogActions() }

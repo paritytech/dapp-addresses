@@ -132,7 +132,8 @@ module.exports = {
     alias: {},
     modules: [
       path.join(__dirname, 'node_modules'),
-      path.join(__dirname, 'node_modules/@parity/ui/node_modules')
+      path.join(__dirname, 'node_modules/@parity/ui/node_modules'),
+      path.join(__dirname, 'node_modules/oo7-parity/node_modules')
     ],
     extensions: ['.json', '.js', '.jsx'],
     unsafeCache: true

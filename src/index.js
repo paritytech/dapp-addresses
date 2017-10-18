@@ -29,7 +29,6 @@ injectTapEventPlugin();
 
 ContractInstances.get(api);
 
-console.log('cntxt');
 ReactDOM.render(
   <ContextProvider api={ api }>
     <Router history={ hashHistory }>
