@@ -18,13 +18,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Header, Image, Table, Button, Popup } from 'semantic-ui-react';
 
-import { bonds, AccountIcon, AddressLabel, EtherBalance, CoinList } from 'parity-reactive-ui';
+import {
+  bonds,
+  AccountIcon,
+  AddressLabel,
+  EtherBalance,
+  TokenList,
+  BadgeList
+} from 'parity-reactive-ui';
 import { DappLink } from '@parity/ui';
+import { Rspan } from 'oo7-react';
 
 import { Bond } from 'oo7';
 import isEqual from 'lodash';
 
-// TODO: Add this to semantic-ui-react
 export default class AddressCard extends Component {
   static contextTypes = {
     api: PropTypes.object.isRequired
@@ -45,7 +52,12 @@ export default class AddressCard extends Component {
 
     info.name = info.name || '';
     addressBond.changed(info.address);
-
+    bonds.badges.then(console.log);
+    console.log('bgs');
+    console.log('bof', bonds.badgesOf(info.address));
+    bonds.nonce(info.address).then((nonce) => {
+      console.log('nonce', nonce);
+    });
     if (info.name.length > 30) {
       dispname = info.name.substr(0, 30) + '...';
     }
@@ -59,19 +71,17 @@ export default class AddressCard extends Component {
           <Image>
             <AccountIcon address={ info.address } />
           </Image>
+          <Header as='h3'>{dispname}</Header>
         </DappLink>
-      </Table.Cell>
-      <Table.Cell>
-        <Header as='h3'>{dispname}</Header>
       </Table.Cell>
       <Table.Cell>
         <EtherBalance balance={ bonds.balance(info.address) } />
       </Table.Cell>
       <Table.Cell>
-        <CoinList tokens={ bonds.tokensOf(info.address) } />
+        <TokenList tokens={ bonds.tokensOf(info.address) } />
       </Table.Cell>
       <Table.Cell>
-        -
+        <Rspan> { bonds.nonce(info.address) } </Rspan>
       </Table.Cell>
       <Table.Cell>
         <AddressLabel address={ addressBond } />

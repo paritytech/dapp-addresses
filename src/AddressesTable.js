@@ -62,11 +62,10 @@ export default class AddressesTable extends ReactiveComponent {
     return (<Table padded columns={ 5 } textAlign='center' style={ { marginBottom: '70px' } }>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>Icon</Table.HeaderCell>
           <Table.HeaderCell>Name</Table.HeaderCell>
           <Table.HeaderCell>Balance</Table.HeaderCell>
           <Table.HeaderCell>Tokens</Table.HeaderCell>
-          <Table.HeaderCell>Badges</Table.HeaderCell>
+          <Table.HeaderCell>Transactions</Table.HeaderCell>
           <Table.HeaderCell>Address</Table.HeaderCell>
           <Table.HeaderCell />
         </Table.Row>
