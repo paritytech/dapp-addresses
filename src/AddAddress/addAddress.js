@@ -19,8 +19,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
-import { Button, Form, Input, InputAddress, ModalBox, Portal } from '@parity/ui';
+import { Button, Form, Input, ModalBox, Portal } from '@parity/ui';
+import { AddressBond } from 'parity-reactive-ui';
 import { AddIcon, AddressIcon, CancelIcon } from '@parity/ui/Icons';
+import { Bond } from 'oo7';
 
 import Store from './store';
 
@@ -95,6 +97,7 @@ export default class AddAddress extends Component {
 
   renderFields () {
     const { address, addressError, description, name, nameError } = this.store;
+    let addressBond = new Bond();
 
     return (
       <ModalBox
@@ -107,25 +110,8 @@ export default class AddAddress extends Component {
         }
       >
         <Form>
-          <InputAddress
-            allowCopy={ false }
-            autoFocus
-            disabled={ !!this.props.address }
-            error={ addressError }
-            hint={
-              <FormattedMessage
-                id='addAddress.input.address.hint'
-                defaultMessage='the network address for the entry'
-              />
-            }
-            label={
-              <FormattedMessage
-                id='addAddress.input.address.label'
-                defaultMessage='network address'
-              />
-            }
-            onChange={ this.onEditAddress }
-            value={ address }
+          <AddressBond
+            bond={ addressBond }
           />
           <Input
             error={ nameError }
@@ -186,3 +172,24 @@ export default class AddAddress extends Component {
     this.props.onClose();
   }
 }
+// RMV
+// <InputAddress
+//             allowCopy={ false }
+//             autoFocus
+//             disabled={ !!this.props.address }
+//             error={ addressError }
+//             hint={
+//               <FormattedMessage
+//                 id='addAddress.input.address.hint'
+//                 defaultMessage='the network address for the entry'
+//               />
+//             }
+//             label={
+//               <FormattedMessage
+//                 id='addAddress.input.address.label'
+//                 defaultMessage='network address'
+//               />
+//             }
+//             onChange={ this.onEditAddress }
+//             value={ address }
+//           />
