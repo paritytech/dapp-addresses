@@ -194,7 +194,7 @@
   background: linear-gradient(white, #fcfcfc);
   flex: 1;
   height: 100%;
-  padding: 0em;
+  padding: 0;
   max-width: 100%;
   position: relative;
   width: 100%;
@@ -206,12 +206,11 @@
     left: 0;
     margin-top: -1.5em;
     margin-bottom: 3em;
-    opacity: inherit;
-    padding: 0 1.5em 1.5em 1.5em;
+    opacity: 0;
+    padding: 0 1.5em 1.5em;
     position: absolute;
     right: 0;
     top: 100%;
-    opacity: 0;
     z-index: 100;
   }
 
@@ -238,7 +237,6 @@
 .container_padded_13PeMvW6JP {
   background-color: transparent !important;
   border-radius: 0 !important;
-  /* border: 1px solid $borderColor; */
   box-shadow: none !important;
   height: 100%;
   position: relative;
@@ -280,7 +278,7 @@
 */
 
 .title_title_1VJhYkGyXL .title_steps_2u9KLdR57U, .title_subtitle_1jmN2Q423w .title_steps_2u9KLdR57U {
-    margin: 1em 0 0 0;
+    margin: 1em 0 0;
   }
 
 .title_title_1VJhYkGyXL .title_waiting_1GPVnPayRA, .title_subtitle_1jmN2Q423w .title_waiting_1GPVnPayRA {
@@ -369,18 +367,17 @@
 
 .portal_overlay_2vhptLW4ST .portal_buttonRow_1C5PIVMHVt {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     justify-content: flex-end;
     padding: 1.5em 0 0 0;
 
-    /*button:not([disabled]) {
+    /* button:not([disabled]) {
       color: white !important;
 
       svg {
         fill: white !important;
       }
-    }*/
+    } */
   }
 
 .portal_overlay_2vhptLW4ST .portal_childContainer_1L4d_wzrxq {
@@ -590,6 +587,7 @@
 */
 
 .list_list_2wBAPet7NI {
+  color: inherit;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
 /* This file is part of Parity.
@@ -624,6 +622,7 @@
   }
 
 .actionbar_actionbar_fic01AoaIT .actionbar_children_21mA7BUuHR {
+    color: inherit;
   }
 
 .actionbar_actionbar_fic01AoaIT .actionbar_buttons_289HDMJ7lo div {
@@ -669,7 +668,7 @@
 .balance_balances_1K8aSkuGEk {
   display: flex;
   flex-wrap: wrap;
-  margin: 0.75em 0 0 0;
+  margin: 0.75em 0 0;
   vertical-align: top;
 }
 
@@ -770,7 +769,7 @@
 }
 
 .identityIcon_padded_1STu8hgV4Y {
-  margin: 1em 0 0 0;
+  margin: 1em 0 0;
 }
 
 .identityIcon_inline_1_U748F4iL,
@@ -959,9 +958,8 @@
 }
 
 .accountCard_accountInfo_dTrrPCBBcR {
-  flex: 1;
-
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   min-width: 0;
@@ -1104,45 +1102,58 @@
 /* You should have received a copy of the GNU General Public License
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 .inputAddress_container_qPzY5y-Aj5 {
+  display: block;
   position: relative;
 }
+
 .inputAddress_container_qPzY5y-Aj5 [data-address-img] {
     position: absolute;
-    top: 2px;
+    top: -7px;
     left: 8px;
   }
+
 .inputAddress_input_1RN5MZ_Pzr input {
   padding-left: 48px !important;
   box-sizing: border-box;
 }
+
 .inputAddress_input_1RN5MZ_Pzr input.inputAddress_small_LUyjeZ5I2n {
     padding-left: 40px !important;
   }
+
 .inputAddress_small_LUyjeZ5I2n .inputAddress_input_1RN5MZ_Pzr input {
     padding-left: 40px !important;
   }
+
 .inputAddress_small_LUyjeZ5I2n .inputAddress_icon_riflSWRHnC img, .inputAddress_small_LUyjeZ5I2n .inputAddress_iconDisabled_3cmvU8b4XP img {
       height: 24px;
       width: 24px;
     }
+
 .inputAddress_icon_riflSWRHnC,
 .inputAddress_iconDisabled_3cmvU8b4XP {
   position: absolute;
   top: 33px;
 }
+
 .inputAddress_icon_riflSWRHnC.inputAddress_noLabel_3Q9_OfjRqS, .inputAddress_iconDisabled_3cmvU8b4XP.inputAddress_noLabel_3Q9_OfjRqS {
     top: 10px;
   }
+
 .inputAddress_icon_riflSWRHnC.inputAddress_noCopy_2PJemnuI-S, .inputAddress_iconDisabled_3cmvU8b4XP.inputAddress_noCopy_2PJemnuI-S {
     left: 5px;
   }
+
 .inputAddress_icon_riflSWRHnC.inputAddress_noUnderline_13-7FWu8xG, .inputAddress_iconDisabled_3cmvU8b4XP.inputAddress_noUnderline_13-7FWu8xG {
     top: 0;
   }
+
 .inputAddress_icon_riflSWRHnC {
   left: 0;
 }
+
 .inputAddress_iconDisabled_3cmvU8b4XP {
   left: 24px;
 }
@@ -39477,6 +39488,7 @@ i.dappCard_image_s9lvjiXT68 {
 }
 
 .dappCard_title_33rn9lpRZa {
+  color: inherit;
 }
 
 .dappCard_titleLink_11lGDp4buU {
@@ -39517,7 +39529,7 @@ i.dappCard_image_s9lvjiXT68 {
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 3000;
   transition: transform 0.75s;
-  transform: translateX(-50%) translateY(0px);
+  transform: translateX(-50%) translateY(0);
 }
 
 #snackbar_action_1eeekODubK {
@@ -39593,13 +39605,15 @@ i.dappCard_image_s9lvjiXT68 {
   width: 100%;
 }
 
-.gasPriceSelector_chartRow_CsR9h2JvnM, .gasPriceSelector_sliderRow_3Ohsob2RE2 {
+.gasPriceSelector_chartRow_CsR9h2JvnM,
+.gasPriceSelector_sliderRow_3Ohsob2RE2 {
   display: flex;
   flex-wrap: wrap;
   position: relative;
 }
 
 .gasPriceSelector_chartRow_CsR9h2JvnM {
+  color: inherit;
 }
 
 .gasPriceSelector_slider_2CMXNVgDJv {
@@ -39629,8 +39643,7 @@ i.dappCard_image_s9lvjiXT68 {
 
 .gasPriceEditor_conditionContainer_1moQkbXcVp {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   margin-bottom: 1.5em;
 }
 
@@ -39644,20 +39657,20 @@ i.dappCard_image_s9lvjiXT68 {
   margin-bottom: 1em;
 }
 
-.gasPriceEditor_conditionRadio_3ML3C6rn2b>label {
+.gasPriceEditor_conditionRadio_3ML3C6rn2b > label {
     margin-bottom: 0.5em;
   }
 
-.gasPriceEditor_conditionRadio_3ML3C6rn2b>div {
+.gasPriceEditor_conditionRadio_3ML3C6rn2b > div {
     display: flex;
     flex-direction: row;
   }
 
-.gasPriceEditor_conditionRadio_3ML3C6rn2b>div>div {
+.gasPriceEditor_conditionRadio_3ML3C6rn2b > div > div {
       width: auto !important;
     }
 
-.gasPriceEditor_conditionRadio_3ML3C6rn2b>div>div label {
+.gasPriceEditor_conditionRadio_3ML3C6rn2b > div > div label {
         padding-right: 1.5em;
         white-space: nowrap;
       }
@@ -39671,12 +39684,11 @@ i.dappCard_image_s9lvjiXT68 {
 .gasPriceEditor_editColumn_PT7RhA7E4_ {
   flex: 35;
   padding-left: 1em;
-  justify-ontent: space-around;
+  justify-content: space-around;
   padding-bottom: 12;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   position: relative;
-  flex-direction: column;
 }
 
 .gasPriceEditor_gasPriceDesc_33XreH2YRG {
@@ -39690,9 +39702,8 @@ i.dappCard_image_s9lvjiXT68 {
 
 .gasPriceEditor_row_2iKy7Peg50 {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   position: relative;
-  flex-direction: column;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
 /* This file is part of Parity.
@@ -39733,12 +39744,13 @@ i.dappCard_image_s9lvjiXT68 {
 */
 
 .methodDecoding_container_13aB5O5zYp {
+  color: inherit;
 }
 
 .methodDecoding_clickable_3OG-9nwMkS {
   border: 1px dashed rgba(255, 255, 255, 0.4);
   padding: 0.1em 0.3em;
-  margin: 0.1em 0.1em;
+  margin: 0.1em;
 }
 
 .methodDecoding_clickable_3OG-9nwMkS:hover {
@@ -39784,6 +39796,7 @@ i.dappCard_image_s9lvjiXT68 {
 .methodDecoding_name_1jblXc4_Ed,
 .methodDecoding_inputs_1-P7oLjZlM,
 .methodDecoding_highlight_1T-LTSToOa {
+  color: inherit;
 }
 
 .methodDecoding_inputs_1-P7oLjZlM,
@@ -39803,10 +39816,11 @@ i.dappCard_image_s9lvjiXT68 {
 
 .methodDecoding_etherValue_CO7m9M1XhT,
 .methodDecoding_tokenValue_nhnIEwDDEe {
+  color: inherit;
 }
 
 .methodDecoding_address_zsINoe10D2 {
-  display: inline-block;
+  display: block;
   position: relative;
 }
 
@@ -39850,7 +39864,7 @@ i.dappCard_image_s9lvjiXT68 {
 
 .modalBox_body_2bIjFPVqiT .modalBox_content_1rV3mDIcYC .modalBox_summary_2OLTKOzRze {
       line-height: 1.618em;
-      padding: 0 4em 1.5em 4em;
+      padding: 0 4em 1.5em;
       text-align: center;
     }
 
@@ -39947,16 +39961,16 @@ i.dappCard_image_s9lvjiXT68 {
   background: #fcfcfc;
 }
 
-.page_layout_d9lPlDWgHb>div, .page_layoutPadded_1Sa8Yub6Ic>div {
+.page_layout_d9lPlDWgHb > div, .page_layoutPadded_1Sa8Yub6Ic > div {
     margin-bottom: 0.5em;
   }
 
 .page_layout_d9lPlDWgHb {
-  padding: 0 1.5em 3em 1.5em;
+  padding: 0 1.5em 3em;
 }
 
 .page_layoutPadded_1Sa8Yub6Ic {
-  padding: 0.5em 1.5em 3em 1.5em;
+  padding: 0.5em 1.5em 3em;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
 /* This file is part of Parity.
@@ -40065,68 +40079,84 @@ i.dappCard_image_s9lvjiXT68 {
 /* You should have received a copy of the GNU General Public License
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 .statusIndicator_status_2HVGoxQTBq {
   display: inline-block;
 }
-.statusIndicator_radial_147txEu91z,.statusIndicator_signal_3fuHw4ax9b {
+
+.statusIndicator_radial_147txEu91z,
+.statusIndicator_signal_3fuHw4ax9b {
   display: inline-block;
-  margin: .2em;
+  margin: 0.2em;
   width: 1em;
   height: 1em;
   white-space: nowrap;
 }
+
 .statusIndicator_radial_147txEu91z {
   border-radius: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   background-image: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0) 100%);
 }
+
 .statusIndicator_radial_147txEu91z.statusIndicator_ok_2f93pqs3hW {
     background-color: #070;
   }
+
 .statusIndicator_radial_147txEu91z.statusIndicator_bad_NtHYgNB0Ew {
     background-color: #c00;
   }
+
 .statusIndicator_radial_147txEu91z.statusIndicator_needsAttention_gQTatn5eza {
     background-color: #dc0;
   }
+
 .statusIndicator_signal_3fuHw4ax9b {
   width: 2em;
-  width: calc(.9em + 5px);
+  width: calc(0.9em + 5px);
   text-transform: initial;
   vertical-align: middle;
   margin-top: -0.5em;
 }
+
 .statusIndicator_signal_3fuHw4ax9b > .statusIndicator_bar_3-HqZVzG4I {
     display: inline-block;
     border: 1px solid #444;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-    width: .3em;
+    width: 0.3em;
     height: 1em;
     opacity: 0.7;
     background-color: rgba(0, 0, 0, 0.6);
     vertical-align: bottom;
   }
+
 .statusIndicator_signal_3fuHw4ax9b > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_active_2TkXBDAQKs {
-      opacity: 1.0;
-      background-image: linear-gradient(0, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0) 100%);
+      opacity: 1;
+      background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0) 100%);
     }
+
 .statusIndicator_signal_3fuHw4ax9b > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_bad_NtHYgNB0Ew {
-      height: .4em;
+      height: 0.4em;
       border-right: 0;
     }
+
 .statusIndicator_signal_3fuHw4ax9b > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_needsAttention_gQTatn5eza {
-      height: .6em;
+      height: 0.6em;
       border-right: 0;
     }
+
 .statusIndicator_signal_3fuHw4ax9b > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_ok_2f93pqs3hW {
       height: 1em;
     }
+
 .statusIndicator_signal_3fuHw4ax9b.statusIndicator_bad_NtHYgNB0Ew > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_active_2TkXBDAQKs {
     background-color: #c00;
   }
+
 .statusIndicator_signal_3fuHw4ax9b.statusIndicator_ok_2f93pqs3hW > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_active_2TkXBDAQKs {
     background-color: #080;
   }
+
 .statusIndicator_signal_3fuHw4ax9b.statusIndicator_needsAttention_gQTatn5eza > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_active_2TkXBDAQKs {
     background-color: #dc0;
   }
@@ -40231,7 +40261,7 @@ i.dappCard_image_s9lvjiXT68 {
 
 .txList_transactions_2CuHdNwjFl td {
     vertical-align: top;
-    padding: 0.75em 0.75em;
+    padding: 0.75em;
   }
 
 .txList_transactions_2CuHdNwjFl td.txList_method_3VdnilAAfv {
@@ -40282,7 +40312,7 @@ i.dappCard_image_s9lvjiXT68 {
   }
 
 .txList_transactions_2CuHdNwjFl .txList_pending_2cXXpzm7PQ {
-    padding: 0em;
+    padding: 0;
   }
 
 .txList_transactions_2CuHdNwjFl .txList_pending_2cXXpzm7PQ div {

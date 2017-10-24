@@ -23,8 +23,8 @@ import { ContextProvider } from '@parity/ui';
 
 import api from './api';
 import Addresses from './Addresses';
-
 import injectTapEventPlugin from 'react-tap-event-plugin';
+
 injectTapEventPlugin();
 
 ContractInstances.get(api);
