@@ -96,7 +96,7 @@ export default class AddAddress extends Component {
   }
 
   renderFields () {
-    const { address, addressError, description, name, nameError } = this.store;
+    const { description, name, nameError } = this.store;
     let addressBond = new Bond();
 
     addressBond.tie(this.onEditAddress);
