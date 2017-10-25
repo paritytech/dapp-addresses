@@ -186,24 +186,3 @@ export default class AddAddress extends Component {
     this.props.onClose();
   }
 }
-// RMV
-// <InputAddress
-//             allowCopy={ false }
-//             autoFocus
-//             disabled={ !!this.props.address }
-//             error={ addressError }
-//             hint={
-//               <FormattedMessage
-//                 id='addAddress.input.address.hint'
-//                 defaultMessage='the network address for the entry'
-//               />
-//             }
-//             label={
-//               <FormattedMessage
-//                 id='addAddress.input.address.label'
-//                 defaultMessage='network address'
-//               />
-//             }
-//             onChange={ this.onEditAddress }
-//             value={ address }
-//           />
