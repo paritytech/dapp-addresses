@@ -19,7 +19,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
-import { Button, Form, Input, ModalBox, Portal } from '@parity/ui';
+import { Button, Form, Input, ModalBox, Portal, LabelWrapper } from '@parity/ui';
 import { AddressBond } from 'parity-reactive-ui';
 import { AddIcon, AddressIcon, CancelIcon } from '@parity/ui/Icons';
 import { Bond } from 'oo7';
@@ -99,6 +99,12 @@ export default class AddAddress extends Component {
     const { address, addressError, description, name, nameError } = this.store;
     let addressBond = new Bond();
 
+    addressBond.changed('0x12345679');
+
+    addressBond.tie((n) => {
+      console.log('new', n);
+    });
+
     return (
       <ModalBox
         icon={ <AddressIcon /> }
@@ -110,9 +116,21 @@ export default class AddAddress extends Component {
         }
       >
         <Form>
-          <AddressBond
-            bond={ addressBond }
-          />
+          <LabelWrapper
+            label={
+              <FormattedMessage
+                id='addAddress.input.address.label'
+                defaultMessage='network address'
+              />
+            }
+          >
+            <AddressBond
+              bond={ addressBond }
+              style={ {
+                width: '100%'
+              } }
+            />
+          </LabelWrapper>
           <Input
             error={ nameError }
             hint={
