@@ -99,11 +99,7 @@ export default class AddAddress extends Component {
     const { address, addressError, description, name, nameError } = this.store;
     let addressBond = new Bond();
 
-    addressBond.changed('0x12345679');
-
-    addressBond.tie((n) => {
-      console.log('new', n);
-    });
+    addressBond.tie(this.onEditAddress);
 
     return (
       <ModalBox
@@ -169,7 +165,7 @@ export default class AddAddress extends Component {
     );
   }
 
-  onEditAddress = (event, address) => {
+  onEditAddress = (address) => {
     this.store.setAddress(address);
   }
 
