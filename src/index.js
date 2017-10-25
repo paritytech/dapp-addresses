@@ -18,22 +18,19 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import { Route, Router, hashHistory } from 'react-router';
 
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
-
 import ContractInstances from '@parity/shared/contracts';
-import { initStore } from '@parity/shared/redux';
-import ContextProvider from '@parity/ui/ContextProvider';
+import { ContextProvider } from '@parity/ui';
 
 import api from './api';
-import Addresses from './addresses';
+import Addresses from './Addresses';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
 
 ContractInstances.get(api);
 
-const store = initStore(api, hashHistory);
-
 ReactDOM.render(
-  <ContextProvider api={ api } store={ store }>
+  <ContextProvider api={ api }>
     <Router history={ hashHistory }>
       <Route path='/' component={ Addresses } />
     </Router>
