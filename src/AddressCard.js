@@ -23,13 +23,11 @@ import {
   AccountIcon,
   AddressLabel,
   EtherBalance,
-  TokenList,
-  BadgeList
+  TokenList
 } from 'parity-reactive-ui';
 import { DappLink } from '@parity/ui';
 import { Rspan } from 'oo7-react';
 
-import { Bond } from 'oo7';
 import isEqual from 'lodash';
 
 export default class AddressCard extends Component {
@@ -48,16 +46,9 @@ export default class AddressCard extends Component {
   render () {
     const { info } = this.props;
     let dispname = info.name;
-    let addressBond = new Bond();
 
     info.name = info.name || '';
-    addressBond.changed(info.address);
-    bonds.badges.then(console.log);
-    console.log('bgs');
-    console.log('bof', bonds.badgesOf(info.address));
-    bonds.nonce(info.address).then((nonce) => {
-      console.log('nonce', nonce);
-    });
+
     if (info.name.length > 30) {
       dispname = info.name.substr(0, 30) + '...';
     }

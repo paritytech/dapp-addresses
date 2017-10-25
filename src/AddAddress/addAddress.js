@@ -96,14 +96,10 @@ export default class AddAddress extends Component {
   }
 
   renderFields () {
-    const { address, addressError, description, name, nameError } = this.store;
+    const { description, name, nameError } = this.store;
     let addressBond = new Bond();
 
-    addressBond.changed('0x12345679');
-
-    addressBond.tie((n) => {
-      console.log('new', n);
-    });
+    addressBond.tie(this.onEditAddress);
 
     return (
       <ModalBox
@@ -169,7 +165,7 @@ export default class AddAddress extends Component {
     );
   }
 
-  onEditAddress = (event, address) => {
+  onEditAddress = (address) => {
     this.store.setAddress(address);
   }
 
@@ -190,24 +186,3 @@ export default class AddAddress extends Component {
     this.props.onClose();
   }
 }
-// RMV
-// <InputAddress
-//             allowCopy={ false }
-//             autoFocus
-//             disabled={ !!this.props.address }
-//             error={ addressError }
-//             hint={
-//               <FormattedMessage
-//                 id='addAddress.input.address.hint'
-//                 defaultMessage='the network address for the entry'
-//               />
-//             }
-//             label={
-//               <FormattedMessage
-//                 id='addAddress.input.address.label'
-//                 defaultMessage='network address'
-//               />
-//             }
-//             onChange={ this.onEditAddress }
-//             value={ address }
-//           />
