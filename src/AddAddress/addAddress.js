@@ -19,10 +19,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
-import { Button, Form, Input, ModalBox, Portal, LabelWrapper } from '@parity/ui';
-import { AddressBond } from 'parity-reactive-ui';
+import { Button, Form, Input, InputAddress, ModalBox, Portal } from '@parity/ui';
 import { AddIcon, AddressIcon, CancelIcon } from '@parity/ui/Icons';
-import { Bond } from 'oo7';
 
 import Store from './store';
 
@@ -96,10 +94,7 @@ export default class AddAddress extends Component {
   }
 
   renderFields () {
-    const { description, name, nameError } = this.store;
-    let addressBond = new Bond();
-
-    addressBond.tie(this.onEditAddress);
+    const { address, addressError, description, name, nameError } = this.store;
 
     return (
       <ModalBox
@@ -112,21 +107,26 @@ export default class AddAddress extends Component {
         }
       >
         <Form>
-          <LabelWrapper
+          <InputAddress
+            allowCopy={ false }
+            autoFocus
+            disabled={ !!this.props.address }
+            error={ addressError }
+            hint={
+              <FormattedMessage
+                id='addAddress.input.address.hint'
+                defaultMessage='the network address for the entry'
+              />
+            }
             label={
               <FormattedMessage
                 id='addAddress.input.address.label'
                 defaultMessage='network address'
               />
             }
-          >
-            <AddressBond
-              bond={ addressBond }
-              style={ {
-                width: '100%'
-              } }
-            />
-          </LabelWrapper>
+            onChange={ this.onEditAddress }
+            value={ address }
+          />
           <Input
             error={ nameError }
             hint={
@@ -165,7 +165,7 @@ export default class AddAddress extends Component {
     );
   }
 
-  onEditAddress = (address) => {
+  onEditAddress = (event, address) => {
     this.store.setAddress(address);
   }
 
