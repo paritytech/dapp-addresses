@@ -20,7 +20,7 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 import { Button, Form, Input, InputAddress, ModalBox, Portal } from '@parity/ui';
-import { AddIcon, AddressIcon, CancelIcon } from '@parity/ui/Icons';
+import { AddIcon, AddressIcon, CancelIcon } from '@parity/ui/lib/Icons';
 
 import Store from './store';
 
