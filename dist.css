@@ -15,7 +15,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.fileSelect_dropzone_3T0tA6IqvN {
+.fileSelect_dropzone_3iOakW4QgV {
   align-items: center;
   background: rgba(0, 0, 0, 0.2);
   border: 2px dashed #666;
@@ -28,21 +28,21 @@
   width: 100%;
 }
 
-.fileSelect_dropzone_3T0tA6IqvN:hover {
+.fileSelect_dropzone_3iOakW4QgV:hover {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 0;
     cursor: pointer;
   }
 
-.fileSelect_dropzone_3T0tA6IqvN.fileSelect_error_Wv29hvyHnp {
+.fileSelect_dropzone_3iOakW4QgV.fileSelect_error_3Ry1LExWrM {
     background: rgba(255, 0, 0, 0.1);
   }
 
-.fileSelect_dropzone_3T0tA6IqvN.fileSelect_error_Wv29hvyHnp:hover {
+.fileSelect_dropzone_3iOakW4QgV.fileSelect_error_3Ry1LExWrM:hover {
       background: rgba(255, 0, 0, 0.2);
     }
 
-.fileSelect_dropzone_3T0tA6IqvN .fileSelect_label_cwy6nbh7xQ {
+.fileSelect_dropzone_3iOakW4QgV .fileSelect_label_NG5eVbkcLY {
     color: #aaa;
   }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -62,17 +62,17 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.title_container_3oQH6bSLxu {
+.title_container_1wvVg2NbUE {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.title_actions_rVilrQKBjV {
+.title_actions_3CTGVNhfDp {
 }
 
-.title_byline_26rZN1mR3m,
-.title_description_3xQdK6UYAl {
+.title_byline_3dWGJgDHQQ,
+.title_description_1TbK7Rqyjn {
   color: #aaa;
   display: -webkit-box;
   line-height: 1.2rem;
@@ -84,16 +84,16 @@
   -webkit-box-orient: vertical;
 }
 
-.title_byline_26rZN1mR3m *, .title_description_3xQdK6UYAl * {
+.title_byline_3dWGJgDHQQ *, .title_description_1TbK7Rqyjn * {
     color: #aaa !important;
   }
 
-.title_description_3xQdK6UYAl {
+.title_description_1TbK7Rqyjn {
   font-size: 0.75rem;
   margin: 0.5em 0 0;
 }
 
-.title_title_3sAI63kEax {
+.title_title_3IThYlEdbY {
   /* background: $backgroundTitle;
   background: $backgroundGradient; */
   line-height: 2rem;
@@ -102,12 +102,12 @@
   padding: 0.5em 0.75em;
 }
 
-.title_title_3sAI63kEax.title_offset_3bBmoU-4OI {
+.title_title_3IThYlEdbY.title_offset_3LVB-gDfMI {
     margin-left: -72px;
     padding-left: 72px;
   }
 
-.title_title_3sAI63kEax .title_text_3geLy1zTbX {
+.title_title_3IThYlEdbY .title_text_3G9Utii7bZ {
     overflow: hidden;
     text-overflow: ellipsis;
     text-transform: uppercase;
@@ -147,7 +147,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.dappLink_link_1PVgRu6eit {
+.dappLink_link_3I5bgHAjQd {
   color: #4183c4;
   cursor: pointer;
 }
@@ -168,7 +168,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.link_link_M9ZSFZrlCD {
+.link_link_aQZJCxAfhO {
   width: 100%;
   height: 100%;
 }
@@ -189,7 +189,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.container_container_1MuF0xJfv5 {
+.container_container_22p_XUGxh5 {
   background: #fcfcfc;
   background: linear-gradient(white, #fcfcfc);
   flex: 1;
@@ -200,7 +200,7 @@
   width: 100%;
 }
 
-.container_container_1MuF0xJfv5 .container_hoverOverlay_28yxKi8HF1 {
+.container_container_22p_XUGxh5 .container_hoverOverlay_ckcrKXBWOp {
     background: #fcfcfc;
     display: none;
     left: 0;
@@ -214,12 +214,12 @@
     z-index: 100;
   }
 
-.container_container_1MuF0xJfv5:hover {
+.container_container_22p_XUGxh5:hover {
     background: white;
     box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.125);
   }
 
-.container_container_1MuF0xJfv5:hover .container_hoverOverlay_28yxKi8HF1 {
+.container_container_22p_XUGxh5:hover .container_hoverOverlay_ckcrKXBWOp {
       background: white !important;
       border: 1px solid rgba(242, 242, 242, 1);
       border-top: 1px solid transparent;
@@ -228,13 +228,13 @@
       opacity: 1;
     }
 
-.container_container_1MuF0xJfv5 .container_title_qkY3bxolxR h3 {
+.container_container_22p_XUGxh5 .container_title_1A3gjN9whv h3 {
     margin-left: -72px !important;
     padding-left: 72px !important;
   }
 
-.container_compact_Ong2mOa8_X,
-.container_padded_13PeMvW6JP {
+.container_compact_1-bUmvTJJ1,
+.container_padded_is_WEJzDnz {
   background-color: transparent !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -243,20 +243,20 @@
   overflow: auto;
 }
 
-.container_compact_Ong2mOa8_X {
+.container_compact_1-bUmvTJJ1 {
   padding: 0 1.5em;
 }
 
-.container_padded_13PeMvW6JP {
+.container_padded_is_WEJzDnz {
   padding: 1.5em;
 }
 
-.container_light_lYiZ4fIFsl .container_compact_Ong2mOa8_X,
-.container_light_lYiZ4fIFsl .container_padded_13PeMvW6JP {
+.container_light_2XDTt8jE4l .container_compact_1-bUmvTJJ1,
+.container_light_2XDTt8jE4l .container_padded_is_WEJzDnz {
   background: rgba(18, 18, 18, 0.5) !important;
 }
 
-.container_cardContainer_GEbgiZQrXK {
+.container_cardContainer_1njGy4WbGd {
   width: 100%;
   height: 100%;
 }
@@ -277,15 +277,15 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.title_title_1VJhYkGyXL .title_steps_2u9KLdR57U, .title_subtitle_1jmN2Q423w .title_steps_2u9KLdR57U {
+.title_title_1eS4gtw4Bx .title_steps_2tw2RnCHmR, .title_subtitle_2GfHlGElR3 .title_steps_2tw2RnCHmR {
     margin: 1em 0 0;
   }
 
-.title_title_1VJhYkGyXL .title_waiting_1GPVnPayRA, .title_subtitle_1jmN2Q423w .title_waiting_1GPVnPayRA {
+.title_title_1eS4gtw4Bx .title_waiting_2pvZZsEKwu, .title_subtitle_2GfHlGElR3 .title_waiting_2pvZZsEKwu {
     margin: 1em -1.5em 0 -1.5em;
   }
 
-.title_subtitle_1jmN2Q423w {
+.title_subtitle_2GfHlGElR3 {
   opacity: 0.75;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -309,7 +309,7 @@
 
 /* This is the case where popped-up over another modal, Portal or otherwise */
 
-.portal_backOverlay_30WHKw-Ah4 {
+.portal_backOverlay_24U-mIqCAg {
   background-color: rgba(0, 0, 0, 0.35);
   position: fixed;
   top: 0;
@@ -319,7 +319,7 @@
   z-index: 2500;
 }
 
-.portal_overlay_2vhptLW4ST {
+.portal_overlay_3tCvfZfSLW {
   background-color: rgba(255, 255, 255, 0.95);
   border: 1px solid whitesmoke;
   box-sizing: border-box;
@@ -330,15 +330,15 @@
   position: fixed;
 }
 
-.portal_overlay_2vhptLW4ST * {
+.portal_overlay_3tCvfZfSLW * {
     min-width: 0;
   }
 
-.portal_overlay_2vhptLW4ST.portal_modal_2CzV2VI2aA {
+.portal_overlay_3tCvfZfSLW.portal_modal_22munS8yuF {
     z-index: 3500;
   }
 
-.portal_overlay_2vhptLW4ST.portal_modal_2CzV2VI2aA:not(.portal_small_H2Co2kPwfQ) {
+.portal_overlay_3tCvfZfSLW.portal_modal_22munS8yuF:not(.portal_small_3ha-BbjK5e) {
       bottom: 1.5em;
       left: 1.5em;
       right: 1.5em;
@@ -350,14 +350,14 @@
     /* but may well be) will scretch to non-visible areas.
     */
 
-.portal_overlay_2vhptLW4ST.portal_modal_2CzV2VI2aA.portal_small_H2Co2kPwfQ {
+.portal_overlay_3tCvfZfSLW.portal_modal_22munS8yuF.portal_small_3ha-BbjK5e {
       margin: 1.5em auto;
       max-width: 768px;
       position: relative;
       width: 75%;
     }
 
-.portal_overlay_2vhptLW4ST.portal_popover_3s-WHXSIzv {
+.portal_overlay_3tCvfZfSLW.portal_popover_31QUl2T9G7 {
     left: 1.5em;
     top: 20vh;
     height: calc(100vh - 20vh - 1.5em);
@@ -365,7 +365,7 @@
     z-index: 3600;
   }
 
-.portal_overlay_2vhptLW4ST .portal_buttonRow_1C5PIVMHVt {
+.portal_overlay_3tCvfZfSLW .portal_buttonRow_WjJZjJ0mSZ {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
@@ -380,7 +380,7 @@
     } */
   }
 
-.portal_overlay_2vhptLW4ST .portal_childContainer_1L4d_wzrxq {
+.portal_overlay_3tCvfZfSLW .portal_childContainer_BrWxQEJZr8 {
     flex: 1;
     margin: 0 -1.5em;
     overflow-x: hidden;
@@ -389,7 +389,7 @@
     z-index: 1;
   }
 
-.portal_overlay_2vhptLW4ST .portal_closeIcon_2LzhBrJ2wD {
+.portal_overlay_3tCvfZfSLW .portal_closeIcon_LHkkT7EBC0 {
     font-size: 3em;
     position: absolute;
     right: 1rem;
@@ -397,16 +397,16 @@
     z-index: 100;
   }
 
-.portal_overlay_2vhptLW4ST .portal_closeIcon_2LzhBrJ2wD i {
+.portal_overlay_3tCvfZfSLW .portal_closeIcon_LHkkT7EBC0 i {
       font-size: inherit;
     }
 
-.portal_overlay_2vhptLW4ST .portal_closeIcon_2LzhBrJ2wD:hover {
+.portal_overlay_3tCvfZfSLW .portal_closeIcon_LHkkT7EBC0:hover {
       cursor: pointer;
       opacity: 0.5;
     }
 
-.portal_overlay_2vhptLW4ST .portal_titleRow_1dMGfOzZMC {
+.portal_overlay_3tCvfZfSLW .portal_titleRow_1l786OZhdK {
     margin-bottom: 1.5em;
   }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -426,7 +426,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.import_desc_2VYy7EYWCT {
+.import_desc_F3ol8cYaCt {
   margin-top: 0;
   color: #ccc;
 }
@@ -447,7 +447,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.label_label_1Lwuaelto6 {
+.label_label_2Cd386zEFI {
   color: rgba(0, 0, 0, 0.3);
   font-size: 0.75rem;
   pointer-events: none;
@@ -470,7 +470,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.chip_chip_3u2Z7yy-79 {
+.chip_chip_t32TqmE99U {
   background: rgba(50, 50, 50, 0.7);
   border-radius: 1em;
   color: white;
@@ -480,21 +480,21 @@
   padding: 0.125em 0.25em;
 }
 
-.chip_chip_3u2Z7yy-79.chip_disabled_1IvIt7K2p5 {
+.chip_chip_t32TqmE99U.chip_disabled_3dr7GVNKS9 {
     background: rgba(150, 150, 150, 0.7);
   }
 
-.chip_chip_3u2Z7yy-79.chip_focus_1C5PZDmJrw {
+.chip_chip_t32TqmE99U.chip_focus_v2ay2smU6U {
     background: rgba(50, 50, 200, 0.7);
   }
 
-.chip_chip_3u2Z7yy-79 .chip_label_3IRu__rNA9 {
+.chip_chip_t32TqmE99U .chip_label_1n7DEsLSS- {
     display: inline-block;
     padding: 0 1em;
     font-size: 0.75em;
   }
 
-.chip_chip_3u2Z7yy-79 .chip_delete_2k706FTc72 {
+.chip_chip_t32TqmE99U .chip_delete_1quL6Rbvos {
     border-radius: 1em;
     font-size: 0.75em;
   }
@@ -515,18 +515,18 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.search_searchcontainer_27xZTyA0Hw {
+.search_searchcontainer_xHeaz9uOvY {
 }
 
-.search_searchButton_3Tz375XN62 {
+.search_searchButton_3jY3-jVY4s {
   min-width: 50px !important;
 }
 
-.search_input_27PV3l9Y4l {
+.search_input_214DY6Wnnn {
   width: 500px !important;
 }
 
-.search_inputContainer_2B6kTDeoMU {
+.search_inputContainer_E6IwDA68LL {
   transition: width 450ms ease-in-out 0ms, height 0ms ease-in-out 0ms;
   white-space: nowrap;
   overflow: hidden;
@@ -535,7 +535,7 @@
   position: relative;
 }
 
-.search_inputContainerShown_3cHx5jNSEm {
+.search_inputContainerShown_wJwk2IfTX_ {
   transition: width 450ms ease-in-out 0ms, height 0ms ease-in-out 400ms;
   width: 0;
   height: 0;
@@ -557,17 +557,17 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.item_item_3vJSawxWIQ.item_active_2WTCYCNt2J {
+.item_item_3j2f70owKa.item_active_31sLzfIU0O {
     background: rgba(0, 0, 255, 0.25);
   }
 
-.item_item_3vJSawxWIQ.item_inactive_3Pqs54KaFH {
+.item_item_3j2f70owKa.item_inactive_2VMbN5o65N {
   }
 
-.item_item_3vJSawxWIQ .item_description_nfp1Gi8JQo {
+.item_item_3j2f70owKa .item_description_2M05q8_MV8 {
   }
 
-.item_item_3vJSawxWIQ .item_label_3mF7nr0J_L {
+.item_item_3j2f70owKa .item_label_3aQBZEyjPh {
   }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
 /* This file is part of Parity.
@@ -586,7 +586,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.list_list_2wBAPet7NI {
+.list_list_3WPx05Pnpa {
   color: inherit;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -606,7 +606,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.actionbar_actionbar_fic01AoaIT {
+.actionbar_actionbar_SmuS3xtjVT {
   background: #fcfcfc;
   display: flex;
   flex-direction: row;
@@ -616,16 +616,16 @@
   margin: 0;
 }
 
-.actionbar_actionbar_fic01AoaIT .actionbar_title_2z5WyvbZgf {
+.actionbar_actionbar_SmuS3xtjVT .actionbar_title_3fFgzDQ7PH {
     text-transform: uppercase;
     margin: 0;
   }
 
-.actionbar_actionbar_fic01AoaIT .actionbar_children_21mA7BUuHR {
+.actionbar_actionbar_SmuS3xtjVT .actionbar_children_1bLeNYkhxa {
     color: inherit;
   }
 
-.actionbar_actionbar_fic01AoaIT .actionbar_buttons_289HDMJ7lo div {
+.actionbar_actionbar_SmuS3xtjVT .actionbar_buttons_P94jYEYJ2S div {
       display: inline-block;
     }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -645,7 +645,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.features_description_1-LYRn01Yr {
+.features_description_3c2tIzrBRy {
   opacity: 0.75;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -665,24 +665,24 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.balance_balances_1K8aSkuGEk {
+.balance_balances_2pN1MQ35is {
   display: flex;
   flex-wrap: wrap;
   margin: 0.75em 0 0;
   vertical-align: top;
 }
 
-.balance_balances_1K8aSkuGEk:not(.balance_full_YUcEkdncWN) {
+.balance_balances_2pN1MQ35is:not(.balance_full_2ilm_kQmIz) {
     height: 40px;
     overflow: hidden;
   }
 
-.balance_balance_1R9Zr0t-nI,
-.balance_empty_3gd7gKB3Sl {
+.balance_balance__bF8REy9J5,
+.balance_empty_C9FOgvH_L- {
   margin: 0.75em 0.5em 4px 0;
 }
 
-.balance_empty_3gd7gKB3Sl {
+.balance_empty_C9FOgvH_L- {
   min-height: 24px;
   line-height: 24px;
   opacity: 0.25;
@@ -691,7 +691,7 @@
   white-space: nowrap;
 }
 
-.balance_balance_1R9Zr0t-nI {
+.balance_balance__bF8REy9J5 {
   align-items: center;
   border-radius: 16px;
   display: flex;
@@ -699,27 +699,27 @@
   max-width: 100%;
 }
 
-.balance_balance_1R9Zr0t-nI.balance_full_YUcEkdncWN {
+.balance_balance__bF8REy9J5.balance_full_2ilm_kQmIz {
     background: rgba(0, 0, 0, 0.25);
     color: white;
   }
 
-.balance_balance_1R9Zr0t-nI.balance_full_YUcEkdncWN img {
+.balance_balance__bF8REy9J5.balance_full_2ilm_kQmIz img {
       margin-right: 1em;
     }
 
-.balance_balance_1R9Zr0t-nI img {
+.balance_balance__bF8REy9J5 img {
     height: 32px;
     margin-top: -4px;
     width: 32px;
   }
 
-.balance_balance_1R9Zr0t-nI .balance_tag_1gkx_jL3-Q {
+.balance_balance__bF8REy9J5 .balance_tag_3hwvXL-kO6 {
     padding-right: 0.75rem;
     font-size: 0.85em;
   }
 
-.balance_balance_1R9Zr0t-nI .balance_value_2RACoN0a8g {
+.balance_balance__bF8REy9J5 .balance_value_1G1Mz_kjs8 {
     margin: 0 0.5em 0 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -742,43 +742,43 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.identityIcon_icon_1i-FVY1-Ul {
+.identityIcon_icon_JyjmQwK-FO {
   border-radius: 50%;
   margin: 0;
   z-index: 1;
 }
 
-.identityIcon_icon_1i-FVY1-Ul.identityIcon_disabled_3D6lMvIcgd {
+.identityIcon_icon_JyjmQwK-FO.identityIcon_disabled_-FBpTfE0w_ {
     filter: grayscale(100%);
     opacity: 0.33;
   }
 
-.identityIcon_center_1kO7YC4phZ {
+.identityIcon_center_39lcVsKiUo {
   text-align: center;
 }
 
-.identityIcon_left_3vvJGeSu9M {
+.identityIcon_left_oWOLmZE-Et {
   float: left;
   text-align: left;
   margin-right: 1em;
 }
 
-.identityIcon_right_1fyNBZspe- {
+.identityIcon_right_1pYmLE1F2t {
   float: right;
   text-align: right;
 }
 
-.identityIcon_padded_1STu8hgV4Y {
+.identityIcon_padded_3OzT6rKUcY {
   margin: 1em 0 0;
 }
 
-.identityIcon_inline_1_U748F4iL,
-.identityIcon_tiny_1JEsi9s3ug {
+.identityIcon_inline_34ZTGuwXYV,
+.identityIcon_tiny_2w8KJ84lXz {
   display: inline-block;
   margin-right: 0.75em;
 }
 
-.identityIcon_button_55wd0EqEo2 {
+.identityIcon_button_ReFQdLtZRm {
   display: inline;
   width: 1em;
   height: 1em;
@@ -801,7 +801,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.shortenedHash_hash_2aIi4wIYKl {
+.shortenedHash_hash_jMau7ejMwK {
   display: inline-block;
   word-break: break-all;
 }
@@ -822,30 +822,30 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.tags_tags_3_-8PsCwxu {
+.tags_tags_2sI4Xa854B {
   display: flex;
   flex-wrap: wrap;
 }
 
-.tags_tags_3_-8PsCwxu.tags_floating_3ZFKTGdIN- {
+.tags_tags_2sI4Xa854B.tags_floating_129aFA1Rj5 {
     position: absolute;
     right: 0.25rem;
     top: 0;
   }
 
-.tags_tags_3_-8PsCwxu.tags_horizontal_3D-qGnTajU {
+.tags_tags_2sI4Xa854B.tags_horizontal_363EOoqT7Z {
     flex-direction: column;
   }
 
-.tags_floating_3ZFKTGdIN- .tags_tag_hbx8E0AILG {
+.tags_floating_129aFA1Rj5 .tags_tag_1mYdUHPdKr {
   margin-top: 0.75em;
 }
 
-.tags_horizontal_3D-qGnTajU .tags_tag_hbx8E0AILG {
+.tags_horizontal_363EOoqT7Z .tags_tag_1mYdUHPdKr {
   margin: 0.25em 0;
 }
 
-.tags_horizontal_3D-qGnTajU .tags_tag_hbx8E0AILG .tags_text_1Emp4PsA5O {
+.tags_horizontal_363EOoqT7Z .tags_tag_1mYdUHPdKr .tags_text_2eKlYY3txp {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -853,7 +853,7 @@
     width: 150%;
   }
 
-.tags_tag_hbx8E0AILG {
+.tags_tag_1mYdUHPdKr {
   font-size: 0.75rem;
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
@@ -863,7 +863,7 @@
   transition: opacity 0.2s ease-out;
 }
 
-.tags_tagClickable_1RU0W5YujI:hover {
+.tags_tagClickable_2YvUjgSQ02:hover {
   cursor: pointer;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -883,7 +883,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.accountCard_account_2f8jUkjlYn {
+.accountCard_account_1M9zcAg674 {
   align-items: stretch;
   display: flex;
   flex-direction: row;
@@ -892,40 +892,40 @@
   transform: scale(1);
 }
 
-.accountCard_account_2f8jUkjlYn.accountCard_copied_PiQFhsrd57 {
+.accountCard_account_1M9zcAg674.accountCard_copied_1HC63AsnG3 {
     animation-duration: 0.25s;
-    animation-name: accountCard_copied_PiQFhsrd57;
+    animation-name: accountCard_copied_1HC63AsnG3;
   }
 
-.accountCard_account_2f8jUkjlYn:focus {
+.accountCard_account_1M9zcAg674:focus {
     transform: scale(0.99);
   }
 
-.accountCard_account_2f8jUkjlYn:first-child {
+.accountCard_account_1M9zcAg674:first-child {
     margin-top: 0;
   }
 
-.accountCard_account_2f8jUkjlYn:last-child {
+.accountCard_account_1M9zcAg674:last-child {
     margin-bottom: 0;
   }
 
-.accountCard_account_2f8jUkjlYn:hover {
+.accountCard_account_1M9zcAg674:hover {
     cursor: pointer;
   }
 
-.accountCard_mainContainer_3XVkRwTCKk {
+.accountCard_mainContainer_3GKBKkVUL6 {
   flex: 1 1 auto;
   overflow: hidden;
   padding: 1em;
 }
 
-.accountCard_tagsContainer_2ekAfdhr3J {
+.accountCard_tagsContainer_33B590g1Vv {
   flex: 0 0 auto;
   position: relative;
   width: 3em;
 }
 
-.accountCard_tags_Lw8YkJhFOA {
+.accountCard_tags_19QtHFwL3J {
   background-color: rgba(0, 0, 0, 0.4);
   box-sizing: content-box;
   height: calc(100% - 0.5em);
@@ -939,25 +939,25 @@
   width: calc(100% + 0.25em);
 }
 
-.accountCard_tags_Lw8YkJhFOA:hover {
+.accountCard_tags_19QtHFwL3J:hover {
     background-color: rgba(0, 0, 0, 0.8);
     padding-left: 0.5em;
     width: auto;
   }
 
-.accountCard_infoContainer_dHIY8zbSop {
+.accountCard_infoContainer_1phB2xbkoo {
   display: flex;
   flex-direction: row;
   margin-bottom: 0.5em;
   width: 100%;
 }
 
-.accountCard_description_1Q6j-sATSR {
+.accountCard_description_kdBMKSAU18 {
   font-size: 0.75em;
   color: rgba(255, 255, 255, 0.5);
 }
 
-.accountCard_accountInfo_dTrrPCBBcR {
+.accountCard_accountInfo_2tRPb74vqm {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -965,29 +965,29 @@
   min-width: 0;
 }
 
-.accountCard_accountInfo_dTrrPCBBcR > * {
+.accountCard_accountInfo_2tRPb74vqm > * {
     padding: 0.25em 0;
   }
 
-.accountCard_accountInfo_dTrrPCBBcR .accountCard_addressContainer_SURnnZp5_n {
+.accountCard_accountInfo_2tRPb74vqm .accountCard_addressContainer_2N6txXPiKQ {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 0.9em;
   }
 
-.accountCard_accountInfo_dTrrPCBBcR .accountCard_accountName_QXCvUkPeHG {
+.accountCard_accountInfo_2tRPb74vqm .accountCard_accountName_2iLwlaNmJU {
     font-weight: 700 !important;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-.accountCard_balance__PXkloWIch {
+.accountCard_balance_2-EHOeID8L {
   margin-top: 0;
 }
 
-@keyframes accountCard_copied_PiQFhsrd57 {
+@keyframes accountCard_copied_1HC63AsnG3 {
   from {
     transform: scale(0.99);
   }
@@ -1017,12 +1017,12 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.copyToClipboard_icon_evmIzi-c2l {
+.copyToClipboard_icon_EN9kgnR7Mu {
   cursor: pointer;
   display: inline-block;
 }
 
-.copyToClipboard_data_2PRkefS07O {
+.copyToClipboard_data_10pzvjRBr_ {
   flex: 1;
   font-family: monospace;
   padding: 0 0.5em;
@@ -1031,7 +1031,7 @@
   text-overflow: ellipsis;
 }
 
-.copyToClipboard_container_rRlhAYiqyN > * {
+.copyToClipboard_container_1KlgfPeI1X > * {
   display: flex;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -1051,7 +1051,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.loading_loading_3e0gJffSbD {
+.loading_loading_2o_kTccr58 {
   flex: 1;
   display: flex;
   align-items: center;
@@ -1074,16 +1074,16 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.input_container_22NXcswA9D {
+.input_container_3o7CNPaJ7X {
 }
 
-.input_copy_2YLG6vaRUL {
+.input_copy_3zyCaLMYif {
   margin-right: 0.5em;
   margin-top: 0.5em;
   vertical-align: bottom;
 }
 
-.input_input_1gcEg3DYfX input[readonly] {
+.input_input_2vZIWmiW_W input[readonly] {
     cursor: text;
   }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -1103,58 +1103,58 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.inputAddress_container_qPzY5y-Aj5 {
+.inputAddress_container_3u1aLkSmg6 {
   display: block;
   position: relative;
 }
 
-.inputAddress_container_qPzY5y-Aj5 [data-address-img] {
+.inputAddress_container_3u1aLkSmg6 [data-address-img] {
     position: absolute;
     top: -7px;
     left: 8px;
   }
 
-.inputAddress_input_1RN5MZ_Pzr input {
+.inputAddress_input_2s1cgN07b_ input {
   padding-left: 48px !important;
   box-sizing: border-box;
 }
 
-.inputAddress_input_1RN5MZ_Pzr input.inputAddress_small_LUyjeZ5I2n {
+.inputAddress_input_2s1cgN07b_ input.inputAddress_small_oEdAqa9nFo {
     padding-left: 40px !important;
   }
 
-.inputAddress_small_LUyjeZ5I2n .inputAddress_input_1RN5MZ_Pzr input {
+.inputAddress_small_oEdAqa9nFo .inputAddress_input_2s1cgN07b_ input {
     padding-left: 40px !important;
   }
 
-.inputAddress_small_LUyjeZ5I2n .inputAddress_icon_riflSWRHnC img, .inputAddress_small_LUyjeZ5I2n .inputAddress_iconDisabled_3cmvU8b4XP img {
+.inputAddress_small_oEdAqa9nFo .inputAddress_icon_2QPgDWK_bB img, .inputAddress_small_oEdAqa9nFo .inputAddress_iconDisabled_1VntYx7hXG img {
       height: 24px;
       width: 24px;
     }
 
-.inputAddress_icon_riflSWRHnC,
-.inputAddress_iconDisabled_3cmvU8b4XP {
+.inputAddress_icon_2QPgDWK_bB,
+.inputAddress_iconDisabled_1VntYx7hXG {
   position: absolute;
   top: 33px;
 }
 
-.inputAddress_icon_riflSWRHnC.inputAddress_noLabel_3Q9_OfjRqS, .inputAddress_iconDisabled_3cmvU8b4XP.inputAddress_noLabel_3Q9_OfjRqS {
+.inputAddress_icon_2QPgDWK_bB.inputAddress_noLabel_1EqnUC81QN, .inputAddress_iconDisabled_1VntYx7hXG.inputAddress_noLabel_1EqnUC81QN {
     top: 10px;
   }
 
-.inputAddress_icon_riflSWRHnC.inputAddress_noCopy_2PJemnuI-S, .inputAddress_iconDisabled_3cmvU8b4XP.inputAddress_noCopy_2PJemnuI-S {
+.inputAddress_icon_2QPgDWK_bB.inputAddress_noCopy_2JovSSzDHQ, .inputAddress_iconDisabled_1VntYx7hXG.inputAddress_noCopy_2JovSSzDHQ {
     left: 5px;
   }
 
-.inputAddress_icon_riflSWRHnC.inputAddress_noUnderline_13-7FWu8xG, .inputAddress_iconDisabled_3cmvU8b4XP.inputAddress_noUnderline_13-7FWu8xG {
+.inputAddress_icon_2QPgDWK_bB.inputAddress_noUnderline_2-AfDQPAFW, .inputAddress_iconDisabled_1VntYx7hXG.inputAddress_noUnderline_2-AfDQPAFW {
     top: 0;
   }
 
-.inputAddress_icon_riflSWRHnC {
+.inputAddress_icon_2QPgDWK_bB {
   left: 0;
 }
 
-.inputAddress_iconDisabled_3cmvU8b4XP {
+.inputAddress_iconDisabled_1VntYx7hXG {
   left: 24px;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -1174,23 +1174,23 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.addressSelect_outerInput_1G0U7gRdIQ {
+.addressSelect_outerInput_3jip3I8TQs {
   display: flex;
   flex-direction: row;
   position: relative;
 }
 
-.addressSelect_outerInput_1G0U7gRdIQ .addressSelect_input_2S8qMq8IpS {
+.addressSelect_outerInput_3jip3I8TQs .addressSelect_input_3rHNrp9eV4 {
     flex: 1;
   }
 
-.addressSelect_outerInput_1G0U7gRdIQ .addressSelect_loader_UeCEJOk5Ss {
+.addressSelect_outerInput_3jip3I8TQs .addressSelect_loader_3xYIxad-6q {
     position: absolute;
     bottom: 1rem;
     right: 9rem;
   }
 
-.addressSelect_input_2S8qMq8IpS {
+.addressSelect_input_3rHNrp9eV4 {
   border: 1px solid rgba(34,36,38,.15);
   border-radius: .28571429rem;
   box-sizing: border-box;
@@ -1208,64 +1208,64 @@
   font-size: 2em;
 }
 
-.addressSelect_input_2S8qMq8IpS:focus {
+.addressSelect_input_3rHNrp9eV4:focus {
     outline: none;
   }
 
-.addressSelect_input_2S8qMq8IpS::placeholder {
+.addressSelect_input_3rHNrp9eV4::placeholder {
     color: #a2a2a2;
   }
 
-.addressSelect_copy_2VJzNusP3B {
+.addressSelect_copy_2XDNkEbEg1 {
   margin-right: 0.5em;
 }
 
-.addressSelect_inputAddressContainer_2C4-_1H1JR {
+.addressSelect_inputAddressContainer_5f3QcSN3bZ {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   position: relative;
 }
 
-.addressSelect_inputAddress_1e-D5eGz52 {
+.addressSelect_inputAddress_1yUtIKu0YE {
   flex: 1;
 }
 
-.addressSelect_inputAddress_1e-D5eGz52:focus {
+.addressSelect_inputAddress_1yUtIKu0YE:focus {
     outline: none;
   }
 
-.addressSelect_inputAddress_1e-D5eGz52 > *:hover {
+.addressSelect_inputAddress_1yUtIKu0YE > *:hover {
     cursor: text !important;
   }
 
-.addressSelect_main_3srh_cxX4t {
+.addressSelect_main_ZxjebZMa3C {
   position: relative;
   left: 0;
 }
 
-.addressSelect_title_3BztGnFhxK {
+.addressSelect_title_7efpX2tUaq {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.addressSelect_underline_pM_oFGlmSE {
+.addressSelect_underline_xC7XZb2JvM {
   position: relative;
   margin: 0 0.5rem 0 0.5rem;
 }
 
-.addressSelect_empty_3rq-t38DvC {
+.addressSelect_empty_1wICj8RGLx {
   font-size: 1.5em;
 }
 
-.addressSelect_inputContainer_38vzVRPNKG {
+.addressSelect_inputContainer_zLD65zGsnf {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.addressSelect_inputContainer_38vzVRPNKG .addressSelect_input_2S8qMq8IpS {
+.addressSelect_inputContainer_zLD65zGsnf .addressSelect_input_3rHNrp9eV4 {
     font-size: 1.5em;
     padding: 0.5em 9rem 0.5em 0.5em;
     display: block;
@@ -1273,38 +1273,38 @@
     padding-right: 6rem;
   }
 
-.addressSelect_container_3At8xgjM_F {
+.addressSelect_container_26RnMvJ2le {
   margin-bottom: 1em;
 }
 
-.addressSelect_categories_1e0kmRYN1A {
+.addressSelect_categories_1mzC74kp4C {
   display: flex;
   flex: 1;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-.addressSelect_categories_1e0kmRYN1A > * {
+.addressSelect_categories_1mzC74kp4C > * {
     flex: 1;
   }
 
-.addressSelect_category_3Bn9Vkc2k- {
+.addressSelect_category_3YqGBBG5fP {
   display: flex;
   flex-direction: column;
   margin: 0 0.5em;
   max-width: 35em;
 }
 
-.addressSelect_category_3Bn9Vkc2k- .addressSelect_title_3BztGnFhxK {
+.addressSelect_category_3YqGBBG5fP .addressSelect_title_7efpX2tUaq {
     text-transform: uppercase;
     font-color: white;
   }
 
-.addressSelect_category_3Bn9Vkc2k- .addressSelect_title_3BztGnFhxK h3 {
+.addressSelect_category_3YqGBBG5fP .addressSelect_title_7efpX2tUaq h3 {
       margin: 0;
     }
 
-.addressSelect_category_3Bn9Vkc2k- .addressSelect_cards_lEYp-cDcC1 {
+.addressSelect_category_3YqGBBG5fP .addressSelect_cards_2FnZfPmBWM {
     flex: 1;
     overflow: auto;
 
@@ -1314,7 +1314,7 @@
     margin: 1em 0;
   }
 
-.addressSelect_category_3Bn9Vkc2k- .addressSelect_account_2_CnoZ2TpA {
+.addressSelect_category_3YqGBBG5fP .addressSelect_account_3tUWCAV4PS {
     margin: 0.5em 0;
   }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -1334,7 +1334,7 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.dropdown_dropdown_1CwvA_z7wg {
+.dropdown_dropdown_1qdmU69pIA {
   position: relative;
   display: block;
 }
@@ -1355,17 +1355,17 @@
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.inputDateTime_container_2yDu50i5Gz {
+.inputDateTime_container_2JgAGdBGtf {
 }
 /*!
  * https://github.com/YouCanBookMe/react-datetime
  */
 
-.react-datetime_rdt_1BF_QK7_C0 {
+.react-datetime_rdt_3HT-UjLrlO {
   position: relative;
 }
 
-.react-datetime_rdtPicker_294soHHH8F {
+.react-datetime_rdtPicker_3vtf1qXmGn {
   display: none;
   position: absolute;
   width: 250px;
@@ -1377,53 +1377,53 @@
   border: 1px solid #f9f9f9;
 }
 
-.react-datetime_rdtOpen_3dRFWTSLpS .react-datetime_rdtPicker_294soHHH8F {
+.react-datetime_rdtOpen_2mddJxjONc .react-datetime_rdtPicker_3vtf1qXmGn {
   display: block;
 }
 
-.react-datetime_rdtStatic_2sRCkh6icy .react-datetime_rdtPicker_294soHHH8F {
+.react-datetime_rdtStatic__iZl9yIQJx .react-datetime_rdtPicker_3vtf1qXmGn {
   box-shadow: none;
   position: static;
 }
 
-.react-datetime_rdtPicker_294soHHH8F .react-datetime_rdtTimeToggle_1Pd_M6jKrL {
+.react-datetime_rdtPicker_3vtf1qXmGn .react-datetime_rdtTimeToggle_jAL-eMOoln {
   text-align: center;
 }
 
-.react-datetime_rdtPicker_294soHHH8F table {
+.react-datetime_rdtPicker_3vtf1qXmGn table {
   width: 100%;
   margin: 0;
 }
 
-.react-datetime_rdtPicker_294soHHH8F td,
-.react-datetime_rdtPicker_294soHHH8F th {
+.react-datetime_rdtPicker_3vtf1qXmGn td,
+.react-datetime_rdtPicker_3vtf1qXmGn th {
   text-align: center;
   height: 28px;
 }
 
-.react-datetime_rdtPicker_294soHHH8F td {
+.react-datetime_rdtPicker_3vtf1qXmGn td {
   cursor: pointer;
 }
 
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtDay_2XTddJJfDS:hover,
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtHour_JS6TiCYlwT:hover,
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtMinute_f9YOqjj1Rk:hover,
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtSecond_2_j2rsF5qm:hover,
-.react-datetime_rdtPicker_294soHHH8F .react-datetime_rdtTimeToggle_1Pd_M6jKrL:hover {
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtDay_WjZPQ1KhxR:hover,
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtHour_1hFD00C7Zr:hover,
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtMinute_2D5PEIrtLQ:hover,
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtSecond_3RwfRwN7-j:hover,
+.react-datetime_rdtPicker_3vtf1qXmGn .react-datetime_rdtTimeToggle_jAL-eMOoln:hover {
   background: #eeeeee;
   cursor: pointer;
 }
 
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtOld_3SPqpxutWK,
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtNew_1gpmPVn12l {
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtOld_3A4r7KUihX,
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtNew_2aN-RnT4O5 {
   color: #999999;
 }
 
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtToday_3T83pnsqhs {
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtToday_14R_MxlkwT {
   position: relative;
 }
 
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtToday_3T83pnsqhs:before {
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtToday_14R_MxlkwT:before {
   content: '';
   display: inline-block;
   border-left: 7px solid transparent;
@@ -1434,56 +1434,56 @@
   right: 4px;
 }
 
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtActive_259axhdZCI,
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtActive_259axhdZCI:hover {
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtActive_2K5qNdD4s5,
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtActive_2K5qNdD4s5:hover {
   background-color: #428bca;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtActive_259axhdZCI.react-datetime_rdtToday_3T83pnsqhs:before {
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtActive_2K5qNdD4s5.react-datetime_rdtToday_14R_MxlkwT:before {
   border-bottom-color: #fff;
 }
 
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtDisabled_2O0l_aqqtX,
-.react-datetime_rdtPicker_294soHHH8F td.react-datetime_rdtDisabled_2O0l_aqqtX:hover {
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtDisabled_3Vc8At7mX6,
+.react-datetime_rdtPicker_3vtf1qXmGn td.react-datetime_rdtDisabled_3Vc8At7mX6:hover {
   background: none;
   color: #999999;
   cursor: not-allowed;
 }
 
-.react-datetime_rdtPicker_294soHHH8F td span.react-datetime_rdtOld_3SPqpxutWK {
+.react-datetime_rdtPicker_3vtf1qXmGn td span.react-datetime_rdtOld_3A4r7KUihX {
   color: #999999;
 }
 
-.react-datetime_rdtPicker_294soHHH8F td span.react-datetime_rdtDisabled_2O0l_aqqtX,
-.react-datetime_rdtPicker_294soHHH8F td span.react-datetime_rdtDisabled_2O0l_aqqtX:hover {
+.react-datetime_rdtPicker_3vtf1qXmGn td span.react-datetime_rdtDisabled_3Vc8At7mX6,
+.react-datetime_rdtPicker_3vtf1qXmGn td span.react-datetime_rdtDisabled_3Vc8At7mX6:hover {
   background: none;
   color: #999999;
   cursor: not-allowed;
 }
 
-.react-datetime_rdtPicker_294soHHH8F th {
+.react-datetime_rdtPicker_3vtf1qXmGn th {
   border-bottom: 1px solid #f9f9f9;
 }
 
-.react-datetime_rdtPicker_294soHHH8F .react-datetime_dow_I2kNjXCk-V {
+.react-datetime_rdtPicker_3vtf1qXmGn .react-datetime_dow_yIzncIWmbX {
   width: 14.2857%;
   border-bottom: none;
 }
 
-.react-datetime_rdtPicker_294soHHH8F th.react-datetime_rdtSwitch_10BlbPOd0J {
+.react-datetime_rdtPicker_3vtf1qXmGn th.react-datetime_rdtSwitch_2KRPm34MJI {
   width: 100px;
 }
 
-.react-datetime_rdtPicker_294soHHH8F th.react-datetime_rdtNext_1LOpZp2xvK,
-.react-datetime_rdtPicker_294soHHH8F th.react-datetime_rdtPrev_lpt1hqCYB1 {
+.react-datetime_rdtPicker_3vtf1qXmGn th.react-datetime_rdtNext_2Fu-KAPTEU,
+.react-datetime_rdtPicker_3vtf1qXmGn th.react-datetime_rdtPrev_2gny1xPfb2 {
   font-size: 21px;
   vertical-align: top;
 }
 
-.react-datetime_rdtPrev_lpt1hqCYB1 span,
-.react-datetime_rdtNext_1LOpZp2xvK span {
+.react-datetime_rdtPrev_2gny1xPfb2 span,
+.react-datetime_rdtNext_2Fu-KAPTEU span {
   display: block;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;   /* Chrome/Safari/Opera */
@@ -1493,73 +1493,73 @@
   user-select: none;
 }
 
-.react-datetime_rdtPicker_294soHHH8F th.react-datetime_rdtDisabled_2O0l_aqqtX,
-.react-datetime_rdtPicker_294soHHH8F th.react-datetime_rdtDisabled_2O0l_aqqtX:hover {
+.react-datetime_rdtPicker_3vtf1qXmGn th.react-datetime_rdtDisabled_3Vc8At7mX6,
+.react-datetime_rdtPicker_3vtf1qXmGn th.react-datetime_rdtDisabled_3Vc8At7mX6:hover {
   background: none;
   color: #999999;
   cursor: not-allowed;
 }
 
-.react-datetime_rdtPicker_294soHHH8F thead tr:first-child th {
+.react-datetime_rdtPicker_3vtf1qXmGn thead tr:first-child th {
   cursor: pointer;
 }
 
-.react-datetime_rdtPicker_294soHHH8F thead tr:first-child th:hover {
+.react-datetime_rdtPicker_3vtf1qXmGn thead tr:first-child th:hover {
   background: #eeeeee;
 }
 
-.react-datetime_rdtPicker_294soHHH8F tfoot {
+.react-datetime_rdtPicker_3vtf1qXmGn tfoot {
   border-top: 1px solid #f9f9f9;
 }
 
-.react-datetime_rdtPicker_294soHHH8F button {
+.react-datetime_rdtPicker_3vtf1qXmGn button {
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.react-datetime_rdtPicker_294soHHH8F button:hover {
+.react-datetime_rdtPicker_3vtf1qXmGn button:hover {
   background-color: #eee;
 }
 
-.react-datetime_rdtPicker_294soHHH8F thead button {
+.react-datetime_rdtPicker_3vtf1qXmGn thead button {
   width: 100%;
   height: 100%;
 }
 
-td.react-datetime_rdtMonth_2mxIy9u8uP,
-td.react-datetime_rdtYear_3qpI75pzY5 {
+td.react-datetime_rdtMonth_1fGHkjrT-U,
+td.react-datetime_rdtYear_1e_W8ca0Xv {
   height: 50px;
   width: 25%;
   cursor: pointer;
 }
 
-td.react-datetime_rdtMonth_2mxIy9u8uP:hover,
-td.react-datetime_rdtYear_3qpI75pzY5:hover {
+td.react-datetime_rdtMonth_1fGHkjrT-U:hover,
+td.react-datetime_rdtYear_1e_W8ca0Xv:hover {
   background: #eee;
 }
 
-.react-datetime_rdtCounters_mYaSVS6EkY {
+.react-datetime_rdtCounters_1OKnRDQNV7 {
   display: inline-block;
 }
 
-.react-datetime_rdtCounters_mYaSVS6EkY > div {
+.react-datetime_rdtCounters_1OKnRDQNV7 > div {
   float: left;
 }
 
-.react-datetime_rdtCounter_6N8ufQg6Ml {
+.react-datetime_rdtCounter_3mQ2dYis-g {
   height: 100px;
 }
 
-.react-datetime_rdtCounter_6N8ufQg6Ml {
+.react-datetime_rdtCounter_3mQ2dYis-g {
   width: 40px;
 }
 
-.react-datetime_rdtCounterSeparator_24eRRyOgqd {
+.react-datetime_rdtCounterSeparator_2bZrNcXpTu {
   line-height: 100px;
 }
 
-.react-datetime_rdtCounter_6N8ufQg6Ml .react-datetime_rdtBtn_1xq93rhEyX {
+.react-datetime_rdtCounter_3mQ2dYis-g .react-datetime_rdtBtn_Kd2IFq6rjT {
   height: 40%;
   line-height: 40px;
   cursor: pointer;
@@ -1573,22 +1573,22 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
   user-select: none;
 }
 
-.react-datetime_rdtCounter_6N8ufQg6Ml .react-datetime_rdtBtn_1xq93rhEyX:hover {
+.react-datetime_rdtCounter_3mQ2dYis-g .react-datetime_rdtBtn_Kd2IFq6rjT:hover {
   background: #eee;
 }
 
-.react-datetime_rdtCounter_6N8ufQg6Ml .react-datetime_rdtCount_2vFFmivFJU {
+.react-datetime_rdtCounter_3mQ2dYis-g .react-datetime_rdtCount_PESeeK4dfR {
   height: 20%;
   font-size: 1.2em;
 }
 
-.react-datetime_rdtMilli_1rFIozICdW {
+.react-datetime_rdtMilli_1lzZ-1iasf {
   vertical-align: middle;
   padding-left: 8px;
   width: 48px;
 }
 
-.react-datetime_rdtMilli_1rFIozICdW input {
+.react-datetime_rdtMilli_1lzZ-1iasf input {
   width: 100%;
   font-size: 1.2em;
   margin-top: 37px;
@@ -1610,16 +1610,16 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.radioButtons_container_3u8cq6dU-l {
+.radioButtons_container_2ZEcHvuyxx {
   display: flex;
   flex-direction: column;
 }
 
-.radioButtons_container_3u8cq6dU-l .radioButtons_radioContainer_3dpUhrs_Q_ {
+.radioButtons_container_2ZEcHvuyxx .radioButtons_radioContainer_3SbnI8DoM6 {
     margin: 0.25em 0;
   }
 
-.radioButtons_container_3u8cq6dU-l .radioButtons_radioContainer_3dpUhrs_Q_ .radioButtons_label_3raZogDPu7 .radioButtons_description_1A21YEp5Yn {
+.radioButtons_container_2ZEcHvuyxx .radioButtons_radioContainer_3SbnI8DoM6 .radioButtons_label_1tS5S2ldZ9 .radioButtons_description_1uzfwrjqkY {
         font-size: 0.75em;
         margin-bottom: 0.5em;
         color: #ccc;
@@ -1642,12 +1642,12 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.typedInput_inputs_vLjh94Yofz {
+.typedInput_inputs_16Cs8oyNIs {
   padding-top: 2px;
   overflow-x: hidden;
 }
 
-.typedInput_inputs_vLjh94Yofz label {
+.typedInput_inputs_16Cs8oyNIs label {
     line-height: 22px;
     pointer-events: none;
     color: rgba(255, 255, 255, 0.498039);
@@ -1656,18 +1656,18 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
     position: relative;
   }
 
-.typedInput_ethInput_1taBKeIOct {
+.typedInput_ethInput_3gwiyXVI-O {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
 }
 
-.typedInput_ethInput_1taBKeIOct .typedInput_input_2Q_fA9mal0 {
+.typedInput_ethInput_3gwiyXVI-O .typedInput_input_1MYmfYBB3P {
     flex: 1;
     position: relative;
   }
 
-.typedInput_ethInput_1taBKeIOct .typedInput_input_2Q_fA9mal0 .typedInput_label_3Dn-4YMFw0 {
+.typedInput_ethInput_3gwiyXVI-O .typedInput_input_1MYmfYBB3P .typedInput_label_aKCsMPD2Py {
       position: absolute;
       right: 1.5em;
       bottom: 1em;
@@ -1675,7 +1675,7 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
       margin-left: 0.5em;
     }
 
-.typedInput_ethInput_1taBKeIOct .typedInput_toggle_1sxpQypnl3 {
+.typedInput_ethInput_3gwiyXVI-O .typedInput_toggle_2gNKIrfQ5k {
     margin-bottom: 0.5em;
     display: flex;
     flex-direction: row;
@@ -1699,7 +1699,7 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.overlay_overlay_2ssferbf4W {
+.overlay_overlay_3r2NmhKaj8 {
   background: rgba(0, 0, 0, 0.85);
   bottom: 0;
   color: white;
@@ -1727,12 +1727,12 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.sectionList_section_3cbA7oNIZ4 {
+.sectionList_section_3OwJSbtJCv {
   position: relative;
   width: 100%;
 }
 
-.sectionList_section_3cbA7oNIZ4 .sectionList_row_1sVo23gFYc {
+.sectionList_section_3OwJSbtJCv .sectionList_row_v9g7oIDPGk {
     display: flex;
     justify-content: center;
   }
@@ -1740,7 +1740,7 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* TODO: As per JS comments, the flex-base could be adjusted in the future to allow for
     /* case where <> 3 columns are required should the need arrise from a UI pov. */
 
-.sectionList_section_3cbA7oNIZ4 .sectionList_row_1sVo23gFYc .sectionList_item_3gGd57Vhdp {
+.sectionList_section_3OwJSbtJCv .sectionList_row_v9g7oIDPGk .sectionList_item_3c-okw99TK {
       box-sizing: border-box;
       display: flex;
       flex: 0 1 33.33%;
@@ -1755,17 +1755,17 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
       width: 0;
     }
 
-.sectionList_section_3cbA7oNIZ4 .sectionList_row_1sVo23gFYc .sectionList_item_3gGd57Vhdp:hover {
+.sectionList_section_3OwJSbtJCv .sectionList_row_v9g7oIDPGk .sectionList_item_3c-okw99TK:hover {
         opacity: 1;
         z-index: 100;
       }
 
-.sectionList_section_3cbA7oNIZ4 .sectionList_row_1sVo23gFYc .sectionList_item_3gGd57Vhdp.sectionList_stretchOn_MAe2FPdK_9:hover {
+.sectionList_section_3OwJSbtJCv .sectionList_row_v9g7oIDPGk .sectionList_item_3c-okw99TK.sectionList_stretchOn_3P-5o7IHUW:hover {
       flex: 0 0 42%;
       max-width: 42%;
     }
 
-.sectionList_section_3cbA7oNIZ4 + .sectionList_section_3cbA7oNIZ4 {
+.sectionList_section_3OwJSbtJCv + .sectionList_section_3OwJSbtJCv {
   margin-top: 2em;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -1802,7 +1802,7 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.selectionList_item_1nv_maHKPe {
+.selectionList_item_o6TQ_eFwrX {
   cursor: pointer;
   display: flex;
   flex: 1;
@@ -1812,52 +1812,52 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
   max-width: 100%;
 }
 
-.selectionList_item_1nv_maHKPe:hover {
+.selectionList_item_o6TQ_eFwrX:hover {
     filter: none;
     opacity: 1;
   }
 
-.selectionList_item_1nv_maHKPe .selectionList_content_27mC80RS4m {
+.selectionList_item_o6TQ_eFwrX .selectionList_content_8RhP0ytoD6 {
     height: 100%;
     width: 100%;
   }
 
-.selectionList_item_1nv_maHKPe .selectionList_content_27mC80RS4m:hover {
+.selectionList_item_o6TQ_eFwrX .selectionList_content_8RhP0ytoD6:hover {
       background-color: rgba(255, 255, 255, 0.15);
     }
 
-.selectionList_item_1nv_maHKPe .selectionList_overlay_3nCqmAXxoa {
+.selectionList_item_o6TQ_eFwrX .selectionList_overlay_3yYtNjo--p {
     position: absolute;
     left: 0.75em;
     top: 0.75em;
     z-index: 1;
   }
 
-.selectionList_item_1nv_maHKPe .selectionList_overlay_3nCqmAXxoa .selectionList_icon_Som8yS2pEx,
-    .selectionList_item_1nv_maHKPe .selectionList_overlay_3nCqmAXxoa .selectionList_iconDisabled_3mCxJZDMIy {
+.selectionList_item_o6TQ_eFwrX .selectionList_overlay_3yYtNjo--p .selectionList_icon_3UiFToRHJE,
+    .selectionList_item_o6TQ_eFwrX .selectionList_overlay_3yYtNjo--p .selectionList_iconDisabled_3Z5QFrflZQ {
       border-radius: 0.25em;
       color: #333 !important;
       cursor: pointer;
       margin-right: 0.25em;
     }
 
-.selectionList_item_1nv_maHKPe .selectionList_overlay_3nCqmAXxoa .selectionList_icon_Som8yS2pEx {
+.selectionList_item_o6TQ_eFwrX .selectionList_overlay_3yYtNjo--p .selectionList_icon_3UiFToRHJE {
       background: white;
     }
 
-.selectionList_item_1nv_maHKPe .selectionList_overlay_3nCqmAXxoa .selectionList_iconDisabled_3mCxJZDMIy {
+.selectionList_item_o6TQ_eFwrX .selectionList_overlay_3yYtNjo--p .selectionList_iconDisabled_3Z5QFrflZQ {
       background: #666;
     }
 
-.selectionList_item_1nv_maHKPe .selectionList_overlay_3nCqmAXxoa .selectionList_iconDisabled_3mCxJZDMIy:hover {
+.selectionList_item_o6TQ_eFwrX .selectionList_overlay_3yYtNjo--p .selectionList_iconDisabled_3Z5QFrflZQ:hover {
         background: white;
       }
 
-.selectionList_selected_2zD5eI58tC {
+.selectionList_selected_1WOiUjluiO {
   filter: none;
 }
 
-.selectionList_selected_2zD5eI58tC::after {
+.selectionList_selected_1WOiUjluiO::after {
     background: #4183c4;
     content: '';
     height: 4px;
@@ -1867,11 +1867,11 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
     top: 0;
   }
 
-.selectionList_selected_2zD5eI58tC.selectionList_default_1A18gddT0F::after {
+.selectionList_selected_1WOiUjluiO.selectionList_default_10kSvHat61::after {
     background: rgb(167, 151, 0);
   }
 
-.selectionList_unselected_3lZhuNHbZV {
+.selectionList_unselected_3cNCfCUxdh {
   filter: grayscale(50%);
   opacity: 0.75;
 }
@@ -1892,45 +1892,45 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.vaultCard_container_Vwf0NBmRe8 {
+.vaultCard_container_yk0o-U85UY {
   text-align: left;
 }
 
-.vaultCard_container_Vwf0NBmRe8 .vaultCard_accounts_3NpYp2bmsK {
+.vaultCard_container_yk0o-U85UY .vaultCard_accounts_3Srf7yc5T1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 1.5em;
   }
 
-.vaultCard_container_Vwf0NBmRe8 .vaultCard_accounts_3NpYp2bmsK .vaultCard_account_-JG3iPWzQb {
+.vaultCard_container_yk0o-U85UY .vaultCard_accounts_3Srf7yc5T1 .vaultCard_account_gSula4u-7D {
       margin: 0.5em;
     }
 
-.vaultCard_container_Vwf0NBmRe8 .vaultCard_empty_lZfSadWfHn {
+.vaultCard_container_yk0o-U85UY .vaultCard_empty_iSqDBbDjOc {
     margin-top: 1.5em;
     opacity: 0.5;
     text-align: center;
   }
 
-.vaultCard_container_Vwf0NBmRe8 .vaultCard_buttons_1cOieSbgt5 {
+.vaultCard_container_yk0o-U85UY .vaultCard_buttons_ubnykZNgxO {
     margin: -1em -1em 0.75em -1em;
     text-align: right;
   }
 
-.vaultCard_container_Vwf0NBmRe8 .vaultCard_buttons_1cOieSbgt5 button.vaultCard_status_1BW-tRhA1e {
+.vaultCard_container_yk0o-U85UY .vaultCard_buttons_ubnykZNgxO button.vaultCard_status_3dDbkhePgS {
       min-width: 2em !important;
     }
 
-.vaultCard_container_Vwf0NBmRe8 .vaultCard_buttons_1cOieSbgt5 button:not(.vaultCard_status_1BW-tRhA1e) {
+.vaultCard_container_yk0o-U85UY .vaultCard_buttons_ubnykZNgxO button:not(.vaultCard_status_3dDbkhePgS) {
       display: none !important;
     }
 
-.vaultCard_container_Vwf0NBmRe8:hover .vaultCard_buttons_1cOieSbgt5 button.vaultCard_status_1BW-tRhA1e {
+.vaultCard_container_yk0o-U85UY:hover .vaultCard_buttons_ubnykZNgxO button.vaultCard_status_3dDbkhePgS {
         display: none !important;
       }
 
-.vaultCard_container_Vwf0NBmRe8:hover .vaultCard_buttons_1cOieSbgt5 button:not(.vaultCard_status_1BW-tRhA1e) {
+.vaultCard_container_yk0o-U85UY:hover .vaultCard_buttons_ubnykZNgxO button:not(.vaultCard_status_3dDbkhePgS) {
         display: inline-block !important;
       }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -1950,29 +1950,29 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.layout_layout_13J02_Tsdc {
+.layout_layout_-x_QItyuKG {
   display: flex;
   min-height: 56px;
   overflow: hidden;
   text-align: left;
 }
 
-.layout_layout_13J02_Tsdc.layout_border_csPAYiRuKb {
+.layout_layout_-x_QItyuKG.layout_border_6UkZVleiHm {
     background: rgba(0, 0, 0, 0.25);
     padding: 1.5em;
   }
 
-.layout_layout_13J02_Tsdc .layout_identityIcon_MokaTJkGYM {
+.layout_layout_-x_QItyuKG .layout_identityIcon_JdTHfBD7cO {
     margin-right: 1em;
     vertical-align: top;
   }
 
-.layout_layout_13J02_Tsdc .layout_identityIcon_MokaTJkGYM.layout_locked_1xKzCnS4r4 {
+.layout_layout_-x_QItyuKG .layout_identityIcon_JdTHfBD7cO.layout_locked_3FMU4efYxb {
       filter: grayscale(100%);
       opacity: 0.33;
     }
 
-.layout_layout_13J02_Tsdc .layout_info_1Q_giFi36F {
+.layout_layout_-x_QItyuKG .layout_info_1OJE_zC5Rp {
     flex: 1;
     overflow: hidden;
   }
@@ -1993,11 +1993,11 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.form_form_7SnypuKE-p {
+.form_form_3mGfTmCHHU {
   width: 100%;
 }
 
-.form_autofill_3zDrKfqG-f {
+.form_autofill_15u74K99Nb {
   height: 1px;
   width: 1px;
   position: absolute;
@@ -2006,7 +2006,7 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
   opacity: 0;
 }
 
-:root .form_form_7SnypuKE-p input:-webkit-autofill {
+:root .form_form_3mGfTmCHHU input:-webkit-autofill {
   display: none;
   opacity: 0;
 }
@@ -2027,14 +2027,14 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.busy_center_Ka-T2f_tVp {
+.busy_center_3Jq5z2NItH {
   text-align: center;
 }
 
-.busy_title_1fFyAc5Mew {
+.busy_title_3xn9UH964K {
 }
 
-.busy_state_3ZRgWwYDLa {
+.busy_state_1nF2GOVNAE {
   margin-top: 1em;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -2054,11 +2054,11 @@ td.react-datetime_rdtYear_3qpI75pzY5:hover {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.completed_body_3tKJfIosuR {
+.completed_body_pS2OZk16i1 {
   text-align: center;
 }
 
-.completed_body_3tKJfIosuR>div+div {
+.completed_body_pS2OZk16i1>div+div {
   margin-top: 1em;
 }
  /*
@@ -39194,7 +39194,7 @@ body.pushable > .pusher {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.badge_bubble_WyuCI-zNu6 {
+.badge_bubble_3K2tJw1Ua3 {
   border-radius: 50%;
   color: white;
   font-size: 0.7em;
@@ -39202,15 +39202,15 @@ body.pushable > .pusher {
   padding: 3px 5px;
 }
 
-.badge_default_3Jn4GdcFHO {
+.badge_default_2JSjaD44lY {
   background: #555;
 }
 
-.badge_red_2vwcv_dFHR {
+.badge_red_29hMQHaAOH {
   background: red;
 }
 
-.badge_green_3OfIp90WbZ {
+.badge_green_niAtXIAzK9 {
   background: green;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39230,8 +39230,8 @@ body.pushable > .pusher {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.blockNumber_blockNumber_A-xf_jxqFU,
-.blockNumber_syncStatus_2UbCWr8U2V {
+.blockNumber_blockNumber_pEibXG0ciB,
+.blockNumber_syncStatus_2JUW2_rp0R {
   display: inline-block;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39251,7 +39251,7 @@ body.pushable > .pusher {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.blockTimestamp_blockTimestamp_9AADlcBOkn {
+.blockTimestamp_blockTimestamp_LmbIMq1MxI {
   display: inline-block;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39271,19 +39271,19 @@ body.pushable > .pusher {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.certifications_certifications_8KFAEYMLDo {
+.certifications_certifications_XxTDJkXTPB {
   margin-top: 0.75em;
 }
 
-.certifications_certification_2_7z8mL2Hh,
-.certifications_certificationIcon_ikBI8eqLv8 {
+.certifications_certification_1JmLtcvBbZ,
+.certifications_certificationIcon_35t2n1kjhk {
   border-radius: 1em;
   display: inline-block;
   line-height: 1em;
   position: relative;
 }
 
-.certifications_certification_2_7z8mL2Hh .certifications_icon_1mPd2K5KjH, .certifications_certificationIcon_ikBI8eqLv8 .certifications_icon_1mPd2K5KjH {
+.certifications_certification_1JmLtcvBbZ .certifications_icon_3nNggGAzml, .certifications_certificationIcon_35t2n1kjhk .certifications_icon_3nNggGAzml {
     width: 2em;
     height: 2em;
     margin: 0;
@@ -39291,11 +39291,11 @@ body.pushable > .pusher {
     border-radius: 1em;
   }
 
-.certifications_certificationIcon_ikBI8eqLv8 {
+.certifications_certificationIcon_35t2n1kjhk {
   margin-left: 0.5em;
 }
 
-.certifications_certification_2_7z8mL2Hh {
+.certifications_certification_1JmLtcvBbZ {
   background-color: rgba(255, 255, 255, 0.07);
   margin-right: 0.5em;
   margin-top: 1em;
@@ -39303,11 +39303,11 @@ body.pushable > .pusher {
   text-transform: uppercase;
 }
 
-.certifications_certification_2_7z8mL2Hh:last-child {
+.certifications_certification_1JmLtcvBbZ:last-child {
     margin-right: 0;
   }
 
-.certifications_certification_2_7z8mL2Hh .certifications_icon_1mPd2K5KjH {
+.certifications_certification_1JmLtcvBbZ .certifications_icon_3nNggGAzml {
     position: absolute;
     top: -0.25em;
     left: 0;
@@ -39329,7 +39329,7 @@ body.pushable > .pusher {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.clientVersion_clientVersion_3foPBzGJhc {
+.clientVersion_clientVersion_3qzccynkYe {
   display: inline-block;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39349,7 +39349,7 @@ body.pushable > .pusher {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.confirmDialog_body_1rePhHvMnk {
+.confirmDialog_body_32OKsM0UPo {
   text-align: center;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39369,18 +39369,18 @@ body.pushable > .pusher {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.dappIcon_icon_vcAM_s_nJM {
+.dappIcon_icon_3L5UMNnNI1 {
   border-radius: 50%;
   margin: 0 0.75em 0 0;
 }
 
-.dappIcon_normal_12wPcjQR4g {
+.dappIcon_normal_1JNQK5NQdL {
   height: 56px;
   width: 56px;
   font-size: 49px !important;
 }
 
-.dappIcon_small_uchVxwoJkp {
+.dappIcon_small_32spqoAkpd {
   height: 32px;
   width: 32px;
   font-size: 28px !important;
@@ -39402,14 +39402,14 @@ body.pushable > .pusher {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.dappVouchFor_tag_2B7mbm0XWC {
+.dappVouchFor_tag_2povz6Pfaa {
   color: inherit;
   position: absolute;
   top: 1em;
   right: 1em;
 }
 
-.dappVouchFor_tag_2B7mbm0XWC .dappVouchFor_image_Smmv_jND6L {
+.dappVouchFor_tag_2povz6Pfaa .dappVouchFor_image_1mZ9cEAgyL {
     position: absolute;
     right: 0;
     top: 0;
@@ -39417,7 +39417,7 @@ body.pushable > .pusher {
     height: 32px;
   }
 
-.dappVouchFor_tag_2B7mbm0XWC .dappVouchFor_bubble_2t_FSILwIF {
+.dappVouchFor_tag_2povz6Pfaa .dappVouchFor_bubble_1_8-zleY8b {
     background: red;
     border-radius: 0.25em;
     color: white;
@@ -39462,40 +39462,40 @@ body.pushable > .pusher {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.dappCard_container_2XYHLZyWnH {
+.dappCard_container_eveFRk1Lle {
   height: 100%;
   position: relative;
 }
 
-.dappCard_container_2XYHLZyWnH:not(:hover) .dappCard_tags_REhMHBXsoI {
+.dappCard_container_eveFRk1Lle:not(:hover) .dappCard_tags_XCYk8isj9U {
       display: none;
     }
 
-.dappCard_image_s9lvjiXT68 {
+.dappCard_image_HgWeXwAC1O {
   color: rgba(0, 0, 0, 0.5);
   left: 1.5rem;
   position: absolute;
   top: 1.5rem;
 }
 
-i.dappCard_image_s9lvjiXT68 {
+i.dappCard_image_HgWeXwAC1O {
   top: 2.75rem;
 }
 
-.dappCard_author_1AnBfaikkZ,
-.dappCard_description_huYqtSYNWF {
+.dappCard_author_2IPCiJI3-r,
+.dappCard_description_6GqZD15DpK {
   margin-left: 72px;
 }
 
-.dappCard_title_33rn9lpRZa {
+.dappCard_title_3E2krB_xA9 {
   color: inherit;
 }
 
-.dappCard_titleLink_11lGDp4buU {
+.dappCard_titleLink_xgMzwiK-SM {
   color: #4183c4;
 }
 
-.dappCard_author_1AnBfaikkZ {
+.dappCard_author_2IPCiJI3-r {
   font-size: 0.75em;
   opacity: 0.5;
   margin-top: 1em;
@@ -39517,25 +39517,23 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.snackbar_snacks_1jyiLZIt_i {
+.snackbar_snacks_mwcrK5jMlF {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 4px 4px 0 0;
+  bottom: 0;
   color: white;
-  padding: 10px 20px;
+  padding: 1.5em 2em;
   position: fixed;
   left: 50%;
-  bottom: 0;
-  height: 40px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 3000;
   transition: transform 0.75s;
   transform: translateX(-50%) translateY(0);
+  z-index: 3000;
 }
 
-#snackbar_action_1eeekODubK {
-  padding-left: 20px;
-  font-weight: bold;
+#snackbar_action_3cb5ASjYKN {
   cursor: pointer;
+  font-weight: bold;
+  padding-left: 2em;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
 /* This file is part of Parity.
@@ -39554,11 +39552,12 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.errors_container_1zvf8-NOhD {
+.errors_container_aEOQwQPzjc {
+  background-color: red;
   z-index: 10101 !important;
 }
 
-.errors_container_1zvf8-NOhD button {
+.errors_container_aEOQwQPzjc button {
     color: white !important;
     margin: 0 !important;
     margin-right: -16px !important;
@@ -39580,7 +39579,7 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.slider_slider_3yEduj82j0 {
+.slider_slider_3hd8L7i_X- {
   width: 100%;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39600,23 +39599,23 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.gasPriceSelector_chart_1A6zJkz2Le {
+.gasPriceSelector_chart_1i2SX5N8VC {
   position: absolute;
   width: 100%;
 }
 
-.gasPriceSelector_chartRow_CsR9h2JvnM,
-.gasPriceSelector_sliderRow_3Ohsob2RE2 {
+.gasPriceSelector_chartRow_3FpntruOkq,
+.gasPriceSelector_sliderRow_1vqtLlUK6l {
   display: flex;
   flex-wrap: wrap;
   position: relative;
 }
 
-.gasPriceSelector_chartRow_CsR9h2JvnM {
+.gasPriceSelector_chartRow_3FpntruOkq {
   color: inherit;
 }
 
-.gasPriceSelector_slider_2CMXNVgDJv {
+.gasPriceSelector_slider_39_nXZTcBU {
   margin-bottom: 1em;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39636,52 +39635,52 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.gasPriceEditor_container_1_7SrJ2kdU {
+.gasPriceEditor_container_VkdSeSothC {
   display: flex;
   flex-direction: column;
 }
 
-.gasPriceEditor_conditionContainer_1moQkbXcVp {
+.gasPriceEditor_conditionContainer_1WSF805kQw {
   display: flex;
   flex-flow: row nowrap;
   margin-bottom: 1.5em;
 }
 
-.gasPriceEditor_conditionContainer_1moQkbXcVp .gasPriceEditor_input_3_8pJ_UdIq {
+.gasPriceEditor_conditionContainer_1WSF805kQw .gasPriceEditor_input_3dsWo5rFaN {
     flex: 0 1 50%;
   }
 
-.gasPriceEditor_conditionRadio_3ML3C6rn2b {
+.gasPriceEditor_conditionRadio_EbF8yPeJrp {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
 }
 
-.gasPriceEditor_conditionRadio_3ML3C6rn2b > label {
+.gasPriceEditor_conditionRadio_EbF8yPeJrp > label {
     margin-bottom: 0.5em;
   }
 
-.gasPriceEditor_conditionRadio_3ML3C6rn2b > div {
+.gasPriceEditor_conditionRadio_EbF8yPeJrp > div {
     display: flex;
     flex-direction: row;
   }
 
-.gasPriceEditor_conditionRadio_3ML3C6rn2b > div > div {
+.gasPriceEditor_conditionRadio_EbF8yPeJrp > div > div {
       width: auto !important;
     }
 
-.gasPriceEditor_conditionRadio_3ML3C6rn2b > div > div label {
+.gasPriceEditor_conditionRadio_EbF8yPeJrp > div > div label {
         padding-right: 1.5em;
         white-space: nowrap;
       }
 
-.gasPriceEditor_graphContainer_2ArPyJR3Xx {
+.gasPriceEditor_graphContainer_RWi6gklIE_ {
   display: flex;
   flex-wrap: wrap;
   position: relative;
 }
 
-.gasPriceEditor_editColumn_PT7RhA7E4_ {
+.gasPriceEditor_editColumn_2jYhDYl1qT {
   flex: 35;
   padding-left: 1em;
   justify-content: space-around;
@@ -39691,16 +39690,16 @@ i.dappCard_image_s9lvjiXT68 {
   position: relative;
 }
 
-.gasPriceEditor_gasPriceDesc_33XreH2YRG {
+.gasPriceEditor_gasPriceDesc_3PCHKA3EL8 {
   font-size: 0.75em;
   opacity: 0.5;
 }
 
-.gasPriceEditor_graphColumn_1Se9nX9H0T {
+.gasPriceEditor_graphColumn_3HOJMWv6lK {
   flex: 65;
 }
 
-.gasPriceEditor_row_2iKy7Peg50 {
+.gasPriceEditor_row_3wcNHVcFqP {
   display: flex;
   flex-flow: column wrap;
   position: relative;
@@ -39722,7 +39721,7 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.gradientBg_background_2_EKVNpstx {
+.gradientBg_background_iRhcaue7qi {
   background: #405161;
   background: linear-gradient(to bottom, #405161 0%, #2c3742 100%);
 }
@@ -39743,93 +39742,92 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.methodDecoding_container_13aB5O5zYp {
+.methodDecoding_container_1uHkiADVHR {
   color: inherit;
+  width: 100%;
 }
 
-.methodDecoding_clickable_3OG-9nwMkS {
+.methodDecoding_clickable_1Qnj7vUl2J {
   border: 1px dashed rgba(255, 255, 255, 0.4);
   padding: 0.1em 0.3em;
   margin: 0.1em;
 }
 
-.methodDecoding_clickable_3OG-9nwMkS:hover {
+.methodDecoding_clickable_1Qnj7vUl2J:hover {
     cursor: pointer;
   }
 
-.methodDecoding_clickable_3OG-9nwMkS.methodDecoding_noSelect_219ZFEsxG7 {
+.methodDecoding_clickable_1Qnj7vUl2J.methodDecoding_noSelect_Kk0VAlRDTO {
     user-select: none;
   }
 
-.methodDecoding_loading_i_izelZqyb {
+.methodDecoding_loading_21lFQQxfGs {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.methodDecoding_details_Use3pHFufO {
+.methodDecoding_details_2CugXaeTH_ {
   line-height: 1.75em;
 }
 
-.methodDecoding_details_Use3pHFufO,
-.methodDecoding_gasDetails_260y2VAp1k {
+.methodDecoding_details_2CugXaeTH_,
+.methodDecoding_gasDetails_346gf__1Lj {
   color: #aaa;
 }
 
-.methodDecoding_gasDetails_260y2VAp1k {
+.methodDecoding_gasDetails_346gf__1Lj {
   padding-top: 0.75em;
   font-size: 0.75em;
   line-height: 1.5em;
   opacity: 0.5;
 }
 
-.methodDecoding_description_3HdNHNYwPj {
+.methodDecoding_description_1flCc30loM {
   line-height: 2em;
 }
 
-.methodDecoding_name_1jblXc4_Ed,
-.methodDecoding_highlight_1T-LTSToOa {
+.methodDecoding_name_3LzTY3zEJ-,
+.methodDecoding_highlight_1jFhyQSd9N {
   color: #333;
   padding: 0.25em;
 }
 
-.methodDecoding_name_1jblXc4_Ed,
-.methodDecoding_inputs_1-P7oLjZlM,
-.methodDecoding_highlight_1T-LTSToOa {
+.methodDecoding_name_3LzTY3zEJ-,
+.methodDecoding_inputs_3Xq6n3WSrY,
+.methodDecoding_highlight_1jFhyQSd9N {
   color: inherit;
 }
 
-.methodDecoding_inputs_1-P7oLjZlM,
-.methodDecoding_addressContainer_2vgez9iZoY {
+.methodDecoding_inputs_3Xq6n3WSrY,
+.methodDecoding_addressContainer_1is3yTR414 {
   padding-left: 2em;
 }
 
-.methodDecoding_addressContainer_2vgez9iZoY {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.methodDecoding_addressContainer_1is3yTR414 {
+  display: block;
 }
 
-.methodDecoding_input_C1oTskXf8K {
+.methodDecoding_input_ybw7Gu-z12 {
   font-family: inherit !important;
 }
 
-.methodDecoding_etherValue_CO7m9M1XhT,
-.methodDecoding_tokenValue_nhnIEwDDEe {
+.methodDecoding_etherValue_34FvY36bfT,
+.methodDecoding_tokenValue_it6dePQQre {
   color: inherit;
 }
 
-.methodDecoding_address_zsINoe10D2 {
+.methodDecoding_address_1t_LJ6c6dj {
   display: block;
   position: relative;
 }
 
-.methodDecoding_identityicon_2wuOadP-MZ {
+.methodDecoding_identityicon_4dxAtF0u4B {
   margin-bottom: -10px;
   margin-right: 0.5em;
 }
 
-.methodDecoding_inputData_3lWKatoDf5 {
+.methodDecoding_inputData_2aRO5xEkHa {
   word-break: break-all;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39849,26 +39847,26 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.modalBox_body_2bIjFPVqiT {
+.modalBox_body_3zh3qM_XKg {
   display: flex;
   justify-content: flex-start;
 }
 
-.modalBox_body_2bIjFPVqiT .modalBox_content_1rV3mDIcYC {
+.modalBox_body_3zh3qM_XKg .modalBox_content_3wMUHbfHqp {
     flex: 1;
   }
 
-.modalBox_body_2bIjFPVqiT .modalBox_content_1rV3mDIcYC .modalBox_body_2bIjFPVqiT {
+.modalBox_body_3zh3qM_XKg .modalBox_content_3wMUHbfHqp .modalBox_body_3zh3qM_XKg {
       width: 100%;
     }
 
-.modalBox_body_2bIjFPVqiT .modalBox_content_1rV3mDIcYC .modalBox_summary_2OLTKOzRze {
+.modalBox_body_3zh3qM_XKg .modalBox_content_3wMUHbfHqp .modalBox_summary_hx0fHRxBNQ {
       line-height: 1.618em;
       padding: 0 4em 1.5em;
       text-align: center;
     }
 
-.modalBox_body_2bIjFPVqiT .modalBox_icon_3oQPdRT05e {
+.modalBox_body_3zh3qM_XKg .modalBox_icon_6GfO9zAMRO {
     background: rgb(167, 151, 0);
     border-radius: 50%;
     height: 5em;
@@ -39878,12 +39876,12 @@ i.dappCard_image_s9lvjiXT68 {
     width: 5em;
   }
 
-.modalBox_body_2bIjFPVqiT .modalBox_icon_3oQPdRT05e img {
+.modalBox_body_3zh3qM_XKg .modalBox_icon_6GfO9zAMRO img {
       margin: 0;
       padding: 0;
     }
 
-.modalBox_body_2bIjFPVqiT .modalBox_icon_3oQPdRT05e i {
+.modalBox_body_3zh3qM_XKg .modalBox_icon_6GfO9zAMRO i {
       color: white;
       font-size: 3.5rem;
       margin: 0.75rem -0.125rem;
@@ -39905,18 +39903,18 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.netChain_chain_3749R1qpzR {
+.netChain_chain_1jZtK-CU25 {
   border-radius: 0.4em;
   line-height: 1.2;
   padding: 0.25em 0.5em;
   text-transform: uppercase;
 }
 
-.netChain_chain_3749R1qpzR.netChain_live_2_FhGvu0XG {
+.netChain_chain_1jZtK-CU25.netChain_live_JFUqAejsRN {
     background: rgb(0, 136, 0);
   }
 
-.netChain_chain_3749R1qpzR.netChain_test_3FYMdgc_7Y {
+.netChain_chain_1jZtK-CU25.netChain_test_3hzdvf42_F {
     background: rgb(136, 0, 0);
   }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39936,7 +39934,7 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.netPeers_peers_25gUkF99Wt {
+.netPeers_peers_2Wc-LdPXYE {
   display: inline-block;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39956,20 +39954,20 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.page_layout_d9lPlDWgHb,
-.page_layoutPadded_1Sa8Yub6Ic {
+.page_layout_2JmNFeuEC3,
+.page_layoutPadded_2Nb0w4oybr {
   background: #fcfcfc;
 }
 
-.page_layout_d9lPlDWgHb > div, .page_layoutPadded_1Sa8Yub6Ic > div {
+.page_layout_2JmNFeuEC3 > div, .page_layoutPadded_2Nb0w4oybr > div {
     margin-bottom: 0.5em;
   }
 
-.page_layout_d9lPlDWgHb {
+.page_layout_2JmNFeuEC3 {
   padding: 0 1.5em 3em;
 }
 
-.page_layoutPadded_1Sa8Yub6Ic {
+.page_layoutPadded_2Nb0w4oybr {
   padding: 0.5em 1.5em 3em;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -39989,19 +39987,19 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.qrCode_qr_EsJBvmYqdw {
+.qrCode_qr_2jnwsXACXW {
   max-width: 15em;
   max-height: 15em;
 }
 
-.qrCode_qr_EsJBvmYqdw img {
+.qrCode_qr_2jnwsXACXW img {
     height: auto !important;
     max-height: 100%;
     max-width: 100%;
     width: auto !important;
   }
 
-.qrCode_qr_EsJBvmYqdw svg {
+.qrCode_qr_2jnwsXACXW svg {
     background: white;
   }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -40021,11 +40019,11 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.qrScan_qr_3CCzo8Ra5y {
+.qrScan_qr_3Pjw-k2vLC {
   text-align: center;
 }
 
-.qrScan_qr_3CCzo8Ra5y video {
+.qrScan_qr_3Pjw-k2vLC video {
     border: 2px solid rgb(200, 200, 200);
     margin: 1.5em auto;
   }
@@ -40046,7 +40044,7 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.scrollableText_input_3LNMnX0JCs {
+.scrollableText_input_1dsBebOglI {
   background-color: transparent;
   border: none;
   box-sizing: border-box;
@@ -40060,7 +40058,7 @@ i.dappCard_image_s9lvjiXT68 {
   width: 100%;
 }
 
-.scrollableText_input_3LNMnX0JCs.scrollableText_small_2dBliKgLS0 {
+.scrollableText_input_1dsBebOglI.scrollableText_small_1hWRyfaNeK {
     width: 10em;
   }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -40080,12 +40078,12 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.statusIndicator_status_2HVGoxQTBq {
+.statusIndicator_status_3z4rd7wvyh {
   display: inline-block;
 }
 
-.statusIndicator_radial_147txEu91z,
-.statusIndicator_signal_3fuHw4ax9b {
+.statusIndicator_radial_3iN2Jvlr-u,
+.statusIndicator_signal_13go7qZsB9 {
   display: inline-block;
   margin: 0.2em;
   width: 1em;
@@ -40093,25 +40091,25 @@ i.dappCard_image_s9lvjiXT68 {
   white-space: nowrap;
 }
 
-.statusIndicator_radial_147txEu91z {
+.statusIndicator_radial_3iN2Jvlr-u {
   border-radius: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   background-image: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.statusIndicator_radial_147txEu91z.statusIndicator_ok_2f93pqs3hW {
+.statusIndicator_radial_3iN2Jvlr-u.statusIndicator_ok_2uS0a0xIC9 {
     background-color: #070;
   }
 
-.statusIndicator_radial_147txEu91z.statusIndicator_bad_NtHYgNB0Ew {
+.statusIndicator_radial_3iN2Jvlr-u.statusIndicator_bad_19BMK2KRcT {
     background-color: #c00;
   }
 
-.statusIndicator_radial_147txEu91z.statusIndicator_needsAttention_gQTatn5eza {
+.statusIndicator_radial_3iN2Jvlr-u.statusIndicator_needsAttention_3yOUt2haHq {
     background-color: #dc0;
   }
 
-.statusIndicator_signal_3fuHw4ax9b {
+.statusIndicator_signal_13go7qZsB9 {
   width: 2em;
   width: calc(0.9em + 5px);
   text-transform: initial;
@@ -40119,7 +40117,7 @@ i.dappCard_image_s9lvjiXT68 {
   margin-top: -0.5em;
 }
 
-.statusIndicator_signal_3fuHw4ax9b > .statusIndicator_bar_3-HqZVzG4I {
+.statusIndicator_signal_13go7qZsB9 > .statusIndicator_bar_2tFEzFnjBG {
     display: inline-block;
     border: 1px solid #444;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
@@ -40130,34 +40128,34 @@ i.dappCard_image_s9lvjiXT68 {
     vertical-align: bottom;
   }
 
-.statusIndicator_signal_3fuHw4ax9b > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_active_2TkXBDAQKs {
+.statusIndicator_signal_13go7qZsB9 > .statusIndicator_bar_2tFEzFnjBG.statusIndicator_active_zfmq7-XNlo {
       opacity: 1;
       background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0) 100%);
     }
 
-.statusIndicator_signal_3fuHw4ax9b > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_bad_NtHYgNB0Ew {
+.statusIndicator_signal_13go7qZsB9 > .statusIndicator_bar_2tFEzFnjBG.statusIndicator_bad_19BMK2KRcT {
       height: 0.4em;
       border-right: 0;
     }
 
-.statusIndicator_signal_3fuHw4ax9b > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_needsAttention_gQTatn5eza {
+.statusIndicator_signal_13go7qZsB9 > .statusIndicator_bar_2tFEzFnjBG.statusIndicator_needsAttention_3yOUt2haHq {
       height: 0.6em;
       border-right: 0;
     }
 
-.statusIndicator_signal_3fuHw4ax9b > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_ok_2f93pqs3hW {
+.statusIndicator_signal_13go7qZsB9 > .statusIndicator_bar_2tFEzFnjBG.statusIndicator_ok_2uS0a0xIC9 {
       height: 1em;
     }
 
-.statusIndicator_signal_3fuHw4ax9b.statusIndicator_bad_NtHYgNB0Ew > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_active_2TkXBDAQKs {
+.statusIndicator_signal_13go7qZsB9.statusIndicator_bad_19BMK2KRcT > .statusIndicator_bar_2tFEzFnjBG.statusIndicator_active_zfmq7-XNlo {
     background-color: #c00;
   }
 
-.statusIndicator_signal_3fuHw4ax9b.statusIndicator_ok_2f93pqs3hW > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_active_2TkXBDAQKs {
+.statusIndicator_signal_13go7qZsB9.statusIndicator_ok_2uS0a0xIC9 > .statusIndicator_bar_2tFEzFnjBG.statusIndicator_active_zfmq7-XNlo {
     background-color: #080;
   }
 
-.statusIndicator_signal_3fuHw4ax9b.statusIndicator_needsAttention_gQTatn5eza > .statusIndicator_bar_3-HqZVzG4I.statusIndicator_active_2TkXBDAQKs {
+.statusIndicator_signal_13go7qZsB9.statusIndicator_needsAttention_3yOUt2haHq > .statusIndicator_bar_2tFEzFnjBG.statusIndicator_active_zfmq7-XNlo {
     background-color: #dc0;
   }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -40177,7 +40175,7 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.warning_warning_zFLbM9nfKT {
+.warning_warning_1WLqgmvCju {
   background: #f80;
   border-radius: 0.5em;
   color: white;
@@ -40203,16 +40201,16 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.txHash_hash_12BNH2yslX {
+.txHash_hash_9pW0JvAP7P {
   padding-top: 1em;
   word-break: break-all;
 }
 
-.txHash_confirm_2rg2ORJUyO {
+.txHash_confirm_2Wiacvlupo {
   opacity: 0.5;
 }
 
-.txHash_progressbar_13lacT6Mnd {
+.txHash_progressbar_2fhthDsWXJ {
   margin: 0.5em 0 !important;
   width: 30% !important;
   min-width: 220px;
@@ -40220,7 +40218,7 @@ i.dappCard_image_s9lvjiXT68 {
   height: 0.75em !important;
 }
 
-.txHash_progressinfo_XO5WE59OC_ {
+.txHash_progressinfo_2CgPE_2nr5 {
   text-align: center;
 }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -40240,35 +40238,35 @@ i.dappCard_image_s9lvjiXT68 {
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.txList_transactions_2CuHdNwjFl {
+.txList_transactions_OdhraQ088M {
   width: 100%;
   border-collapse: collapse;
 }
 
-.txList_transactions_2CuHdNwjFl tr {
+.txList_transactions_OdhraQ088M tr {
     line-height: 32px;
     vertical-align: top;
   }
 
-.txList_transactions_2CuHdNwjFl tr:nth-child(even) {
+.txList_transactions_OdhraQ088M tr:nth-child(even) {
       background: rgba(255, 255, 255, 0.04);
     }
 
-.txList_transactions_2CuHdNwjFl th {
+.txList_transactions_OdhraQ088M th {
     color: #aaa;
     text-align: center;
   }
 
-.txList_transactions_2CuHdNwjFl td {
+.txList_transactions_OdhraQ088M td {
     vertical-align: top;
     padding: 0.75em;
   }
 
-.txList_transactions_2CuHdNwjFl td.txList_method_3VdnilAAfv {
+.txList_transactions_OdhraQ088M td.txList_method_3Atl3azEr_ {
       width: 40%;
     }
 
-.txList_transactions_2CuHdNwjFl td.txList_timestamp_3ks88RwP7D {
+.txList_transactions_OdhraQ088M td.txList_timestamp_hEO2hZ55Ij {
       max-width: 5em;
       padding-top: 0.75em;
       text-align: center;
@@ -40276,50 +40274,50 @@ i.dappCard_image_s9lvjiXT68 {
       color: grey;
     }
 
-.txList_transactions_2CuHdNwjFl td.txList_transaction_3Dis8q93hb {
+.txList_transactions_OdhraQ088M td.txList_transaction_2sWf4k3bek {
       padding-top: 1.5em;
       text-align: center;
     }
 
-.txList_transactions_2CuHdNwjFl td.txList_transaction_3Dis8q93hb div {
+.txList_transactions_OdhraQ088M td.txList_transaction_2sWf4k3bek div {
         line-height: 1.25em;
         min-height: 1.25em;
       }
 
-.txList_transactions_2CuHdNwjFl .txList_icon_2sNCJS-j49 {
+.txList_transactions_OdhraQ088M .txList_icon_11-fkTY2Lo {
     margin: 0;
   }
 
-.txList_transactions_2CuHdNwjFl .txList_link_UWcH3MhC9x {
+.txList_transactions_OdhraQ088M .txList_link_RrlLXvYF5K {
     vertical-align: top;
   }
 
-.txList_transactions_2CuHdNwjFl .txList_link_UWcH3MhC9x.txList_currentLink_2PDuKOcUPP {
+.txList_transactions_OdhraQ088M .txList_link_RrlLXvYF5K.txList_currentLink_2tMH7RQHY6 {
       color: white;
       cursor: text;
     }
 
-.txList_transactions_2CuHdNwjFl .txList_right_qNvqToHBk6 {
+.txList_transactions_OdhraQ088M .txList_right_3nPs25jBBm {
     text-align: right;
   }
 
-.txList_transactions_2CuHdNwjFl .txList_center_2_seKRV-UY {
+.txList_transactions_OdhraQ088M .txList_center_1esPNypytS {
     text-align: center;
   }
 
-.txList_transactions_2CuHdNwjFl .txList_left_uOBi6Btb9m {
+.txList_transactions_OdhraQ088M .txList_left_D4TbHCBj2D {
     text-align: left;
   }
 
-.txList_transactions_2CuHdNwjFl .txList_pending_2cXXpzm7PQ {
+.txList_transactions_OdhraQ088M .txList_pending_1fb5p_Ot3A {
     padding: 0;
   }
 
-.txList_transactions_2CuHdNwjFl .txList_pending_2cXXpzm7PQ div {
+.txList_transactions_OdhraQ088M .txList_pending_1fb5p_Ot3A div {
     padding-bottom: 1.25em;
   }
 
-.txList_transactions_2CuHdNwjFl .txList_uppercase_3IsMB8_8ri {
+.txList_transactions_OdhraQ088M .txList_uppercase_lKOrcumasZ {
     text-transform: uppercase;
   }
 /* Copyright 2015-2017 Parity Technologies (UK) Ltd.
@@ -40343,14 +40341,14 @@ i.dappCard_image_s9lvjiXT68 {
 /* a component that can take a list of tags and render them in the correct format
 */
 
-.vaultTag_vault_3HjCXZPbe9 {
+.vaultTag_vault_2FbZdLCZmX {
   display: flex;
   flex-wrap: wrap;
   margin: 0.75em 0 0;
   vertical-align: top;
 }
 
-.vaultTag_vault_3HjCXZPbe9 .vaultTag_vaultBody_2Nt7afsLBZ {
+.vaultTag_vault_2FbZdLCZmX .vaultTag_vaultBody__81UBlO3t7 {
     margin: 0.75em 0.5em 0 0;
     background: rgba(255, 255, 255, 0.07);
     border-radius: 16px;
@@ -40360,13 +40358,13 @@ i.dappCard_image_s9lvjiXT68 {
     align-items: center;
   }
 
-.vaultTag_vault_3HjCXZPbe9 img {
+.vaultTag_vault_2FbZdLCZmX img {
     height: 32px !important;
     margin: -4px 1em 0 0;
     width: 32px !important;
   }
 
-.vaultTag_vault_3HjCXZPbe9 .vaultTag_text_3_fwCJ-S0Y {
+.vaultTag_vault_2FbZdLCZmX .vaultTag_text_3KwlvNRKzR {
     margin: 0 0.5em 0 0;
     text-transform: uppercase;
     white-space: nowrap;

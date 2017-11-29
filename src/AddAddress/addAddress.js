@@ -19,8 +19,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
-import { Button, Form, Input, ModalBox, Portal, LabelWrapper } from '@parity/ui';
-import { AddressBond } from 'parity-reactive-ui';
+import { Form, Input, ModalBox, Portal, LabelWrapper } from '@parity/ui';
+import { AddressBond, BButton as Button } from 'parity-reactive-ui';
 import { AddIcon, AddressIcon, CancelIcon } from '@parity/ui/Icons';
 import { Bond } from 'oo7';
 

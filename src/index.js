@@ -18,7 +18,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import { Route, Router, hashHistory } from 'react-router';
 
-import ContractInstances from '@parity/shared/contracts';
+import ContractInstances from '@parity/shared/lib/contracts';
 import { ContextProvider } from '@parity/ui';
 
 import api from './api';
