@@ -20,8 +20,7 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 import { Form, Input, ModalBox, Portal, LabelWrapper } from '@parity/ui';
-import { AddressBond, BButton as Button } from 'parity-reactive-ui';
-import { AddIcon, AddressIcon, CancelIcon } from '@parity/ui/Icons';
+import { AddressBond, BButton as Button, Icons } from 'parity-reactive-ui';
 import { Bond } from 'oo7';
 
 import Store from './store';
@@ -70,7 +69,7 @@ export default class AddAddress extends Component {
 
     return [
       <Button
-        icon={ <CancelIcon /> }
+        icon={ <Icons.CancelIcon /> }
         key='cancel'
         label={
           <FormattedMessage
@@ -82,7 +81,7 @@ export default class AddAddress extends Component {
       />,
       <Button
         disabled={ hasError }
-        icon={ <AddIcon /> }
+        icon={ <Icons.AddIcon /> }
         key='save'
         label={
           <FormattedMessage
@@ -103,7 +102,7 @@ export default class AddAddress extends Component {
 
     return (
       <ModalBox
-        icon={ <AddressIcon /> }
+        icon={ <Icons.AddressIcon /> }
         summary={
           <FormattedMessage
             id='addAddress.header'

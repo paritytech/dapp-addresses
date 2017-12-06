@@ -20,7 +20,7 @@ import { Header, Image, Table, Button, Popup } from 'semantic-ui-react';
 
 import {
   bonds,
-  AccountIcon,
+  Icons,
   AddressLabel,
   EtherBalance,
   TokenList
@@ -29,7 +29,7 @@ import { DappLink } from '@parity/ui';
 import { Rspan } from 'oo7-react';
 
 import { Bond } from 'oo7';
-import isEqual from 'lodash';
+import { isEqual } from 'lodash';
 
 export default class AddressCard extends Component {
   static contextTypes = {
@@ -63,7 +63,7 @@ export default class AddressCard extends Component {
           className='IconLink'
         >
           <Image>
-            <AccountIcon address={ info.address } />
+            <Icons.AccountsIcon address={ info.address } />
           </Image>
           <Header as='h3'>{dispname}</Header>
         </DappLink>

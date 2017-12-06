@@ -26,7 +26,7 @@ import {
   Button as PButton
 } from '@parity/ui';
 
-import { AddIcon } from '@parity/ui/Icons';
+import { Icons } from 'parity-reactive-ui';
 import { bonds } from 'oo7-parity';
 
 import AddressesTable from './AddressesTable';
@@ -87,7 +87,7 @@ export default class Addresses extends Component {
     const buttons = [
       <PButton
         key='newAddress'
-        icon={ <AddIcon /> }
+        icon={ <Icons.AddIcon /> }
         label={ 'address' }
         onClick={ this.onOpenAdd }
       />,
