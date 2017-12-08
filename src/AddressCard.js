@@ -20,7 +20,7 @@ import { Header, Image, Table, Button, Popup } from 'semantic-ui-react';
 
 import {
   bonds,
-  Icons,
+  AccountIcon,
   AddressLabel,
   EtherBalance,
   TokenList
@@ -63,7 +63,7 @@ export default class AddressCard extends Component {
           className='IconLink'
         >
           <Image>
-            <Icons.AccountsIcon address={ info.address } />
+            <AccountIcon address={ info.address } />
           </Image>
           <Header as='h3'>{dispname}</Header>
         </DappLink>
