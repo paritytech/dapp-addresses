@@ -47,7 +47,6 @@ export default class Addresses extends Component {
 
   render () {
     // construct a bond that represents the data contained in table
-
     let TableBond = bonds.allAccountsInfo.map((accountList) => {
       console.log(accountList);
       let p = [];
@@ -67,18 +66,8 @@ export default class Addresses extends Component {
       }
 
       return p;
-    })
-    // .map((filterArray) => {
-    //   filterArray.map((accData) => {
-    //     accData['balance'] = bonds.balance(accData.address);
-    //     return accData;
-    //   });
-    //   return filterArray;
-    // }, 2);
+    });
 
-    //let TableBond = bonds.allAccountsInfo;
-
-    // AddressTable causes circular bug :D
     return (<div className={ styles.Addresses }>
       { this.renderActionbar() }
       { this.renderAddAddress() }
