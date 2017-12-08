@@ -36,6 +36,7 @@ export default class AddressesTable extends ReactiveComponent {
   }
 
   render () {
+    console.log('stati', this.state);
     if (typeof this.state.accountinfo === 'undefined') {
       return (<div />);
     }
@@ -58,7 +59,7 @@ export default class AddressesTable extends ReactiveComponent {
     }
 
     let filteredAddreddes = this.getFilteredAddresses(this.state.accountinfo);
-
+    console.log('rending')
     return (<Table padded columns={ 5 } textAlign='center' style={ { marginBottom: '70px' } }>
       <Table.Header>
         <Table.Row>
@@ -72,6 +73,7 @@ export default class AddressesTable extends ReactiveComponent {
       </Table.Header>
       <Table.Body>
         { filteredAddreddes.map(elem => {
+          console.log('rending2')
           return (
             <AddressCard
               key={ elem.address }
