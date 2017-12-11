@@ -16,7 +16,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Header, Image, Table, Button, Popup } from 'semantic-ui-react';
+import { Header, Table, Button, Popup } from 'semantic-ui-react';
 
 import {
   bonds,
@@ -62,9 +62,9 @@ export default class AddressCard extends Component {
           to={ `/address/${info.address}` }
           className='IconLink'
         >
-          <Image>
-            <AccountIcon address={ info.address } />
-          </Image>
+          <AccountIcon
+            address={ info.address }
+          />
           <Header as='h3'>{dispname}</Header>
         </DappLink>
       </Table.Cell>

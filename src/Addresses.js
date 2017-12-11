@@ -48,7 +48,6 @@ export default class Addresses extends Component {
   render () {
     // construct a bond that represents the data contained in table
     let TableBond = bonds.allAccountsInfo.map((accountList) => {
-      console.log(accountList);
       let p = [];
 
       for (let key in accountList) {
