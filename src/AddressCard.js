@@ -16,7 +16,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Header, Table, Button, Popup } from 'semantic-ui-react';
+import { Header, Table, Button, Popup, Item } from 'semantic-ui-react';
 
 import {
   bonds,
@@ -64,17 +64,25 @@ export default class AddressCard extends Component {
           to={ `/address/${info.address}` }
           className='IconLink'
         >
-          <AccountIcon
-            address={ info.address }
-            className={ styles.AccountIcon }
-          />
+          <Item.Group>
+            <Item>
+              <Item.Image size='tiny'>
+                <AccountIcon
+                  address={ info.address }
+                  className={ styles.AccountIcon }
+                />
+              </Item.Image>
+              <Item.Content>
+                <Item.Header as='h3'>
+                  {dispname}
+                  <BadgeList
+                    badges={ bonds.badgesOf(info.address) }
+                  />
+                </Item.Header>
+              </Item.Content>
+            </Item>
+          </Item.Group>
         </DappLink>
-        <Header as='h3'>
-          {dispname}
-          <BadgeList
-            badges={ bonds.badgesOf(info.address) }
-          />
-        </Header>
       </Table.Cell>
       <Table.Cell>
         <EtherBalance balance={ bonds.balance(info.address) } />
