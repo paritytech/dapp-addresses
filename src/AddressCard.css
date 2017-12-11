@@ -23,3 +23,28 @@
 .AddressCard:hover{
   box-shadow: 3px 3px 8px #DDD;
 }
+
+.AccountIcon{
+  box-shadow: 0 0 0 black;
+
+}
+
+.AccountIcon:hover{
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0%    {box-shadow: 0 0 0 black}
+  70%   {box-shadow: 0 0 20px black}
+  100%  {box-shadow: 0 0 20px black}
+}
+
+.BadgeList{
+  padding: 0 3px;
+}
+
+.BadgeList *{
+
+}

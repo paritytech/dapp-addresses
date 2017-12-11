@@ -23,13 +23,16 @@ import {
   AccountIcon,
   AddressLabel,
   EtherBalance,
-  TokenList
+  TokenList,
+  BadgeList
 } from 'parity-reactive-ui';
 import { DappLink } from '@parity/ui';
 import { Rspan } from 'oo7-react';
 
 import { Bond } from 'oo7';
 import { isEqual } from 'lodash';
+
+import styles from './AddressCard.css';
 
 export default class AddressCard extends Component {
   static contextTypes = {
@@ -55,7 +58,6 @@ export default class AddressCard extends Component {
     if (info.name.length > 30) {
       dispname = info.name.substr(0, 30) + '...';
     }
-
     return (<Table.Row >
       <Table.Cell>
         <DappLink
@@ -64,9 +66,15 @@ export default class AddressCard extends Component {
         >
           <AccountIcon
             address={ info.address }
+            className={ styles.AccountIcon }
           />
-          <Header as='h3'>{dispname}</Header>
         </DappLink>
+        <Header as='h3'>
+          {dispname}
+          <BadgeList
+            badges={ bonds.badgesOf(info.address) }
+          />
+        </Header>
       </Table.Cell>
       <Table.Cell>
         <EtherBalance balance={ bonds.balance(info.address) } />
@@ -75,7 +83,7 @@ export default class AddressCard extends Component {
         <TokenList tokens={ bonds.tokensOf(info.address) } />
       </Table.Cell>
       <Table.Cell>
-        <Rspan> { bonds.nonce(info.address) } </Rspan>
+        <Rspan> { bonds.nonce(info.address) } tx</Rspan>
       </Table.Cell>
       <Table.Cell>
         <AddressLabel address={ addressBond } />

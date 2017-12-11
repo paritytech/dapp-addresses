@@ -38,7 +38,7 @@ export default class Addresses extends Component {
     api: PropTypes.object.isRequired
   }
 
-  state ={
+  state={
     showAdd: false,
     searchTokens: [],
     searchValues: [],

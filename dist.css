@@ -40385,6 +40385,50 @@ i.dappCard_image_HgWeXwAC1O {
 /* You should have received a copy of the GNU General Public License
 /* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 */
+.AddressCard_AddressCard_1Hp5qaWLHp {
+  display: inline-block;
+  padding: 20px;
+  box-shadow: 1px 1px 5px #DDD;
+}
+.AddressCard_AddressCard_1Hp5qaWLHp:hover{
+  box-shadow: 3px 3px 8px #DDD;
+}
+.AddressCard_AccountIcon_1i-XK3rF79{
+  box-shadow: 0 0 0 black;
+
+}
+.AddressCard_AccountIcon_1i-XK3rF79:hover{
+  animation-name: AddressCard_pulse_29XGiGwk9K;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes AddressCard_pulse_29XGiGwk9K {
+  0%    {box-shadow: 0 0 0 black}
+  70%   {box-shadow: 0 0 20px black}
+  100%  {box-shadow: 0 0 20px black}
+}
+.AddressCard_BadgeList_25YOiCIMeh{
+  padding: 0 3px;
+}
+.AddressCard_BadgeList_25YOiCIMeh *{
+
+}
+/* Copyright 2015-2017 Parity Technologies (UK) Ltd.
+/* This file is part of Parity.
+/*
+/* Parity is free software: you can redistribute it and/or modify
+/* it under the terms of the GNU General Public License as published by
+/* the Free Software Foundation, either version 3 of the License, or
+/* (at your option) any later version.
+/*
+/* Parity is distributed in the hope that it will be useful,
+/* but WITHOUT ANY WARRANTY; without even the implied warranty of
+/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+/* GNU General Public License for more details.
+/*
+/* You should have received a copy of the GNU General Public License
+/* along with Parity.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 .Addresses_AddressContainer_2O09GLtCgX{
   display: flex;
