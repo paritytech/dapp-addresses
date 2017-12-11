@@ -20,7 +20,7 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 import { Form, Input, ModalBox, Portal, LabelWrapper } from '@parity/ui';
-import { AddressBond, BButton as Button, Icons } from 'parity-reactive-ui';
+import { AddressBond, BButton, Icons } from 'parity-reactive-ui';
 import { Bond } from 'oo7';
 
 import Store from './store';
@@ -68,29 +68,27 @@ export default class AddAddress extends Component {
     const { hasError } = this.store;
 
     return [
-      <Button
-        icon={ <Icons.CancelIcon /> }
+      <BButton
         key='cancel'
-        label={
-          <FormattedMessage
-            id='addAddress.button.close'
-            defaultMessage='Cancel'
-          />
-        }
         onClick={ this.onClose }
-      />,
-      <Button
+      >
+        <Icons.CancelIcon />
+        <FormattedMessage
+          id='addAddress.button.close'
+          defaultMessage='Cancel'
+        />
+      </BButton>,
+      <BButton
         disabled={ hasError }
-        icon={ <Icons.AddIcon /> }
         key='save'
-        label={
-          <FormattedMessage
-            id='addAddress.button.add'
-            defaultMessage='Save Address'
-          />
-        }
         onClick={ this.onAdd }
-      />
+      >
+        <Icons.AddIcon />
+        <FormattedMessage
+          id='addAddress.button.add'
+          defaultMessage='Save Address'
+        />
+      </BButton>
     ];
   }
 
