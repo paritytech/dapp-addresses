@@ -58,10 +58,11 @@ export default class AddressesTable extends ReactiveComponent {
     }
 
     let filteredAddreddes = this.getFilteredAddresses(this.state.accountinfo);
-    return (<Table padded columns={ 5 } textAlign='center' style={ { marginBottom: '70px' } }>
+
+    return (<Table columns={ 5 } padded='very' textAlign='left' style={ { marginBottom: '70px' } }>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>Name</Table.HeaderCell>
+          <Table.HeaderCell textAlign='center'>Name</Table.HeaderCell>
           <Table.HeaderCell>Balance</Table.HeaderCell>
           <Table.HeaderCell>Tokens</Table.HeaderCell>
           <Table.HeaderCell>Transactions</Table.HeaderCell>

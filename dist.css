@@ -40394,19 +40394,22 @@ i.dappCard_image_HgWeXwAC1O {
   box-shadow: 3px 3px 8px #DDD;
 }
 .AddressCard_AccountIcon_1i-XK3rF79{
-  box-shadow: 0 0 0 black;
-
+  box-shadow: 0 0 5px #444;
+  transition: box-shadow .7s;
 }
 .AddressCard_AccountIcon_1i-XK3rF79:hover{
-  animation-name: AddressCard_pulse_29XGiGwk9K;
+  box-shadow: 0 0 20px #444;
+  /*animation-name: pulse;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;*/
 }
-@keyframes AddressCard_pulse_29XGiGwk9K {
+/*
+@keyframes pulse {
   0%    {box-shadow: 0 0 0 black}
   70%   {box-shadow: 0 0 20px black}
   100%  {box-shadow: 0 0 20px black}
 }
+*/
 .AddressCard_BadgeList_25YOiCIMeh{
   padding: 0 3px;
 }
