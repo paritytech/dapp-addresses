@@ -31,17 +31,8 @@
 
 .AccountIcon:hover{
   box-shadow: 0 0 20px #444;
-  /*animation-name: pulse;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;*/
 }
-/*
-@keyframes pulse {
-  0%    {box-shadow: 0 0 0 black}
-  70%   {box-shadow: 0 0 20px black}
-  100%  {box-shadow: 0 0 20px black}
-}
-*/
+
 .BadgeList{
   padding: 0 3px;
 }

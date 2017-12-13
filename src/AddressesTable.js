@@ -15,12 +15,13 @@
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
 import React from 'react';
-import { ReactiveComponent } from 'oo7-react';
+// import { ReactiveComponent } from 'oo7-react';
 import PropTypes from 'prop-types';
-import { Table } from 'semantic-ui-react';
+import { Table, bonds } from 'semantic-ui-react';
+
 import AddressCard from './AddressCard';
 
-export default class AddressesTable extends ReactiveComponent {
+export default class AddressesTable {
   static contextTypes = {
     api: PropTypes.object.isRequired
   }
@@ -31,19 +32,37 @@ export default class AddressesTable extends ReactiveComponent {
     seachValues: PropTypes.array
   }
 
-  constructor () {
-    super(['accountinfo']);
-  }
-
   render () {
-    if (typeof this.state.accountinfo === 'undefined') {
-      return (<div />);
-    }
-    let { accountinfo } = this.state;
     let { sortOrder } = this.props;
+
+    // if (!accountinfo) {
+    //   return (<div />);
+    // }
+
+    // construct a bond that represents the data contained in table
+    let TableBond = bonds.allAccountsInfo.map((accountList) => {
+      let p = [];
+
+      for (let key in accountList) {
+        // read out all (valid) accounts
+        if (typeof accountList[key].uuid === 'undefined' &&
+            !accountList[key].meta.contract &&
+            !accountList[key].meta.wallet) {
+          // modify account so that all bond of info is in object
+          let modaccount = accountList[key];
+
+          modaccount['address'] = key;
+          // balanceArray.push(bonds.balance(key));
+          p.push(modaccount);
+        }
+      }
+
+      return p;
+    }).map(this.getFilteredAddresses);
 
     if (sortOrder === 'eth' && this.state.prevSort !== 'eth') {
       accountinfo.sort((accA, accB) => {
+        console.log('ethsort', accA, accB);
         if (accA.balance.equals(accB.balance)) {
           return 0;
         } else if (accA.balance.greaterThan(accB.balance)) {
@@ -82,9 +101,8 @@ export default class AddressesTable extends ReactiveComponent {
     </Table>);
   }
 
-  getFilteredAddresses () {
+  getFilteredAddresses (accountinfo) {
     const { searchTokens } = this.props;
-    const { accountinfo } = this.state;
     const searchValues = (searchTokens || []).map(v => v.toLowerCase());
 
     if (searchValues.length === 0) {

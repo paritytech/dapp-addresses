@@ -46,32 +46,10 @@ export default class Addresses extends Component {
   }
 
   render () {
-    // construct a bond that represents the data contained in table
-    let TableBond = bonds.allAccountsInfo.map((accountList) => {
-      let p = [];
-
-      for (let key in accountList) {
-        // read out all (valid) accounts
-        if (typeof accountList[key].uuid === 'undefined' &&
-            !accountList[key].meta.contract &&
-            !accountList[key].meta.wallet) {
-          // modify account so that all bond of info is in object
-          let modaccount = accountList[key];
-
-          modaccount['address'] = key;
-          // balanceArray.push(bonds.balance(key));
-          p.push(modaccount);
-        }
-      }
-
-      return p;
-    });
-
     return (<div className={ styles.Addresses }>
       { this.renderActionbar() }
       { this.renderAddAddress() }
       <AddressesTable
-        accountinfo={ TableBond }
         sortOrder={ this.state.sortOrder }
         searchTokens={ this.state.searchTokens }
         searchValues={ this.state.searchValues }

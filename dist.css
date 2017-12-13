@@ -40399,17 +40399,7 @@ i.dappCard_image_HgWeXwAC1O {
 }
 .AddressCard_AccountIcon_1i-XK3rF79:hover{
   box-shadow: 0 0 20px #444;
-  /*animation-name: pulse;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;*/
 }
-/*
-@keyframes pulse {
-  0%    {box-shadow: 0 0 0 black}
-  70%   {box-shadow: 0 0 20px black}
-  100%  {box-shadow: 0 0 20px black}
-}
-*/
 .AddressCard_BadgeList_25YOiCIMeh{
   padding: 0 3px;
 }
