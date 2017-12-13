@@ -14,14 +14,16 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import React from 'react';
+import React, { Component } from 'react';
 // import { ReactiveComponent } from 'oo7-react';
 import PropTypes from 'prop-types';
-import { Table, bonds } from 'semantic-ui-react';
+import { Table } from 'semantic-ui-react';
+import { bonds } from 'oo7-parity';
+import { ReactiveComponent } from 'oo7-react';
 
 import AddressCard from './AddressCard';
 
-export default class AddressesTable {
+export default class AddressesTable extends Component {
   static contextTypes = {
     api: PropTypes.object.isRequired
   }
@@ -58,25 +60,11 @@ export default class AddressesTable {
       }
 
       return p;
-    }).map(this.getFilteredAddresses);
+    }).map(this.getFilteredAddresses).map((ac) => { return this.sortAccounts(ac, sortOrder); });
 
-    if (sortOrder === 'eth' && this.state.prevSort !== 'eth') {
-      accountinfo.sort((accA, accB) => {
-        console.log('ethsort', accA, accB);
-        if (accA.balance.equals(accB.balance)) {
-          return 0;
-        } else if (accA.balance.greaterThan(accB.balance)) {
-          return -1;
-        }
-        return 1;
-      });
-    } else if (sortOrder === 'name') {
-      accountinfo.sort((accA, accB) => {
-        return accA.name.localeCompare(accB.name);
-      });
-    }
+    console.log(TableBond);
 
-    let filteredAddreddes = this.getFilteredAddresses(this.state.accountinfo);
+    let filteredAddreddes = [];
 
     return (<Table columns={ 5 } padded='very' textAlign='left' style={ { marginBottom: '70px' } }>
       <Table.Header>
@@ -101,7 +89,7 @@ export default class AddressesTable {
     </Table>);
   }
 
-  getFilteredAddresses (accountinfo) {
+  getFilteredAddresses = (accountinfo) => {
     const { searchTokens } = this.props;
     const searchValues = (searchTokens || []).map(v => v.toLowerCase());
 
@@ -126,4 +114,26 @@ export default class AddressesTable {
       // `current || truth, false` => use tokens as OR
     });
   }
+
+  sortAccounts = (accountinfo, order) => {
+    if (order === 'eth' && this.state.prevSort !== 'eth') {
+      return accountinfo.sort((accA, accB) => {
+        console.log('ethsort', accA, accB);
+        if (accA.balance.equals(accB.balance)) {
+          return 0;
+        } else if (accA.balance.greaterThan(accB.balance)) {
+          return -1;
+        }
+        return 1;
+      });
+    } else if (order === 'name') {
+      return accountinfo.sort((accA, accB) => {
+        return accA.name.localeCompare(accB.name);
+      });
+    }
+  }
+}
+
+class AddressTableAux extends ReactiveComponent {
+
 }
