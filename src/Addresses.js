@@ -46,10 +46,35 @@ export default class Addresses extends Component {
   }
 
   render () {
+
+    let TableBond = bonds.allAccountsInfo.map((accountList) => {
+      let outList = [];
+
+      for (let key in accountList) {
+        // read out all (valid) accounts
+        if (typeof accountList[key].uuid === 'undefined' &&
+            !accountList[key].meta.contract &&
+            !accountList[key].meta.wallet) {
+          // modify account so that all bond of info is in object
+          let modaccount = accountList[key];
+
+          modaccount['address'] = key;
+          // balanceArray.push(bonds.balance(key));
+          outList.push(modaccount);
+        }
+      }
+      console.log('acclist', outList);
+      return outList;
+    });
+    // .map((i) => this.getFilteredAddresses(i, this.state.searchTokens)).map((ac) => this.sortAccounts(ac, this.state.sortOrder));
+
+    console.log('tbd', TableBond);
+
     return (<div className={ styles.Addresses }>
       { this.renderActionbar() }
       { this.renderAddAddress() }
       <AddressesTable
+        tableinfo={ TableBond }
         sortOrder={ this.state.sortOrder }
         searchTokens={ this.state.searchTokens }
         searchValues={ this.state.searchValues }
@@ -171,5 +196,50 @@ export default class Addresses extends Component {
         onChange={ onChange }
       />
     );
+  }
+
+  getFilteredAddresses = (accountinfo, searchTokens) => {
+    console.log('filti', accountinfo, searchTokens);
+    const searchValues = (searchTokens || []).map(v => v.toLowerCase());
+
+    if (searchValues.length === 0) {
+      return accountinfo;
+    }
+
+    return accountinfo.filter((account) => {
+      const tags = account.meta.tags || [];
+      const desc = account.meta.description || '';
+      const name = account.name || '';
+
+      const values = tags.concat(name);
+
+      values.concat(desc.split(' '));
+      values.map(v => v.toLowerCase());
+
+      return searchValues.map(searchValue => {
+        return values.some(value => value.indexOf(searchValue) >= 0);
+      }).reduce((current, truth) => current && truth, true);
+      // `current && truth, true` => use tokens as AND
+      // `current || truth, false` => use tokens as OR
+    });
+  }
+
+  sortAccounts = (accountinfo, order) => {
+    // && this.state.prevSort !== 'eth'
+    console.log('ethsort', accountinfo, order);
+    if (order === 'eth') {
+      return accountinfo.sort((accA, accB) => {
+        if (accA.balance.equals(accB.balance)) {
+          return 0;
+        } else if (accA.balance.greaterThan(accB.balance)) {
+          return -1;
+        }
+        return 1;
+      });
+    } else if (order === 'name') {
+      return accountinfo.sort((accA, accB) => {
+        return accA.name.localeCompare(accB.name);
+      });
+    }
   }
 }

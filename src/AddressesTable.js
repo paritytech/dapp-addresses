@@ -23,7 +23,7 @@ import { ReactiveComponent } from 'oo7-react';
 
 import AddressCard from './AddressCard';
 
-export default class AddressesTable extends Component {
+export default class AddressesTable extends ReactiveComponent {
   static contextTypes = {
     api: PropTypes.object.isRequired
   }
@@ -34,37 +34,21 @@ export default class AddressesTable extends Component {
     seachValues: PropTypes.array
   }
 
-  render () {
-    let { sortOrder } = this.props;
+  constructor () {
+    super(['tableinfo']);
+  }
 
+  render () {
     // if (!accountinfo) {
     //   return (<div />);
     // }
 
     // construct a bond that represents the data contained in table
-    let TableBond = bonds.allAccountsInfo.map((accountList) => {
-      let p = [];
+    let { tableinfo } = this.state;
 
-      for (let key in accountList) {
-        // read out all (valid) accounts
-        if (typeof accountList[key].uuid === 'undefined' &&
-            !accountList[key].meta.contract &&
-            !accountList[key].meta.wallet) {
-          // modify account so that all bond of info is in object
-          let modaccount = accountList[key];
+    console.log('ti', this.state.tableinfo);
 
-          modaccount['address'] = key;
-          // balanceArray.push(bonds.balance(key));
-          p.push(modaccount);
-        }
-      }
-
-      return p;
-    }).map(this.getFilteredAddresses).map((ac) => { return this.sortAccounts(ac, sortOrder); });
-
-    console.log(TableBond);
-
-    let filteredAddreddes = [];
+    // let filteredAddreddes = [];
 
     return (<Table columns={ 5 } padded='very' textAlign='left' style={ { marginBottom: '70px' } }>
       <Table.Header>
@@ -78,7 +62,7 @@ export default class AddressesTable extends Component {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        { filteredAddreddes.map(elem => {
+        { tableinfo.map(elem => {
           return (
             <AddressCard
               key={ elem.address }
@@ -88,52 +72,4 @@ export default class AddressesTable extends Component {
       </Table.Body>
     </Table>);
   }
-
-  getFilteredAddresses = (accountinfo) => {
-    const { searchTokens } = this.props;
-    const searchValues = (searchTokens || []).map(v => v.toLowerCase());
-
-    if (searchValues.length === 0) {
-      return accountinfo;
-    }
-
-    return accountinfo.filter((account) => {
-      const tags = account.meta.tags || [];
-      const desc = account.meta.description || '';
-      const name = account.name || '';
-
-      const values = tags.concat(name);
-
-      values.concat(desc.split(' '));
-      values.map(v => v.toLowerCase());
-
-      return searchValues.map(searchValue => {
-        return values.some(value => value.indexOf(searchValue) >= 0);
-      }).reduce((current, truth) => current && truth, true);
-      // `current && truth, true` => use tokens as AND
-      // `current || truth, false` => use tokens as OR
-    });
-  }
-
-  sortAccounts = (accountinfo, order) => {
-    if (order === 'eth' && this.state.prevSort !== 'eth') {
-      return accountinfo.sort((accA, accB) => {
-        console.log('ethsort', accA, accB);
-        if (accA.balance.equals(accB.balance)) {
-          return 0;
-        } else if (accA.balance.greaterThan(accB.balance)) {
-          return -1;
-        }
-        return 1;
-      });
-    } else if (order === 'name') {
-      return accountinfo.sort((accA, accB) => {
-        return accA.name.localeCompare(accB.name);
-      });
-    }
-  }
-}
-
-class AddressTableAux extends ReactiveComponent {
-
 }
