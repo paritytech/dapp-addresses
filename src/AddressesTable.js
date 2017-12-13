@@ -39,10 +39,6 @@ export default class AddressesTable extends ReactiveComponent {
   }
 
   render () {
-    // if (!accountinfo) {
-    //   return (<div />);
-    // }
-
     // construct a bond that represents the data contained in table
     let { tableinfo } = this.state;
 
@@ -62,7 +58,7 @@ export default class AddressesTable extends ReactiveComponent {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        { tableinfo.map(elem => {
+        { (tableinfo || []).map(elem => {
           return (
             <AddressCard
               key={ elem.address }

@@ -28,6 +28,7 @@ import {
 
 import { Icons } from 'parity-reactive-ui';
 import { bonds } from 'oo7-parity';
+import { Bond } from 'oo7';
 
 import AddressesTable from './AddressesTable';
 import AddAddress from './AddAddress';
@@ -49,7 +50,6 @@ export default class Addresses extends Component {
 
     let TableBond = bonds.allAccountsInfo.map((accountList) => {
       let outList = [];
-
       for (let key in accountList) {
         // read out all (valid) accounts
         if (typeof accountList[key].uuid === 'undefined' &&
@@ -63,18 +63,19 @@ export default class Addresses extends Component {
           outList.push(modaccount);
         }
       }
-      console.log('acclist', outList);
-      return outList;
-    });
-    // .map((i) => this.getFilteredAddresses(i, this.state.searchTokens)).map((ac) => this.sortAccounts(ac, this.state.sortOrder));
 
-    console.log('tbd', TableBond);
+      return outList;
+    }).map((prepList) => this.getFilteredAddresses(prepList, this.state.searchTokens));
+
+    let nTableBond = this.sortAccountsBond(TableBond);
+
+    console.log('tbd', nTableBond);
 
     return (<div className={ styles.Addresses }>
       { this.renderActionbar() }
       { this.renderAddAddress() }
       <AddressesTable
-        tableinfo={ TableBond }
+        tableinfo={ nTableBond }
         sortOrder={ this.state.sortOrder }
         searchTokens={ this.state.searchTokens }
         searchValues={ this.state.searchValues }
@@ -227,7 +228,9 @@ export default class Addresses extends Component {
   sortAccounts = (accountinfo, order) => {
     // && this.state.prevSort !== 'eth'
     console.log('ethsort', accountinfo, order);
-    if (order === 'eth') {
+    if (!order) {
+      return accountinfo;
+    } else if (order === 'eth') {
       return accountinfo.sort((accA, accB) => {
         if (accA.balance.equals(accB.balance)) {
           return 0;
@@ -240,6 +243,26 @@ export default class Addresses extends Component {
       return accountinfo.sort((accA, accB) => {
         return accA.name.localeCompare(accB.name);
       });
+    } else {
+      //sort order not recognised
+      return accountinfo;
     }
+  }
+
+  sortAccountsBond = (accbond) => {
+    // && this.state.prevSort !== 'eth'
+    accbond.map(console.log);
+    return accbond
+    .map(accs => accs.map((elem) => [bonds.balance(elem.address), elem]))
+    .map(aux => aux.sort((auxA, auxB) => {
+      console.log('ax', auxA[1], auxB[1])
+      if (auxA[1].equals(auxB[1])) {
+          return 0;
+        } else if (aux[1].greaterThan(auxB[1])) {
+          return 1;
+        }
+        return -1;
+    }
+    ));
   }
 }
