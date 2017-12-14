@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Header, Table, Button, Popup, Item } from 'semantic-ui-react';
 import { ReactiveComponent } from 'oo7-react';
@@ -35,10 +35,7 @@ import { isEqual } from 'lodash';
 
 import styles from './AddressCard.css';
 
-export default class AddressCard extends ReactiveComponent {
-  constructor () {
-    super(['info']);
-  }
+export default class AddressCard extends Component {
 
   static contextTypes = {
     api: PropTypes.object.isRequired
@@ -49,8 +46,8 @@ export default class AddressCard extends ReactiveComponent {
   }
 
   render () {
-    const { info } = this.state;
-    let dispname = info.name;
+    const { info } = this.props;
+    let dispname = info.name || '';
     let addressBond = new Bond();
 
     info.name = info.name || '';

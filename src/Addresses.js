@@ -67,15 +67,36 @@ export default class Addresses extends Component {
       return outList;
     }).map((prepList) => this.getFilteredAddresses(prepList, this.state.searchTokens));
 
-    let nTableBond = this.sortAccountsBond(TableBond);
+    let t0 = performance.now()
+    let table = bonds.allAccountsInfo
+    .map((accob) => Object.keys(accob).map(sacc => {
+        let temp = accob[sacc];
+        temp.address = sacc;
+        return temp;
+      }
+    ))
+    .map(acca => acca.filter(single => !single.uuid && !single.meta.contract && !single.meta.wallet))
+    .map((prepList) => this.getFilteredAddresses(prepList, this.state.searchTokens))
+    .map(accf => accf.map(sing => {
+      sing.balance = bonds.balance(sing.address);
+      return sing;
+    }),2)
+    .map(accl => this.sortAccounts(accl, this.state.sortOrder), 2)
+    .map(accs => accs.map(elem => {
+      delete elem.balance;
+      return elem;
+    }));
+    let t1 = performance.now();
+    console.log('pf',t1-t0)
 
-    console.log('tbd', nTableBond);
+    table.log();
 
+    //let nTableBond = this.sortAccountsBond(TableBond);
     return (<div className={ styles.Addresses }>
       { this.renderActionbar() }
       { this.renderAddAddress() }
       <AddressesTable
-        tableinfo={ nTableBond }
+        tableinfo={ table }
         sortOrder={ this.state.sortOrder }
         searchTokens={ this.state.searchTokens }
         searchValues={ this.state.searchValues }
@@ -200,7 +221,6 @@ export default class Addresses extends Component {
   }
 
   getFilteredAddresses = (accountinfo, searchTokens) => {
-    console.log('filti', accountinfo, searchTokens);
     const searchValues = (searchTokens || []).map(v => v.toLowerCase());
 
     if (searchValues.length === 0) {
@@ -227,7 +247,6 @@ export default class Addresses extends Component {
 
   sortAccounts = (accountinfo, order) => {
     // && this.state.prevSort !== 'eth'
-    console.log('ethsort', accountinfo, order);
     if (!order) {
       return accountinfo;
     } else if (order === 'eth') {
@@ -244,25 +263,8 @@ export default class Addresses extends Component {
         return accA.name.localeCompare(accB.name);
       });
     } else {
-      //sort order not recognised
+      // sort order not recognised
       return accountinfo;
     }
-  }
-
-  sortAccountsBond = (accbond) => {
-    // && this.state.prevSort !== 'eth'
-    accbond.map(console.log);
-    return accbond
-    .map(accs => accs.map((elem) => [bonds.balance(elem.address), elem]))
-    .map(aux => aux.sort((auxA, auxB) => {
-      console.log('ax', auxA[1], auxB[1])
-      if (auxA[1].equals(auxB[1])) {
-          return 0;
-        } else if (aux[1].greaterThan(auxB[1])) {
-          return 1;
-        }
-        return -1;
-    }
-    ));
   }
 }

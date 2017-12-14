@@ -42,9 +42,7 @@ export default class AddressesTable extends ReactiveComponent {
     // construct a bond that represents the data contained in table
     let { tableinfo } = this.state;
 
-    console.log('ti', this.state.tableinfo);
-
-    // let filteredAddreddes = [];
+    console.log('atb', tableinfo);
 
     return (<Table columns={ 5 } padded='very' textAlign='left' style={ { marginBottom: '70px' } }>
       <Table.Header>
@@ -58,7 +56,7 @@ export default class AddressesTable extends ReactiveComponent {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        { (tableinfo || []).map(elem => {
+        {(tableinfo || []).map(elem => {
           return (
             <AddressCard
               key={ elem.address }
