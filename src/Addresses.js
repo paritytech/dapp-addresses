@@ -48,26 +48,26 @@ export default class Addresses extends Component {
 
   render () {
 
-    let TableBond = bonds.allAccountsInfo.map((accountList) => {
-      let outList = [];
-      for (let key in accountList) {
-        // read out all (valid) accounts
-        if (typeof accountList[key].uuid === 'undefined' &&
-            !accountList[key].meta.contract &&
-            !accountList[key].meta.wallet) {
-          // modify account so that all bond of info is in object
-          let modaccount = accountList[key];
+    // let TableBond = bonds.allAccountsInfo.map((accountList) => {
+    //   let outList = [];
+    //   for (let key in accountList) {
+    //     // read out all (valid) accounts
+    //     if (typeof accountList[key].uuid === 'undefined' &&
+    //         !accountList[key].meta.contract &&
+    //         !accountList[key].meta.wallet) {
+    //       // modify account so that all bond of info is in object
+    //       let modaccount = accountList[key];
 
-          modaccount['address'] = key;
-          // balanceArray.push(bonds.balance(key));
-          outList.push(modaccount);
-        }
-      }
+    //       modaccount['address'] = key;
+    //       // balanceArray.push(bonds.balance(key));
+    //       outList.push(modaccount);
+    //     }
+    //   }
 
-      return outList;
-    }).map((prepList) => this.getFilteredAddresses(prepList, this.state.searchTokens));
+    //   return outList;
+    // }).map((prepList) => this.getFilteredAddresses(prepList, this.state.searchTokens));
 
-    let t0 = performance.now()
+
     let table = bonds.allAccountsInfo
     .map((accob) => Object.keys(accob).map(sacc => {
         let temp = accob[sacc];
@@ -76,19 +76,15 @@ export default class Addresses extends Component {
       }
     ))
     .map(acca => acca.filter(single => !single.uuid && !single.meta.contract && !single.meta.wallet))
-    .map((prepList) => this.getFilteredAddresses(prepList, this.state.searchTokens))
     .map(accf => accf.map(sing => {
-      sing.balance = bonds.balance(sing.address);
-      return sing;
+      return [bonds.balance(sing.address), sing];
     }),2)
-    .map(accl => this.sortAccounts(accl, this.state.sortOrder), 2)
+    .map(accl => this.sortAccounts(accl, this.state.sortOrder), 1)
     .map(accs => accs.map(elem => {
-      delete elem.balance;
-      return elem;
+      return elem[1];
     }));
-    let t1 = performance.now();
-    console.log('pf',t1-t0)
 
+    //.map((prepList) => this.getFilteredAddresses(prepList, this.state.searchTokens))
     table.log();
 
     //let nTableBond = this.sortAccountsBond(TableBond);
@@ -247,20 +243,22 @@ export default class Addresses extends Component {
 
   sortAccounts = (accountinfo, order) => {
     // && this.state.prevSort !== 'eth'
+    console.log('acci',accountinfo);
     if (!order) {
       return accountinfo;
     } else if (order === 'eth') {
       return accountinfo.sort((accA, accB) => {
-        if (accA.balance.equals(accB.balance)) {
+        console.log('accs', accA, accB);
+        if (accA[0].equals(accB[0])) {
           return 0;
-        } else if (accA.balance.greaterThan(accB.balance)) {
+        } else if (accA[0].greaterThan(accB[0])) {
           return -1;
         }
         return 1;
       });
     } else if (order === 'name') {
       return accountinfo.sort((accA, accB) => {
-        return accA.name.localeCompare(accB.name);
+        return accA[1].name.localeCompare(accB[1].name);
       });
     } else {
       // sort order not recognised
