@@ -17,7 +17,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Header, Table, Button, Popup, Item } from 'semantic-ui-react';
-import { ReactiveComponent } from 'oo7-react';
 
 import {
   bonds,
@@ -36,7 +35,6 @@ import { isEqual } from 'lodash';
 import styles from './AddressCard.css';
 
 export default class AddressCard extends Component {
-
   static contextTypes = {
     api: PropTypes.object.isRequired
   }
@@ -56,6 +54,7 @@ export default class AddressCard extends Component {
     if (info.name.length > 30) {
       dispname = info.name.substr(0, 30) + '...';
     }
+
     return (
       <Table.Row>
         <Table.Cell textAlign='center'>

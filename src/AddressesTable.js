@@ -36,13 +36,12 @@ export default class AddressesTable extends ReactiveComponent {
 
   constructor () {
     super(['tableinfo']);
+    // bonds.tokens.then(tokens => this.setState({ 'tokens': tokens }));
   }
 
   render () {
     // construct a bond that represents the data contained in table
     let { tableinfo } = this.state;
-
-    console.log('atb', tableinfo);
 
     return (<Table columns={ 5 } padded='very' textAlign='left' style={ { marginBottom: '70px' } }>
       <Table.Header>

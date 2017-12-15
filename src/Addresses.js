@@ -47,30 +47,12 @@ export default class Addresses extends Component {
   }
 
   render () {
-
-    // let TableBond = bonds.allAccountsInfo.map((accountList) => {
-    //   let outList = [];
-    //   for (let key in accountList) {
-    //     // read out all (valid) accounts
-    //     if (typeof accountList[key].uuid === 'undefined' &&
-    //         !accountList[key].meta.contract &&
-    //         !accountList[key].meta.wallet) {
-    //       // modify account so that all bond of info is in object
-    //       let modaccount = accountList[key];
-
-    //       modaccount['address'] = key;
-    //       // balanceArray.push(bonds.balance(key));
-    //       outList.push(modaccount);
-    //     }
-    //   }
-
-    //   return outList;
-    // }).map((prepList) => this.getFilteredAddresses(prepList, this.state.searchTokens));
-
+    bonds.tokens.log();
 
     let table = bonds.allAccountsInfo
     .map((accob) => Object.keys(accob).map(sacc => {
         let temp = accob[sacc];
+
         temp.address = sacc;
         return temp;
       }
@@ -78,16 +60,15 @@ export default class Addresses extends Component {
     .map(acca => acca.filter(single => !single.uuid && !single.meta.contract && !single.meta.wallet))
     .map(accf => accf.map(sing => {
       return [bonds.balance(sing.address), sing];
-    }),2)
+    }), 2)
     .map(accl => this.sortAccounts(accl, this.state.sortOrder), 1)
     .map(accs => accs.map(elem => {
       return elem[1];
-    }));
+    }))
+    .map((prepList) => this.getFilteredAddresses(prepList, this.state.searchTokens));
 
-    //.map((prepList) => this.getFilteredAddresses(prepList, this.state.searchTokens))
     table.log();
 
-    //let nTableBond = this.sortAccountsBond(TableBond);
     return (<div className={ styles.Addresses }>
       { this.renderActionbar() }
       { this.renderAddAddress() }
@@ -243,12 +224,10 @@ export default class Addresses extends Component {
 
   sortAccounts = (accountinfo, order) => {
     // && this.state.prevSort !== 'eth'
-    console.log('acci',accountinfo);
     if (!order) {
       return accountinfo;
     } else if (order === 'eth') {
       return accountinfo.sort((accA, accB) => {
-        console.log('accs', accA, accB);
         if (accA[0].equals(accB[0])) {
           return 0;
         } else if (accA[0].greaterThan(accB[0])) {
